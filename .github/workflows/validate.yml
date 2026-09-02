@@ -17,7 +17,7 @@ jobs:
       - name: Check public files for private identifiers
         shell: bash
         run: |
-          if grep -RniE 'C:\\Users\\|https://[^ ]+\.slack\.com/files/|F[0-9A-Z]{10}' \
+          if grep -RniE 'C:\\Users\\|https://[^ ]+\.slack\.com/files/|F0[0-9A-Z]{8,}' \
             README* report docs evals plugins scripts; then
             echo "Potential private identifier found."
             exit 1
