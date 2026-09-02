@@ -1,0 +1,210 @@
+[
+  {
+    "agent": "ollama-cloud",
+    "model": "glm-5.2",
+    "key": "glm-5.2",
+    "variant": "baseline",
+    "delivery": "inline_instructions",
+    "run": 1,
+    "started_at": "2026-09-03T06:19:01.5784562+09:00",
+    "completed_at": "2026-09-03T06:20:00.1584594+09:00",
+    "elapsed_seconds": 58.58,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 4819,
+      "output_tokens": 3736,
+      "total_tokens": 8555,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "gpt-oss:120b",
+    "key": "gpt-oss:120b",
+    "variant": "baseline",
+    "delivery": "inline_instructions",
+    "run": 1,
+    "started_at": "2026-09-03T06:21:20.455716+09:00",
+    "completed_at": "2026-09-03T06:21:27.3772743+09:00",
+    "elapsed_seconds": 6.922,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 3957,
+      "output_tokens": 1790,
+      "total_tokens": 5747,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "kimi-k3",
+    "key": "kimi-k3",
+    "variant": "baseline",
+    "delivery": "inline_instructions",
+    "run": 1,
+    "started_at": "2026-09-03T06:18:20.9140407+09:00",
+    "completed_at": "2026-09-03T06:19:00.9402821+09:00",
+    "elapsed_seconds": 40.026,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 4951,
+      "output_tokens": 3489,
+      "total_tokens": 8440,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "qwen3.5:397b",
+    "key": "qwen3.5:397b",
+    "variant": "baseline",
+    "delivery": "inline_instructions",
+    "run": 1,
+    "started_at": "2026-09-03T06:20:00.7172701+09:00",
+    "completed_at": "2026-09-03T06:21:19.9031792+09:00",
+    "elapsed_seconds": 79.186,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 3693,
+      "output_tokens": 6225,
+      "total_tokens": 9918,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "glm-5.2",
+    "key": "glm-5.2",
+    "variant": "none",
+    "delivery": "none",
+    "run": 1,
+    "started_at": "2026-09-03T06:16:22.6686396+09:00",
+    "completed_at": "2026-09-03T06:17:09.1842417+09:00",
+    "elapsed_seconds": 46.516,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2486,
+      "output_tokens": 3709,
+      "total_tokens": 6195,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "gpt-oss:120b",
+    "key": "gpt-oss:120b",
+    "variant": "none",
+    "delivery": "none",
+    "run": 1,
+    "started_at": "2026-09-03T06:18:14.8290383+09:00",
+    "completed_at": "2026-09-03T06:18:20.3242424+09:00",
+    "elapsed_seconds": 5.495,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 1993,
+      "output_tokens": 1912,
+      "total_tokens": 3905,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "kimi-k3",
+    "key": "kimi-k3",
+    "variant": "none",
+    "delivery": "none",
+    "run": 1,
+    "started_at": "2026-09-03T06:14:54.8264299+09:00",
+    "completed_at": "2026-09-03T06:15:56.0089958+09:00",
+    "elapsed_seconds": 61.183,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2636,
+      "output_tokens": 4950,
+      "total_tokens": 7586,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "agent": "ollama-cloud",
+    "model": "qwen3.5:397b",
+    "key": "qwen3.5:397b",
+    "variant": "none",
+    "delivery": "none",
+    "run": 1,
+    "started_at": "2026-09-03T06:17:09.8138237+09:00",
+    "completed_at": "2026-09-03T06:18:14.247979+09:00",
+    "elapsed_seconds": 64.434,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 1814,
+      "output_tokens": 5011,
+      "total_tokens": 6825,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  }
+]

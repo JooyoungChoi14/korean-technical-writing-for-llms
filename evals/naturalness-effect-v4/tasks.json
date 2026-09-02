@@ -1,0 +1,147 @@
+{
+  "experiment": "naturalness-effect-v4",
+  "purpose": "Measure whether the skill detects and rewrites awkward Korean technical expressions when the intended meaning is fully specified.",
+  "cases": [
+    {
+      "id": "NAT-01",
+      "category": "mixed_compound",
+      "kind": "awkward",
+      "target": "두 variant의 parity를 확보한다.",
+      "context": "학사 포털의 개인정보 화면은 관리자용과 학생용 두 형태로 제공된다. 두 화면은 배치만 다르고 이름, 학번, 소속, 연락처, 수신 동의 여부를 모두 표시해야 한다. 관리자용 화면에는 일괄 수정 버튼이 추가되지만 표시 필드의 종류와 개수는 학생용 화면과 같아야 한다. 설계 문서에서 variant는 이 두 화면 형태를, parity는 표시 필드가 같다는 뜻으로 사용했다. 사용자에게 공유할 구현 요약에는 다음 문장이 남아 있다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["관리자용", "학생용", "표시", "필드", "같"],
+      "required_patterns": ["관리자용", "학생용", "표시.*필드|필드.*표시", "같|동일"],
+      "banned_phrases": ["variant", "parity"],
+      "forbidden_assumptions": ["권한", "버튼 수", "데이터베이스"]
+    },
+    {
+      "id": "NAT-02",
+      "category": "metaphor",
+      "kind": "awkward",
+      "target": "상태를 화면으로 꺼낼 구멍을 연다.",
+      "context": "장비 API는 현재 내부에서만 사용하는 `status` 값을 응답 객체에 추가하기로 했다. 화면은 이 속성을 읽어 정상, 점검 중, 연결 끊김 상태를 표시한다. 서버가 상태를 계산하고 API 응답에 넣으며 화면은 값을 변경하지 않는다. 별도의 API 엔드포인트나 사용자 조작 버튼은 추가하지 않는다. 구현 메모의 다음 문장은 `status` 속성을 API 응답에 공개한다는 뜻이다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["status", "API", "응답", "화면", "읽"],
+      "required_patterns": ["status", "API", "응답", "화면", "읽"],
+      "banned_phrases": ["구멍", "꺼낼", "꺼내"],
+      "forbidden_assumptions": ["버튼", "새 엔드포인트", "화면이 상태를 변경"]
+    },
+    {
+      "id": "NAT-03",
+      "category": "noun_stack",
+      "kind": "awkward",
+      "target": "호출 경유, 변경 불요.",
+      "context": "로그인 요청은 `LoginController`, `LegacyAuthAdapter`, 새 인증 서비스 순서로 전달된다. 이번 작업은 새 인증 서비스만 수정한다. `LegacyAuthAdapter`는 호출 경로에 계속 포함되지만 입력과 출력 형식이 같아 코드를 바꾸지 않는다. 배포 대상에도 기존 어댑터 바이너리를 그대로 사용한다. 변경 범위 표의 짧은 메모는 이 사실을 설명하려고 쓴 것이다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["LegacyAuthAdapter", "호출 경로", "변경하지 않"],
+      "required_patterns": ["LegacyAuthAdapter", "호출 경로", "변경하지 않|변경.*필요 없|코드 변경.*없"],
+      "banned_phrases": ["변경 불요", "호출 경유"],
+      "forbidden_assumptions": ["제거", "우회", "새로 배포"]
+    },
+    {
+      "id": "NAT-04",
+      "category": "evaluation_first",
+      "kind": "awkward",
+      "target": "클라이언트만 먼저 배포해도 무해하다.",
+      "context": "새 클라이언트는 로그인 요청에 선택 필드 `ui_mode`를 추가한다. 현재 운영 중인 구버전 서버는 알 수 없는 선택 필드를 무시하고 기존 필드만 처리하도록 이미 구현돼 있다. 따라서 새 클라이언트를 먼저 배포해도 로그인, 로그아웃과 세션 갱신 동작은 바뀌지 않는다. 서버 배포 뒤에는 `ui_mode`에 따라 화면 구성을 달리한다. 배포 계획의 다음 문장은 선행 배포가 기존 기능에 미치는 영향을 요약한 것이다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["구버전 서버", "ui_mode", "무시", "기존 기능", "영향"],
+      "required_patterns": ["구버전 서버", "ui_mode|선택 필드", "무시", "로그인|기존 기능", "바뀌지 않|변하지 않|영향.*없"],
+      "banned_phrases": ["무해"],
+      "forbidden_assumptions": ["모든 서버", "오류가 없다", "동시에 배포"]
+    },
+    {
+      "id": "NAT-05",
+      "category": "mixed_compound",
+      "kind": "awkward",
+      "target": "500대 fleet의 route recalculation fan-out을 제어한다.",
+      "context": "물류센터의 중앙 서버는 이동 로봇 500대에 새 경로를 보낸다. 통로가 막히면 서버가 영향을 받는 로봇을 25대씩 묶어 경로를 다시 계산하고, 각 묶음의 계산이 끝난 뒤 메시지 큐를 통해 새 경로를 전송한다. 동시에 계산하는 묶음은 최대 네 개로 제한해 CPU 사용량을 통제한다. 설계자는 fleet을 로봇 전체, route recalculation fan-out을 재계산 작업을 여러 묶음으로 나누는 방식이라는 뜻으로 썼다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["로봇 500대", "25대씩", "경로", "다시 계산", "최대 네"],
+      "required_patterns": ["로봇.*500대|500대.*로봇|500 대.*로봇", "25대씩|25대.*묶", "경로.*재계산|경로.*다시 계산", "최대.*4개|최대.*네 개|최대 네"],
+      "banned_phrases": ["fleet", "route recalculation", "fan-out"],
+      "forbidden_assumptions": ["500대를 동시에", "로봇이 계산", "방송"]
+    },
+    {
+      "id": "NAT-06",
+      "category": "metaphor",
+      "kind": "awkward",
+      "target": "이벤트를 정산 파이프에 태운다.",
+      "context": "결제가 완료되면 주문 서비스가 `payment_completed` 이벤트를 Kafka의 `settlement-events` 토픽에 발행한다. 정산 워커는 이 토픽을 구독해 결제 금액과 수수료를 대사한 뒤 정산 원장에 기록한다. 주문 서비스가 정산 워커를 직접 호출하지는 않는다. 구현 순서표의 다음 문장은 이벤트를 Kafka 토픽에 발행한다는 작업을 가리킨다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["payment_completed", "settlement-events", "Kafka", "발행"],
+      "required_patterns": ["payment_completed", "settlement-events", "Kafka", "발행"],
+      "banned_phrases": ["파이프", "태운"],
+      "forbidden_assumptions": ["직접 호출", "HTTP", "결제 요청"]
+    },
+    {
+      "id": "NAT-07",
+      "category": "evaluation_first",
+      "kind": "awkward",
+      "target": "이 방식은 회계 오염을 막는다.",
+      "context": "월말 마감이 끝난 원장의 기존 분개는 수정하거나 삭제하지 않는다. 이후 오류를 발견하면 원래 분개를 참조하는 조정 전표를 새로 만들고, 변경 사유와 승인자를 함께 기록한다. 보고서는 원래 분개와 조정 전표를 합산해 최종 잔액을 계산한다. 이 방식의 목적은 기존 분개 이력과 수정 근거를 모두 남기는 것이다. 회계 설계 요약의 다음 문장은 이 효과를 설명한다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["기존 분개", "수정", "조정 전표", "이력"],
+      "required_patterns": ["기존 분개|원래 분개", "수정하지 않|변경하지 않|수정.*삭제하지 않", "조정 전표", "이력|근거"],
+      "banned_phrases": ["오염"],
+      "forbidden_assumptions": ["오류를 방지", "원장을 잠금", "분개를 삭제"]
+    },
+    {
+      "id": "NAT-08",
+      "category": "colloquial_metaphor",
+      "kind": "awkward",
+      "target": "처음부터 켜두는 편이 쌉니다.",
+      "context": "검색 서버는 기동할 때 인기 검색어 10만 건을 메모리에 미리 적재할 수 있다. 이 기능을 활성화하면 첫 요청부터 평균 응답 시간이 180밀리초에서 45밀리초로 줄지만 서버 한 대당 메모리를 약 300MB 더 사용한다. 운영팀은 응답 시간 개선이 추가 메모리 비용보다 중요하다고 판단해 모든 운영 서버에서 기동 시 사전 적재를 활성화하기로 결정했다. 다음 문장은 이 결정을 설명하려고 작성됐다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["기동", "사전 적재", "활성화", "응답 시간", "메모리"],
+      "required_patterns": ["기동", "사전 적재", "활성화", "응답 시간", "메모리"],
+      "banned_phrases": ["켜두", "쌉니다", "싸다", "싼"],
+      "forbidden_assumptions": ["비용이 감소", "메모리 사용량이 감소", "개발 서버"]
+    },
+    {
+      "id": "NAT-09",
+      "category": "transliteration",
+      "kind": "awkward",
+      "target": "수강신청 위저드가 네 단계를 오케스트레이션합니다.",
+      "context": "학생은 과목 검색, 시간표 충돌 확인, 수강 정원 확인, 신청 완료의 네 단계를 순서대로 진행한다. 프런트엔드 컴포넌트 이름은 `EnrollmentWizard`이며 단계 이동과 입력값 보존을 담당한다. 사용자용 설계 설명에서는 코드 이름을 한 번 병기하되, 화면의 역할은 한국어로 설명하기로 했다. 다음 문장은 이 화면을 소개하는 초안이다.",
+      "expected_decision": "구체화 필요",
+      "required_terms": ["단계별", "수강 신청", "EnrollmentWizard", "입력값", "이동"],
+      "required_patterns": ["수강 ?신청", "EnrollmentWizard", "네 단계|4단계", "이동", "입력값"],
+      "banned_phrases": ["위저드", "오케스트레이션"],
+      "forbidden_assumptions": ["서버", "자동 신청", "승인"]
+    },
+    {
+      "id": "CTL-01",
+      "category": "established_term",
+      "kind": "control",
+      "target": "Kafka 파티션별 lag를 수집하고 임계값을 넘으면 알림을 보낸다.",
+      "context": "운영팀 용어집은 Kafka와 lag를 그대로 사용하는 표준 용어로 정의한다. 모니터링 서비스는 각 파티션의 처리 지연량을 수집하고 설정된 임계값을 넘으면 담당자에게 알림을 보낸다. 문장은 대상, 조건과 동작을 모두 설명하며 별도의 사용자용 번역어를 사용하지 않는다.",
+      "expected_decision": "통과",
+      "required_terms": [],
+      "banned_phrases": [],
+      "forbidden_assumptions": []
+    },
+    {
+      "id": "CTL-02",
+      "category": "code_identifier",
+      "kind": "control",
+      "target": "서버는 `messageUuid`를 `notification.tag`에 저장한다.",
+      "context": "알림 중복 표시를 막기 위해 서버가 메시지 식별자 `messageUuid`를 웹 알림 객체의 `notification.tag` 속성에 저장한다. 두 이름은 실제 코드 식별자이며 번역하거나 일반 명사로 바꾸면 구현 위치를 찾기 어렵다. 저장 주체, 값과 대상 속성은 이미 명시돼 있다.",
+      "expected_decision": "통과",
+      "required_terms": [],
+      "banned_phrases": [],
+      "forbidden_assumptions": []
+    },
+    {
+      "id": "CTL-03",
+      "category": "clear_operation",
+      "kind": "control",
+      "target": "임시 권한은 만료 시각을 저장하고, 각 요청을 처리할 때 현재 시각과 비교해 유효성을 확인한다.",
+      "context": "관리자가 부여한 임시 권한에는 만료 시각이 포함된다. 권한 서비스는 요청을 받을 때마다 현재 시각이 만료 시각보다 이른지 확인하고, 만료됐으면 작업을 거부한다. 검토 대상 문장은 이 구현의 저장값, 검사 시점과 동작을 이미 분명하게 설명한다.",
+      "expected_decision": "통과",
+      "required_terms": [],
+      "banned_phrases": [],
+      "forbidden_assumptions": []
+    }
+  ]
+}

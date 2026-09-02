@@ -1,0 +1,26 @@
+{
+  "agent": "ollama-cloud",
+  "model": "kimi-k3",
+  "key": "kimi-k3",
+  "variant": "none",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T21:14:54.8264299+00:00",
+  "completed_at": "2026-09-02T21:15:56.0089958+00:00",
+  "elapsed_seconds": 61.183,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2636,
+    "output_tokens": 4950,
+    "total_tokens": 7586,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}
