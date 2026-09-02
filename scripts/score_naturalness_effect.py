@@ -47,7 +47,8 @@ def main():
             banned_found=[term for term in case['banned_phrases'] if term.lower() in revision.lower()]
             required_patterns=case.get('required_patterns',[re.escape(term) for term in case['required_terms']]) if a.coverage_mode=='patterns' else [re.escape(term) for term in case['required_terms']]
             missing_required=[pattern for pattern in required_patterns if not re.search(pattern,revision,re.I)]
-            forbidden_found=[term for term in case['forbidden_assumptions'] if term.lower() in revision.lower()]
+            forbidden_patterns=case.get('forbidden_patterns',[re.escape(term) for term in case['forbidden_assumptions']])
+            forbidden_found=[pattern for pattern in forbidden_patterns if re.search(pattern,revision,re.I)]
             awkward_removed=kind!='awkward' or (bool(revision) and not banned_found and norm(revision)!=norm(case['target']))
             semantic_coverage=kind!='awkward' or (bool(revision) and not missing_required)
             assumption_safe=kind!='awkward' or not forbidden_found

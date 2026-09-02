@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "decision": {"type": "string", "enum": ["통과", "구체화 필요", "의미 확인 필요"]},
+          "suggested_revision": {"type": ["string", "null"]},
+          "reason": {"type": "string"}
+        },
+        "required": ["id", "decision", "suggested_revision", "reason"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["cases"],
+  "additionalProperties": false
+}

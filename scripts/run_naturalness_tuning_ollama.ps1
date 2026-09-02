@@ -1,0 +1,29 @@
+param(
+    [string[]]$Models=@('kimi-k3','glm-5.2','qwen3.5:397b','gpt-oss:120b'),
+    [ValidateSet('baseline','candidate')][string[]]$Variants=@('baseline','candidate'),
+    [ValidateRange(1,5)][int]$Runs=3,
+    [Parameter(Mandatory=$true)][string]$OutputRoot,
+    [ValidateRange(1,3)][int]$Concurrency=1,
+    [ValidateRange(0,5)][int]$RetryCount=2,
+    [switch]$SkipFinished
+)
+$ErrorActionPreference='Stop'
+$repoRoot=Split-Path -Parent $PSScriptRoot;$experimentRoot=Join-Path $repoRoot 'evals\naturalness-tuning-v5';$skillRoot=Join-Path $repoRoot 'plugins\korean-technical-writing-review\skills\korean-technical-writing-review'
+$tasks=Get-Content (Join-Path $experimentRoot 'tasks.json') -Raw -Encoding UTF8|ConvertFrom-Json;$schemaText=Get-Content (Join-Path $experimentRoot 'output-schema.json') -Raw -Encoding UTF8
+$secretPath=Join-Path $env:USERPROFILE '.codex\secrets\ollama-cloud-api-key.txt';$token=$env:OLLAMA_API_KEY;if([string]::IsNullOrWhiteSpace($token) -and (Test-Path -LiteralPath $secretPath)){$token=(Get-Content $secretPath -Raw -Encoding UTF8).Trim()};if([string]::IsNullOrWhiteSpace($token)){throw 'Ollama Cloud API 키를 찾지 못했습니다.'}
+$referenceFiles=@((Join-Path $skillRoot 'references\rubric.ko.md'),(Join-Path $skillRoot 'references\semantic-fidelity.ko.md'),(Join-Path $skillRoot 'references\output-formats.ko.md'));$references=($referenceFiles|ForEach-Object{"`n--- $([IO.Path]::GetFileName($_)) ---`n"+(Get-Content $_ -Raw -Encoding UTF8)}) -join "`n"
+$variantInstructions=@{baseline=("`n--- SKILL.md ---`n"+(Get-Content (Join-Path $skillRoot 'SKILL.md') -Raw -Encoding UTF8)+$references);candidate=("`n--- SKILL.md ---`n"+(Get-Content (Join-Path $experimentRoot 'candidate-SKILL.md') -Raw -Encoding UTF8)+$references)}
+if(-not [IO.Path]::IsPathRooted($OutputRoot)){$OutputRoot=Join-Path $repoRoot $OutputRoot};$OutputRoot=[IO.Path]::GetFullPath($OutputRoot);New-Item -ItemType Directory -Path $OutputRoot -Force|Out-Null
+$blocks=@($tasks.cases|ForEach-Object{"### $($_.id)`n[문맥]`n$($_.context)`n`n[검토 대상 문장]`n$($_.target)"});$prompt="아래 문서 조각마다 검토 대상 문장이 자연스럽고 명확한 한국어 기술 문장인지 평가하세요. 문맥에는 뜻을 확정하는 데 필요한 정보가 들어 있습니다. 고칠 필요가 있으면 문맥의 사실을 유지한 수정문을 제안하고, 이미 자연스럽고 명확하면 통과시키고 suggested_revision을 null로 두세요.`n`n$($blocks -join "`n`n")`n`n반드시 아래 JSON Schema와 정확히 일치하는 JSON 객체 하나만 출력하세요. 다른 필드, 설명, 마크다운 코드 펜스를 추가하지 마세요. 모든 ID를 한 번씩 포함하세요.`n`n$schemaText"
+$jobs=[Collections.Generic.List[object]]::new()
+foreach($run in 1..$Runs){foreach($variant in $Variants){foreach($model in $Models){
+    while(($jobs|Where-Object State -eq Running).Count -ge $Concurrency){$done=Wait-Job $jobs -Any -Timeout 5;if($done){Receive-Job $done|Out-Host}}
+    $safe=$model -replace '[:/]','-';$dir=Join-Path $OutputRoot (Join-Path $variant $safe);New-Item -ItemType Directory -Path $dir -Force|Out-Null;$out=Join-Path $dir "run-$run.md";$meta=Join-Path $dir "run-$run.json";if($SkipFinished -and (Test-Path -LiteralPath $meta)){if((Get-Content $meta -Raw -Encoding UTF8|ConvertFrom-Json).transport_status -eq 'completed'){continue}}
+    $instructions=$variantInstructions[$variant]
+    $jobs.Add((Start-Job -ArgumentList $model,$variant,$run,$prompt,$instructions,$token,$out,$meta,$RetryCount -ScriptBlock{
+        param($model,$variant,$run,$prompt,$instructions,$token,$out,$meta,$retryCount);$start=[DateTimeOffset]::UtcNow;$record=[ordered]@{agent='ollama-cloud';model=$model;key=$model;variant=$variant;delivery='instructions';run=$run;started_at=$start.ToString('o');completed_at=$null;elapsed_seconds=$null;transport_status='failed';response_status=$null;usage=$null;error=$null;output="run-$run.md"}
+        try{$body=@{model=$model;instructions=$instructions;input=$prompt;stream=$false;temperature=0;max_output_tokens=20000;truncation='disabled'}|ConvertTo-Json -Depth 12;$response=$null;foreach($attempt in 0..$retryCount){try{$response=Invoke-RestMethod -Method Post -Uri 'https://ollama.com/v1/responses' -Headers @{Authorization="Bearer $token"} -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 900;break}catch{if($_.Exception.Message -notmatch '429' -or $attempt -ge $retryCount){throw};Start-Sleep -Seconds (15*($attempt+1))}};$parts=foreach($item in $response.output){foreach($content in $item.content){if($content.type -eq 'output_text'){$content.text}}};$text=($parts -join "`n").Trim();Set-Content $out $text -Encoding UTF8;$record.transport_status=if([string]::IsNullOrWhiteSpace($text)){'empty'}else{'completed'};$record.response_status=$response.status;$record.usage=$response.usage}catch{$record.error=$_.Exception.Message -replace 'Bearer\s+\S+','Bearer [REDACTED]'}finally{$end=[DateTimeOffset]::UtcNow;$record.completed_at=$end.ToString('o');$record.elapsed_seconds=[Math]::Round(($end-$start).TotalSeconds,3);$record|ConvertTo-Json -Depth 12|Set-Content $meta -Encoding UTF8;[pscustomobject]@{model=$model;variant=$variant;run=$run;status=$record.transport_status;seconds=$record.elapsed_seconds}}
+    }))
+}}}
+while(($jobs|Where-Object State -eq Running).Count){$done=Wait-Job $jobs -Any -Timeout 5;if($done){Receive-Job $done|Out-Host}}
+$jobs|Where-Object State -ne Running|ForEach-Object{Receive-Job $_ -ErrorAction SilentlyContinue|Out-Host;Remove-Job $_ -Force};$summary=@(Get-ChildItem $OutputRoot -Filter 'run-*.json' -Recurse|ForEach-Object{Get-Content $_.FullName -Raw -Encoding UTF8|ConvertFrom-Json});$summary|ConvertTo-Json -Depth 12|Set-Content (Join-Path $OutputRoot 'transport-summary.json') -Encoding UTF8;"Completed $($summary.Count) Ollama records."
