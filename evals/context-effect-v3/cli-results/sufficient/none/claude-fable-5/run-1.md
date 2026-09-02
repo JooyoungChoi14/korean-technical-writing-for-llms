@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "PERM-S",
+      "decision": "구체화 필요",
+      "evidence_quote": "계산된 권한 결과를 `EffectivePermissionSet` 객체 하나로 표현한다",
+      "suggested_revision": "계산된 권한 결과를 담을 `EffectivePermissionSet` 객체를 `PermissionResolver`가 생성해야 합니다.",
+      "verification_question": null
+    },
+    {
+      "id": "INV-S",
+      "decision": "구체화 필요",
+      "evidence_quote": "각 병원은 A등급 품목별 `safety_stock_days`를 14로 설정하고",
+      "suggested_revision": "A등급 품목별로 평균 사용량 14일분의 안전 재고(`safety_stock_days`=14)를 설정합니다.",
+      "verification_question": null
+    },
+    {
+      "id": "STAT-S",
+      "decision": "구체화 필요",
+      "evidence_quote": "이 API 호출과 로딩·오류·마지막 갱신 시각을 관리하는 React 훅 `usePolicyEffects`를 사용한다",
+      "suggested_revision": "통계 API 호출과 상태 관리를 담당하는 React 훅 `usePolicyEffects`를 추가하고, 지역·기준일 변경 시 `reload` 함수를 호출합니다.",
+      "verification_question": null
+    }
+  ]
+}

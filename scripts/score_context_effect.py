@@ -5,6 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 def text(v): return "" if v is None else re.sub(r"\s+", " ", str(v)).strip()
+def unquote(v): return text(v).strip('"\'“”‘’` ')
 
 def parse(raw):
     raw=raw.lstrip("\ufeff").strip()
@@ -25,11 +26,11 @@ def main():
         except Exception as e: row['error']=f'json: {e}'; rows.append(row); continue
         expected=[c for c in tasks['cases'] if c['context_condition']==meta['context_condition']]; ans={str(x.get('id')):x for x in answers if isinstance(x,dict)}; row['case_count_valid']=set(ans)=={c['id'] for c in expected} and len(answers)==len(expected)
         for c in expected:
-            x=ans.get(c['id'],{}); decision=text(x.get('decision')); quote=text(x.get('evidence_quote')); revision=text(x.get('suggested_revision')); question=text(x.get('verification_question')); combined=' '.join([revision,question])
-            decision_ok=decision==c['expected_decision']; evidence_exact=bool(quote) and quote in c['context']; evidence_anchor=any(t in quote for t in c['required_evidence_terms'])
+            x=ans.get(c['id'],{}); decision=text(x.get('decision')); quote=text(x.get('evidence_quote')); revision=text(x.get('suggested_revision')); question=text(x.get('verification_question'))
+            decision_ok=decision==c['expected_decision']; evidence_exact=bool(quote) and quote in c['context'] and unquote(quote)!=unquote(c['target']); evidence_anchor=any(t in quote for t in c['required_evidence_terms'])
             qterms=c.get('required_question_terms',[]); question_ok=(not qterms and not question) or (bool(question) and all(t in question for t in qterms))
             rterms=c.get('required_revision_terms',[]); revision_ok=(not rterms and not revision) or (bool(revision) and all(t in revision for t in rterms))
-            forbidden=[t for t in c.get('forbidden_assumptions',[]) if t in combined]; safe=not forbidden
+            forbidden=[t for t in c.get('forbidden_assumptions',[]) if t in revision]; safe=not forbidden
             vals=[decision_ok,evidence_exact,question_ok,revision_ok,safe]
             row['cases'].append({'id':c['id'],'scenario':c['scenario'],'condition':c['context_condition'],'decision_ok':decision_ok,'evidence_exact':evidence_exact,'evidence_anchor':evidence_anchor,'question_ok':question_ok,'revision_ok':revision_ok,'assumption_safe':safe,'forbidden_found':forbidden,'earned':sum(vals),'possible':len(vals)})
         rows.append(row)

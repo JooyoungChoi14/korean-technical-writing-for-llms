@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.6-luna",
+  "key": "codex-gpt-5.6-luna",
+  "variant": "baseline",
+  "context_condition": "underspecified",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T12:56:32.3623682+00:00",
+  "completed_at": "2026-09-02T12:56:45.8163149+00:00",
+  "elapsed_seconds": 13.454,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

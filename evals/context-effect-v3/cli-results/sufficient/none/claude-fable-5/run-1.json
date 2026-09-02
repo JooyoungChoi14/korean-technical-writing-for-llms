@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "claude-fable-5",
+  "key": "claude-fable-5",
+  "variant": "none",
+  "context_condition": "sufficient",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:54:06.3508392+00:00",
+  "completed_at": "2026-09-02T12:54:24.6374031+00:00",
+  "elapsed_seconds": 18.287,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

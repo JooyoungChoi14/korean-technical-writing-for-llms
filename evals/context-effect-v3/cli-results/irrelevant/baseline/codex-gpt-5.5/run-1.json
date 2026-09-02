@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.5",
+  "key": "codex-gpt-5.5",
+  "variant": "baseline",
+  "context_condition": "irrelevant",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T12:59:03.7199338+00:00",
+  "completed_at": "2026-09-02T12:59:16.1917547+00:00",
+  "elapsed_seconds": 12.472,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

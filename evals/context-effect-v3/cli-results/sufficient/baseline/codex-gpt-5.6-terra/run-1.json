@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.6-terra",
+  "key": "codex-gpt-5.6-terra",
+  "variant": "baseline",
+  "context_condition": "sufficient",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T12:57:20.6925977+00:00",
+  "completed_at": "2026-09-02T12:57:35.8373905+00:00",
+  "elapsed_seconds": 15.145,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

@@ -2,8 +2,8 @@ param(
     [ValidateSet('underspecified','sufficient','irrelevant','conflicting')]
     [string[]]$Conditions=@('underspecified','sufficient','irrelevant','conflicting'),
     [ValidateSet('none','baseline')][string[]]$Variants=@('none','baseline'),
-    [ValidateSet('claude-opus-5','claude-sonnet','codex-gpt-5.6-sol','codex-gpt-5.3-codex-spark')]
-    [string[]]$ProfileKeys=@('claude-opus-5','claude-sonnet','codex-gpt-5.6-sol','codex-gpt-5.3-codex-spark'),
+    [ValidateSet('claude-fable-5','claude-opus-5','claude-sonnet','claude-haiku-4-5','codex-gpt-5.6-sol','codex-gpt-5.6-terra','codex-gpt-5.6-luna','codex-gpt-5.5','codex-gpt-5.4-mini','codex-gpt-5.3-codex-spark')]
+    [string[]]$ProfileKeys=@('claude-fable-5','claude-opus-5','claude-sonnet','claude-haiku-4-5','codex-gpt-5.6-sol','codex-gpt-5.6-terra','codex-gpt-5.6-luna','codex-gpt-5.5','codex-gpt-5.4-mini','codex-gpt-5.3-codex-spark'),
     [Parameter(Mandatory=$true)][string]$OutputRoot,
     [ValidateRange(1,4)][int]$Concurrency=2,
     [switch]$SkipFinished
@@ -21,9 +21,15 @@ $files=@((Join-Path $skillRoot 'SKILL.md'),(Join-Path $skillRoot 'references\rub
 $instructions=($files|%{"`n--- $([IO.Path]::GetFileName($_)) ---`n"+(Get-Content $_ -Raw -Encoding UTF8)}) -join "`n"
 if(-not [IO.Path]::IsPathRooted($OutputRoot)){$OutputRoot=Join-Path $repoRoot $OutputRoot};$OutputRoot=[IO.Path]::GetFullPath($OutputRoot);New-Item -ItemType Directory -Path $OutputRoot -Force|Out-Null
 $profiles=@(
+    [pscustomobject]@{agent='claude';model='claude-fable-5';key='claude-fable-5'},
     [pscustomobject]@{agent='claude';model='claude-opus-5';key='claude-opus-5'},
     [pscustomobject]@{agent='claude';model='sonnet';key='claude-sonnet'},
+    [pscustomobject]@{agent='claude';model='claude-haiku-4-5';key='claude-haiku-4-5'},
     [pscustomobject]@{agent='codex';model='gpt-5.6-sol';key='codex-gpt-5.6-sol'},
+    [pscustomobject]@{agent='codex';model='gpt-5.6-terra';key='codex-gpt-5.6-terra'},
+    [pscustomobject]@{agent='codex';model='gpt-5.6-luna';key='codex-gpt-5.6-luna'},
+    [pscustomobject]@{agent='codex';model='gpt-5.5';key='codex-gpt-5.5'},
+    [pscustomobject]@{agent='codex';model='gpt-5.4-mini';key='codex-gpt-5.4-mini'},
     [pscustomobject]@{agent='codex';model='gpt-5.3-codex-spark';key='codex-gpt-5.3-codex-spark'}
 ) | Where-Object { $ProfileKeys -contains $_.key }
 $jobs=[Collections.Generic.List[object]]::new()

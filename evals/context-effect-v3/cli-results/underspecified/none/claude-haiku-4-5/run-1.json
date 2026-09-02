@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "claude-haiku-4-5",
+  "key": "claude-haiku-4-5",
+  "variant": "none",
+  "context_condition": "underspecified",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:55:11.4474142+00:00",
+  "completed_at": "2026-09-02T12:55:24.5179832+00:00",
+  "elapsed_seconds": 13.071,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}
