@@ -1,0 +1,14 @@
+{
+  "agent": "claude",
+  "model": "claude-fable-5",
+  "key": "claude-fable-5",
+  "variant": "candidate",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T21:49:49.3957551+00:00",
+  "completed_at": "2026-09-02T21:50:55.0323357+00:00",
+  "elapsed_seconds": 65.637,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

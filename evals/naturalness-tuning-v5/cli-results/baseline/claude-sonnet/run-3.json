@@ -1,0 +1,14 @@
+{
+  "agent": "claude",
+  "model": "sonnet",
+  "key": "claude-sonnet",
+  "variant": "baseline",
+  "delivery": "system_or_developer_instructions",
+  "run": 3,
+  "started_at": "2026-09-02T21:56:27.1807167+00:00",
+  "completed_at": "2026-09-02T21:57:09.3447819+00:00",
+  "elapsed_seconds": 42.164,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-3.md"
+}

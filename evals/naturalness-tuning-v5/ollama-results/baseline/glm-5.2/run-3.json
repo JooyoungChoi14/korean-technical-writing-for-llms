@@ -1,0 +1,26 @@
+{
+  "agent": "ollama-cloud",
+  "model": "glm-5.2",
+  "key": "glm-5.2",
+  "variant": "baseline",
+  "delivery": "instructions",
+  "run": 3,
+  "started_at": "2026-09-02T22:01:59.9318250+00:00",
+  "completed_at": "2026-09-02T22:02:16.1617047+00:00",
+  "elapsed_seconds": 16.23,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 5221,
+    "output_tokens": 2074,
+    "total_tokens": 7295,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

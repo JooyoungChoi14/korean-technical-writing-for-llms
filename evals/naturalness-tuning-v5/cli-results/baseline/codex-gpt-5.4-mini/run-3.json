@@ -1,0 +1,14 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.4-mini",
+  "key": "codex-gpt-5.4-mini",
+  "variant": "baseline",
+  "delivery": "system_or_developer_instructions",
+  "run": 3,
+  "started_at": "2026-09-02T21:57:32.7760102+00:00",
+  "completed_at": "2026-09-02T21:58:24.9027529+00:00",
+  "elapsed_seconds": 52.127,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-3.md"
+}

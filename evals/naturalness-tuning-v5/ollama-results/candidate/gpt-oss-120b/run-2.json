@@ -1,0 +1,26 @@
+{
+  "agent": "ollama-cloud",
+  "model": "gpt-oss:120b",
+  "key": "gpt-oss:120b",
+  "variant": "candidate",
+  "delivery": "instructions",
+  "run": 2,
+  "started_at": "2026-09-02T22:00:44.6521021+00:00",
+  "completed_at": "2026-09-02T22:00:55.8870515+00:00",
+  "elapsed_seconds": 11.235,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 4304,
+    "output_tokens": 2839,
+    "total_tokens": 7143,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

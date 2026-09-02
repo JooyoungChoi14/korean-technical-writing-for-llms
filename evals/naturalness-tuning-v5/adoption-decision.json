@@ -1,0 +1,153 @@
+{
+  "decision": "hold",
+  "checks": [
+    {
+      "id": "semantic_coverage_gain",
+      "passed": false,
+      "actual_delta": 0.0111,
+      "threshold": ">= 0.10"
+    },
+    {
+      "id": "successful_rewrite_gain",
+      "passed": false,
+      "actual_delta": 0.0083,
+      "threshold": ">= 0.08"
+    },
+    {
+      "id": "awkward_removal_noninferiority",
+      "passed": true,
+      "actual_delta": 0.0083,
+      "threshold": ">= -0.02"
+    },
+    {
+      "id": "control_precision",
+      "passed": true,
+      "candidate": 1.0,
+      "actual_delta": 0.0,
+      "threshold": ">= 0.95 and delta >= -0.02"
+    },
+    {
+      "id": "semantic_safety",
+      "passed": true,
+      "candidate": 1.0,
+      "threshold": ">= 0.99"
+    },
+    {
+      "id": "model_distribution",
+      "passed": true,
+      "non_decrease": 8,
+      "improved": 4,
+      "threshold": "non_decrease >= 6 and improved >= 4"
+    }
+  ],
+  "baseline": {
+    "variant": "baseline",
+    "runs": 30,
+    "completed": 30,
+    "json_valid": 30,
+    "cases": 450,
+    "decision_ok": 425,
+    "edit_behavior_ok": 440,
+    "awkward_cases": 360,
+    "awkward_removed": 307,
+    "semantic_coverage": 38,
+    "assumption_safe": 360,
+    "rewrite_success": 36,
+    "control_cases": 90,
+    "control_ok": 90,
+    "completion_rate": 1.0,
+    "decision_accuracy": 0.9444,
+    "edit_behavior_accuracy": 0.9778,
+    "awkward_removal_rate": 0.8528,
+    "semantic_coverage_rate": 0.1056,
+    "semantic_safety_rate": 1.0,
+    "successful_rewrite_rate": 0.1,
+    "control_precision": 1.0
+  },
+  "candidate": {
+    "variant": "candidate",
+    "runs": 30,
+    "completed": 30,
+    "json_valid": 30,
+    "cases": 450,
+    "decision_ok": 428,
+    "edit_behavior_ok": 440,
+    "awkward_cases": 360,
+    "awkward_removed": 310,
+    "semantic_coverage": 42,
+    "assumption_safe": 360,
+    "rewrite_success": 39,
+    "control_cases": 90,
+    "control_ok": 90,
+    "completion_rate": 1.0,
+    "decision_accuracy": 0.9511,
+    "edit_behavior_accuracy": 0.9778,
+    "awkward_removal_rate": 0.8611,
+    "semantic_coverage_rate": 0.1167,
+    "semantic_safety_rate": 1.0,
+    "successful_rewrite_rate": 0.1083,
+    "control_precision": 1.0
+  },
+  "model_deltas": [
+    {
+      "model": "claude-fable-5",
+      "baseline": 0.1389,
+      "candidate": 0.1944,
+      "delta": 0.0555
+    },
+    {
+      "model": "claude-haiku-4-5",
+      "baseline": 0.0278,
+      "candidate": 0.0,
+      "delta": -0.0278
+    },
+    {
+      "model": "glm-5.2",
+      "baseline": 0.0833,
+      "candidate": 0.1389,
+      "delta": 0.0556
+    },
+    {
+      "model": "gpt-5.3-codex-spark",
+      "baseline": 0.0833,
+      "candidate": 0.1389,
+      "delta": 0.0556
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "delta": 0.0
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "baseline": 0.1944,
+      "candidate": 0.3056,
+      "delta": 0.1112
+    },
+    {
+      "model": "gpt-oss:120b",
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "delta": 0.0
+    },
+    {
+      "model": "kimi-k3",
+      "baseline": 0.4722,
+      "candidate": 0.3056,
+      "delta": -0.1666
+    },
+    {
+      "model": "qwen3.5:397b",
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "delta": 0.0
+    },
+    {
+      "model": "sonnet",
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "delta": 0.0
+    }
+  ]
+}

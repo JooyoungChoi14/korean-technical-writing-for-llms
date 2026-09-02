@@ -1,0 +1,26 @@
+{
+  "agent": "ollama-cloud",
+  "model": "qwen3.5:397b",
+  "key": "qwen3.5:397b",
+  "variant": "candidate",
+  "delivery": "instructions",
+  "run": 3,
+  "started_at": "2026-09-02T22:05:21.1150032+00:00",
+  "completed_at": "2026-09-02T22:06:56.4270834+00:00",
+  "elapsed_seconds": 95.312,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 4059,
+    "output_tokens": 6946,
+    "total_tokens": 11005,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}
