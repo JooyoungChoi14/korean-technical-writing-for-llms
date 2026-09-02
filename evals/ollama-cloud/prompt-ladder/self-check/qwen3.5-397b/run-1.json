@@ -1,0 +1,23 @@
+{
+  "model": "qwen3.5:397b",
+  "variant": "self-check",
+  "run": 1,
+  "started_at": "2026-09-02T06:31:04.4142897+00:00",
+  "completed_at": "2026-09-02T06:32:46.1603799+00:00",
+  "elapsed_seconds": 101.746,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2093,
+    "output_tokens": 3325,
+    "total_tokens": 5418,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

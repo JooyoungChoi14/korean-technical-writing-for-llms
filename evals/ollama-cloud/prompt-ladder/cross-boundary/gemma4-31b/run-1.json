@@ -1,0 +1,23 @@
+{
+  "model": "gemma4:31b",
+  "variant": "cross-boundary",
+  "run": 1,
+  "started_at": "2026-09-02T07:21:32.7053212+00:00",
+  "completed_at": "2026-09-02T07:21:54.2892216+00:00",
+  "elapsed_seconds": 21.584,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2280,
+    "output_tokens": 442,
+    "total_tokens": 2722,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

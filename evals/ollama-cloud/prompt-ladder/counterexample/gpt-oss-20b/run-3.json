@@ -1,0 +1,23 @@
+{
+  "model": "gpt-oss:20b",
+  "variant": "counterexample",
+  "run": 3,
+  "started_at": "2026-09-02T06:39:07.7230393+00:00",
+  "completed_at": "2026-09-02T06:39:38.3572590+00:00",
+  "elapsed_seconds": 30.634,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2340,
+    "output_tokens": 1191,
+    "total_tokens": 3531,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

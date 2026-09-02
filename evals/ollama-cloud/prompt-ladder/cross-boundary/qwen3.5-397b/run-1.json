@@ -1,0 +1,23 @@
+{
+  "model": "qwen3.5:397b",
+  "variant": "cross-boundary",
+  "run": 1,
+  "started_at": "2026-09-02T07:33:04.5138882+00:00",
+  "completed_at": "2026-09-02T07:35:00.6487812+00:00",
+  "elapsed_seconds": 116.135,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2167,
+    "output_tokens": 3985,
+    "total_tokens": 6152,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

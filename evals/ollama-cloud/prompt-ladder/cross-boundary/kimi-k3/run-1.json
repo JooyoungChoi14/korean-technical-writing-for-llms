@@ -1,0 +1,23 @@
+{
+  "model": "kimi-k3",
+  "variant": "cross-boundary",
+  "run": 1,
+  "started_at": "2026-09-02T07:28:24.9534428+00:00",
+  "completed_at": "2026-09-02T07:30:06.4069006+00:00",
+  "elapsed_seconds": 101.453,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2900,
+    "output_tokens": 5636,
+    "total_tokens": 8536,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

@@ -1,0 +1,1313 @@
+[
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T14:59:04.4964934+09:00",
+    "completed_at": "2026-09-02T14:59:24.5211601+09:00",
+    "elapsed_seconds": 20.025,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 3397,
+      "total_tokens": 5647,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T14:59:04.7643329+09:00",
+    "completed_at": "2026-09-02T14:59:17.4284147+09:00",
+    "elapsed_seconds": 12.664,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 2721,
+      "total_tokens": 4971,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T14:59:05.0524358+09:00",
+    "completed_at": "2026-09-02T14:59:18.5582818+09:00",
+    "elapsed_seconds": 13.506,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 2686,
+      "total_tokens": 4936,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T14:59:05.2944975+09:00",
+    "completed_at": "2026-09-02T14:59:34.9285645+09:00",
+    "elapsed_seconds": 29.634,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 2930,
+      "total_tokens": 5180,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T14:59:05.5501979+09:00",
+    "completed_at": "2026-09-02T14:59:30.5801171+09:00",
+    "elapsed_seconds": 25.03,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 2254,
+      "total_tokens": 4504,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T14:59:05.7589811+09:00",
+    "completed_at": "2026-09-02T14:59:39.1687529+09:00",
+    "elapsed_seconds": 33.41,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2250,
+      "output_tokens": 2862,
+      "total_tokens": 5112,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T14:59:18.0861496+09:00",
+    "completed_at": "2026-09-02T14:59:41.7068969+09:00",
+    "elapsed_seconds": 23.621,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2109,
+      "output_tokens": 359,
+      "total_tokens": 2468,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T14:59:19.1802667+09:00",
+    "completed_at": "2026-09-02T14:59:38.8561877+09:00",
+    "elapsed_seconds": 19.676,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2109,
+      "output_tokens": 443,
+      "total_tokens": 2552,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T14:59:25.1316855+09:00",
+    "completed_at": "2026-09-02T14:59:42.4510484+09:00",
+    "elapsed_seconds": 17.319,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2109,
+      "output_tokens": 413,
+      "total_tokens": 2522,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T14:59:31.2573769+09:00",
+    "completed_at": "2026-09-02T15:00:16.0876624+09:00",
+    "elapsed_seconds": 44.83,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2524,
+      "output_tokens": 2447,
+      "total_tokens": 4971,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T14:59:35.5747586+09:00",
+    "completed_at": "2026-09-02T15:01:13.1025954+09:00",
+    "elapsed_seconds": 97.528,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2524,
+      "output_tokens": 4474,
+      "total_tokens": 6998,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T14:59:39.4987193+09:00",
+    "completed_at": "2026-09-02T15:00:31.1567331+09:00",
+    "elapsed_seconds": 51.658,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2524,
+      "output_tokens": 2852,
+      "total_tokens": 5376,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T14:59:39.8167339+09:00",
+    "completed_at": "2026-09-02T15:00:40.084149+09:00",
+    "elapsed_seconds": 60.267,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 2983,
+      "total_tokens": 5514,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T14:59:42.3721361+09:00",
+    "completed_at": "2026-09-02T15:00:45.471916+09:00",
+    "elapsed_seconds": 63.1,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 982,
+      "total_tokens": 3513,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T14:59:43.1225095+09:00",
+    "completed_at": "2026-09-02T15:01:00.2457707+09:00",
+    "elapsed_seconds": 77.123,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 1764,
+      "total_tokens": 4295,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:00:16.6969712+09:00",
+    "completed_at": "2026-09-02T15:02:07.844209+09:00",
+    "elapsed_seconds": 111.147,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 14378,
+      "total_tokens": 16909,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:00:31.7913819+09:00",
+    "completed_at": "2026-09-02T15:02:30.6920037+09:00",
+    "elapsed_seconds": 118.901,
+    "status": "empty",
+    "response_status": "incomplete",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 16384,
+      "total_tokens": 18915,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:00:40.6955915+09:00",
+    "completed_at": "2026-09-02T15:03:13.713481+09:00",
+    "elapsed_seconds": 153.018,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 14488,
+      "total_tokens": 17019,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:00:46.0885799+09:00",
+    "completed_at": "2026-09-02T15:03:27.7690023+09:00",
+    "elapsed_seconds": 161.68,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 7633,
+      "total_tokens": 10164,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:01:00.8657657+09:00",
+    "completed_at": "2026-09-02T15:05:21.973762+09:00",
+    "elapsed_seconds": 261.108,
+    "status": "empty",
+    "response_status": "incomplete",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 16384,
+      "total_tokens": 18915,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:01:13.751925+09:00",
+    "completed_at": "2026-09-02T15:04:30.9346118+09:00",
+    "elapsed_seconds": 197.183,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 8341,
+      "total_tokens": 10872,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:03:28.3784031+09:00",
+    "completed_at": "2026-09-02T15:04:04.9074865+09:00",
+    "elapsed_seconds": 36.529,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 1037,
+      "total_tokens": 3216,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:03:41.9151212+09:00",
+    "completed_at": "2026-09-02T15:04:08.1951765+09:00",
+    "elapsed_seconds": 26.28,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 859,
+      "total_tokens": 3038,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:03:50.4325843+09:00",
+    "completed_at": "2026-09-02T15:04:11.0773798+09:00",
+    "elapsed_seconds": 20.645,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 824,
+      "total_tokens": 3003,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:02:08.4445518+09:00",
+    "completed_at": "2026-09-02T15:03:40.5105276+09:00",
+    "elapsed_seconds": 92.066,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 1099,
+      "total_tokens": 3278,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:02:31.3424423+09:00",
+    "completed_at": "2026-09-02T15:03:49.6921353+09:00",
+    "elapsed_seconds": 78.35,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 1003,
+      "total_tokens": 3182,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:03:14.4055804+09:00",
+    "completed_at": "2026-09-02T15:03:59.8354926+09:00",
+    "elapsed_seconds": 45.43,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2179,
+      "output_tokens": 1179,
+      "total_tokens": 3358,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:04:00.4661729+09:00",
+    "completed_at": "2026-09-02T15:05:06.0666033+09:00",
+    "elapsed_seconds": 65.6,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 2958,
+      "total_tokens": 5469,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:04:05.5175891+09:00",
+    "completed_at": "2026-09-02T15:05:28.0333429+09:00",
+    "elapsed_seconds": 82.516,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 3171,
+      "total_tokens": 5682,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:04:08.8090885+09:00",
+    "completed_at": "2026-09-02T15:06:31.1902484+09:00",
+    "elapsed_seconds": 142.381,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 4579,
+      "total_tokens": 7090,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:04:11.6760312+09:00",
+    "completed_at": "2026-09-02T15:05:41.4934847+09:00",
+    "elapsed_seconds": 89.817,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 2313,
+      "total_tokens": 4824,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:04:31.5413119+09:00",
+    "completed_at": "2026-09-02T15:05:46.0706792+09:00",
+    "elapsed_seconds": 74.529,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 2052,
+      "total_tokens": 4563,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:05:06.8111679+09:00",
+    "completed_at": "2026-09-02T15:05:58.6352209+09:00",
+    "elapsed_seconds": 51.824,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2511,
+      "output_tokens": 2140,
+      "total_tokens": 4651,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:05:22.7510488+09:00",
+    "completed_at": "2026-09-02T15:07:13.9102199+09:00",
+    "elapsed_seconds": 111.159,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2652,
+      "output_tokens": 7511,
+      "total_tokens": 10163,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:05:28.6403182+09:00",
+    "completed_at": "2026-09-02T15:07:20.0526446+09:00",
+    "elapsed_seconds": 111.412,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2652,
+      "output_tokens": 6324,
+      "total_tokens": 8976,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:05:42.1206237+09:00",
+    "completed_at": "2026-09-02T15:07:22.7555995+09:00",
+    "elapsed_seconds": 100.635,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2652,
+      "output_tokens": 4063,
+      "total_tokens": 6715,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:05:46.6672706+09:00",
+    "completed_at": "2026-09-02T15:07:28.4919265+09:00",
+    "elapsed_seconds": 101.825,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 1983,
+      "output_tokens": 694,
+      "total_tokens": 2677,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:05:59.2798379+09:00",
+    "completed_at": "2026-09-02T15:07:34.895167+09:00",
+    "elapsed_seconds": 95.615,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 1983,
+      "output_tokens": 605,
+      "total_tokens": 2588,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:06:31.7985947+09:00",
+    "completed_at": "2026-09-02T15:07:42.6666907+09:00",
+    "elapsed_seconds": 70.868,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 1983,
+      "output_tokens": 791,
+      "total_tokens": 2774,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:07:14.7243433+09:00",
+    "completed_at": "2026-09-02T15:08:58.9089498+09:00",
+    "elapsed_seconds": 104.185,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2139,
+      "output_tokens": 5564,
+      "total_tokens": 7703,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:07:20.755984+09:00",
+    "completed_at": "2026-09-02T15:08:45.6209946+09:00",
+    "elapsed_seconds": 84.865,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2139,
+      "output_tokens": 3263,
+      "total_tokens": 5402,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:07:23.5147231+09:00",
+    "completed_at": "2026-09-02T15:08:51.5866759+09:00",
+    "elapsed_seconds": 88.072,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2139,
+      "output_tokens": 3612,
+      "total_tokens": 5751,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:07:29.1906599+09:00",
+    "completed_at": "2026-09-02T15:08:52.9569939+09:00",
+    "elapsed_seconds": 83.766,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 369,
+      "total_tokens": 2412,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:07:35.6314759+09:00",
+    "completed_at": "2026-09-02T15:08:57.9693721+09:00",
+    "elapsed_seconds": 82.338,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 309,
+      "total_tokens": 2352,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:07:43.2675504+09:00",
+    "completed_at": "2026-09-02T15:09:00.0230373+09:00",
+    "elapsed_seconds": 76.755,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 323,
+      "total_tokens": 2366,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:08:46.2356814+09:00",
+    "completed_at": "2026-09-02T15:09:29.8684342+09:00",
+    "elapsed_seconds": 43.633,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 1777,
+      "total_tokens": 3831,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:08:52.1867883+09:00",
+    "completed_at": "2026-09-02T15:09:29.2628296+09:00",
+    "elapsed_seconds": 37.076,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 1656,
+      "total_tokens": 3710,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:08:53.5550921+09:00",
+    "completed_at": "2026-09-02T15:09:28.89609+09:00",
+    "elapsed_seconds": 35.341,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 1453,
+      "total_tokens": 3507,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:08:58.5748985+09:00",
+    "completed_at": "2026-09-02T15:09:53.4301661+09:00",
+    "elapsed_seconds": 54.855,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 865,
+      "total_tokens": 2919,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:08:59.5228077+09:00",
+    "completed_at": "2026-09-02T15:10:10.5371831+09:00",
+    "elapsed_seconds": 71.014,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 1621,
+      "total_tokens": 3675,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:09:00.6365854+09:00",
+    "completed_at": "2026-09-02T15:10:26.0716687+09:00",
+    "elapsed_seconds": 85.435,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 1718,
+      "total_tokens": 3772,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:09:29.6510553+09:00",
+    "completed_at": "2026-09-02T15:10:17.9846623+09:00",
+    "elapsed_seconds": 48.334,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 762,
+      "total_tokens": 2816,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:09:30.0873871+09:00",
+    "completed_at": "2026-09-02T15:10:39.5971074+09:00",
+    "elapsed_seconds": 69.51,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 853,
+      "total_tokens": 2907,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:09:30.7217462+09:00",
+    "completed_at": "2026-09-02T15:10:45.0205133+09:00",
+    "elapsed_seconds": 74.299,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2054,
+      "output_tokens": 974,
+      "total_tokens": 3028,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "run": 1,
+    "started_at": "2026-09-02T15:09:54.0679664+09:00",
+    "completed_at": "2026-09-02T15:11:12.3966065+09:00",
+    "elapsed_seconds": 78.329,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2015,
+      "output_tokens": 4181,
+      "total_tokens": 6196,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "run": 2,
+    "started_at": "2026-09-02T15:10:11.1270253+09:00",
+    "completed_at": "2026-09-02T15:11:17.161927+09:00",
+    "elapsed_seconds": 66.035,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2015,
+      "output_tokens": 3448,
+      "total_tokens": 5463,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "run": 3,
+    "started_at": "2026-09-02T15:10:18.5900441+09:00",
+    "completed_at": "2026-09-02T15:11:29.6149963+09:00",
+    "elapsed_seconds": 71.025,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2015,
+      "output_tokens": 3956,
+      "total_tokens": 5971,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  }
+]

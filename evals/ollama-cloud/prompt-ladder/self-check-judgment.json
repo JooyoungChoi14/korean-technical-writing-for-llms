@@ -1,0 +1,574 @@
+{
+  "runs": [
+    {
+      "model": "deepseek-v4-flash-0731",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 자료 구조로 단정했고, 사용자 직접 허용과 역할 거부의 충돌 결과를 묻지 않았다."
+    },
+    {
+      "model": "deepseek-v4-flash-0731",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "충돌 쌍은 검토했지만 그릇을 데이터 구조로 단정했다."
+    },
+    {
+      "model": "deepseek-v4-flash-0731",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 대상을 열어 두고 확인했지만 문장 3을 그대로 통과시켰다."
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 자료 구조로 단정했고 특정 충돌 쌍을 확인하지 않았다."
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "passed_count": 3,
+      "result": "pass",
+      "reason": "그릇의 구현 대상을 열어 두었고 문장 2를 통과시키며 사용자 직접 허용과 역할 거부의 충돌을 물었다."
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "충돌 쌍은 확인했지만 그릇을 자료 구조로 단정했다."
+    },
+    {
+      "model": "gemma4-31b",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현체는 열어 두었지만 사용자 직접 허용과 역할 거부의 충돌을 직접 확인하지 않았다."
+    },
+    {
+      "model": "gemma4-31b",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 적절했으나 문장 3의 특정 충돌 쌍을 묻지 않았다."
+    },
+    {
+      "model": "gemma4-31b",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 대상을 확정하지 않았지만 사용자 직접 허용 대 역할 거부를 시험하지 않았다."
+    },
+    {
+      "model": "glm-5.1",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 후보를 열어 두고 문장 2를 통과시켰지만 지정된 충돌 사례가 없다."
+    },
+    {
+      "model": "glm-5.1",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 단정했고 충돌도 일반적인 허용·거부로만 다뤘다."
+    },
+    {
+      "model": "glm-5.1",
+      "run": 3,
+      "c1": false,
+      "c2": false,
+      "c3": false,
+      "passed_count": 0,
+      "result": "fail",
+      "reason": "그릇을 객체로 단정하고 문장 2를 문제 삼았으며 문장 3의 핵심 충돌도 놓쳤다."
+    },
+    {
+      "model": "glm-5.2",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 충족했지만 문장 3을 통과시켜 특정 충돌을 확인하지 않았다."
+    },
+    {
+      "model": "glm-5.2",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇이 무엇인지 직접 확인하지 않았고 문장 3도 평가 방식만 일반적으로 물었다."
+    },
+    {
+      "model": "glm-5.2",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현체는 확인했지만 문장 3을 문제없이 통과시켰다."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "passed_count": 3,
+      "result": "pass",
+      "reason": "그릇의 실제 대상을 열어 두고 물었으며 문장 2를 통과시키고 사용자 직접 허용과 역할 거부의 관계를 시험했다."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "run": 2,
+      "c1": null,
+      "c2": null,
+      "c3": null,
+      "passed_count": 0,
+      "result": "",
+      "reason": "출력이 비어 있다."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "run": 3,
+      "c1": null,
+      "c2": null,
+      "c3": null,
+      "passed_count": 0,
+      "result": "",
+      "reason": "출력이 비어 있다."
+    },
+    {
+      "model": "glm-5.3",
+      "run": 1,
+      "c1": null,
+      "c2": null,
+      "c3": null,
+      "passed_count": 0,
+      "result": "",
+      "reason": "출력이 비어 있다."
+    },
+    {
+      "model": "glm-5.3",
+      "run": 2,
+      "c1": null,
+      "c2": null,
+      "c3": null,
+      "passed_count": 0,
+      "result": "",
+      "reason": "출력이 비어 있다."
+    },
+    {
+      "model": "glm-5.3",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 2와 충돌 검사는 적절했지만 그릇을 자료 구조로 단정했다."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 확정했고 문장 3은 일반적인 중단 조건만 물었다."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 컨테이너로 바꿔 단정했고 지정된 충돌 사례를 다루지 않았다."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 단정하고 사용자 직접 허용 대 역할 거부를 확인하지 않았다."
+    },
+    {
+      "model": "gpt-oss-20b",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 컨테이너로 단정하고 문장 3을 통과시켰다."
+    },
+    {
+      "model": "gpt-oss-20b",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 컨테이너형 데이터 구조로 확정했고 특정 충돌을 묻지 않았다."
+    },
+    {
+      "model": "gpt-oss-20b",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇의 뜻을 저장 컨테이너로 단정했고 문장 3의 충돌 검사가 없다."
+    },
+    {
+      "model": "kimi-k2.6",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 후보를 열어 두었고 문장 2도 통과했지만 지정된 충돌 쌍을 묻지 않았다."
+    },
+    {
+      "model": "kimi-k2.6",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 적절했지만 문장 3은 일반적인 평가 방식만 확인했다."
+    },
+    {
+      "model": "kimi-k2.6",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 실제 요소를 확인했지만 사용자 직접 허용과 역할 거부의 결과를 묻지 않았다."
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "run": 1,
+      "c1": true,
+      "c2": false,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇은 적절히 확인했지만 문장 2를 문제 삼고 문장 3을 통과시켰다."
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "run": 2,
+      "c1": true,
+      "c2": false,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇의 구현체를 열어 두었지만 문장 2를 문제로 분류하고 핵심 충돌을 놓쳤다."
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 충족했으나 문장 3에서 특정 충돌 쌍을 시험하지 않았다."
+    },
+    {
+      "model": "kimi-k3",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "충돌 질문은 정확했지만 그릇을 데이터 구조로 제안해 구현 범주를 단정했다."
+    },
+    {
+      "model": "kimi-k3",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "passed_count": 3,
+      "result": "pass",
+      "reason": "그릇의 실제 대상을 확정 보류했고 문장 2를 통과시키며 지정된 충돌 결과를 직접 물었다."
+    },
+    {
+      "model": "kimi-k3",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "passed_count": 3,
+      "result": "pass",
+      "reason": "확인용 자리표시자를 유지했고 문장 2와 사용자 직접 허용 대 역할 거부 검사를 모두 충족했다."
+    },
+    {
+      "model": "minimax-m2.7",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현체를 확정하지 않았고 문장 2도 통과했지만 특정 충돌 쌍을 묻지 않았다."
+    },
+    {
+      "model": "minimax-m2.7",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 충족했으나 문장 3을 통과시켰다."
+    },
+    {
+      "model": "minimax-m2.7",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 저장소 형태는 확인했지만 문장 3에서 지정된 충돌 결과를 묻지 않았다."
+    },
+    {
+      "model": "minimax-m3",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 자료 구조로 단정했고 문장 3은 알고리즘 유형만 물었다."
+    },
+    {
+      "model": "minimax-m3",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "지정된 충돌 질문은 포함했지만 그릇을 타입으로 단정했다."
+    },
+    {
+      "model": "minimax-m3",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": true,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "사용자 직접 허용과 역할 거부는 검토했지만 그릇을 데이터 타입으로 확정했다."
+    },
+    {
+      "model": "mistral-large-3-675b",
+      "run": 1,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 단정하고 문장 3을 통과시켰다."
+    },
+    {
+      "model": "mistral-large-3-675b",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 확정했고 문장 3의 충돌을 문제로 보지 않았다."
+    },
+    {
+      "model": "mistral-large-3-675b",
+      "run": 3,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 데이터 구조로 단정하고 문장 3을 명확하다고 통과시켰다."
+    },
+    {
+      "model": "nemotron-3-nano-30b",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구조나 객체 여부를 열어 두었지만 지정된 충돌 사례는 확인하지 않았다."
+    },
+    {
+      "model": "nemotron-3-nano-30b",
+      "run": 2,
+      "c1": false,
+      "c2": true,
+      "c3": false,
+      "passed_count": 1,
+      "result": "fail",
+      "reason": "그릇을 구조로 단정했고 문장 3도 나열된 우선순위만 되풀이했다."
+    },
+    {
+      "model": "nemotron-3-nano-30b",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현 후보는 열어 두었지만 사용자 직접 허용과 역할 거부를 직접 비교하지 않았다."
+    },
+    {
+      "model": "nemotron-3-super",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 실제 구현체는 확인했지만 문장 3의 필수 충돌 검사가 없다."
+    },
+    {
+      "model": "nemotron-3-super",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 충족했으나 문장 3은 일반적인 거부 우선만 확인했다."
+    },
+    {
+      "model": "nemotron-3-super",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현 대상을 여러 가능성으로 확인했지만 문장 3을 다루지 않았다."
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현체는 열어 두었지만 문장 3은 일반적인 평가 방식만 확인했다."
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "문장 1과 2는 적절했으나 사용자 직접 허용 대 역할 거부를 묻지 않았다."
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현 유형은 확인했지만 문장 3에서 지정된 충돌 쌍을 직접 시험하지 않았다."
+    },
+    {
+      "model": "qwen3.5-397b",
+      "run": 1,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇을 자리표시자로 남기고 확인했지만 문장 3을 통과시켰다."
+    },
+    {
+      "model": "qwen3.5-397b",
+      "run": 2,
+      "c1": true,
+      "c2": true,
+      "c3": false,
+      "passed_count": 2,
+      "result": "fail",
+      "reason": "그릇의 구현을 복수 후보로 열어 두었지만 문장 3은 평가 알고리즘만 물었다."
+    },
+    {
+      "model": "qwen3.5-397b",
+      "run": 3,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "passed_count": 3,
+      "result": "pass",
+      "reason": "그릇의 구현 형태를 확정하지 않았고 문장 2를 통과시키며 사용자 허용과 역할 거부의 충돌 결과를 명시적으로 검토했다."
+    }
+  ]
+}

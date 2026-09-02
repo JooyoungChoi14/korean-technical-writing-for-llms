@@ -11,6 +11,7 @@ The project asks a reader-centered question: even when a sentence is grammatical
 - A public-safe evaluation set of 20 synthetic cases
 - A reproducible [CLI installation and behavior smoke test](evals/cli-smoke/README.md)
 - A same-prompt [Codex and Ollama Cloud smoke test across 19 public models](evals/ollama-cloud/README.md)
+- A 285-run [prompt-ladder experiment](evals/ollama-cloud/prompt-ladder/README.md) separating harness failures from prompt-sensitive content failures
 - Codex plugin and repository marketplace metadata
 
 ```bash
@@ -25,11 +26,13 @@ On September 2, 2026, the skill was installed from the public GitHub repository 
 
 The same Codex harness was also connected to 19 Ollama Cloud models for one exploratory run per model. Fifteen produced final answers; GLM 5.3 and GLM 5.3 Flash met all three strict criteria. Four models were not scored because of tool-schema or service-availability errors. Configuration, judgments, limitations, and the 15 raw outputs are recorded in [`evals/ollama-cloud/`](evals/ollama-cloud/README.md).
 
+A follow-up direct-API experiment removed tools and ran five prompt conditions three times on all 19 models. All 285 calls reached the API without an error, separating the initial MiniMax, Mistral, and Qwen failures from Korean content quality. Generic self-check and counterexample instructions did not beat the baseline; explicitly naming the task-specific authorization conflict increased strict passes from 7 to 21 of 57. The [raw outputs, exact prompt additions, repeated judgments, and limitations](evals/ollama-cloud/prompt-ladder/README.md) are published for inspection.
+
 This is a compatibility and single-run behavioral smoke test, not a repeated performance benchmark. The [commands, per-model results, acceptance criteria, metadata, and captured outputs](evals/cli-smoke/README.md) are included for review.
 
 ## Public study scope
 
-The published evidence consists entirely of material available in this repository:
+The core writing study consists entirely of new, public material available in this repository:
 
 - Three black-box tasks covering authorization, revenue recognition, and policy-experiment analysis
 - Two models: Claude Sonnet and Codex gpt-5.4
@@ -38,6 +41,8 @@ The published evidence consists entirely of material available in this repositor
 - Two separate evaluation axes: reader clarity and semantic fidelity
 
 The models were not told that their writing style would be evaluated. Because the sample contains only three outputs per model with no repeated runs, the study does not claim general model rankings or generational effects. Earlier observations from private workplace documents motivated the question but are not part of the published corpus, evaluation set, or model comparison.
+
+The CLI installation checks and the 19-model Ollama prompt ladder are separate follow-up validations. They test installation compatibility, harness failures, and prompt sensitivity on one short regression task; they do not expand the core corpus or support a general ranking of Korean-language model quality.
 
 ## Authorship
 

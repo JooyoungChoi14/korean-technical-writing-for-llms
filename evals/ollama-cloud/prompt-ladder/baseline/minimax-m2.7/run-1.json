@@ -1,0 +1,23 @@
+{
+  "model": "minimax-m2.7",
+  "variant": "baseline",
+  "run": 1,
+  "started_at": "2026-09-02T06:05:46.6672706+00:00",
+  "completed_at": "2026-09-02T06:07:28.4919265+00:00",
+  "elapsed_seconds": 101.825,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 1983,
+    "output_tokens": 694,
+    "total_tokens": 2677,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

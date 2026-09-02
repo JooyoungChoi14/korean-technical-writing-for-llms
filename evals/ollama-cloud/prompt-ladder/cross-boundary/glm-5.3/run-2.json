@@ -1,0 +1,23 @@
+{
+  "model": "glm-5.3",
+  "variant": "cross-boundary",
+  "run": 2,
+  "started_at": "2026-09-02T07:22:58.0718773+00:00",
+  "completed_at": "2026-09-02T07:26:34.7095168+00:00",
+  "elapsed_seconds": 216.638,
+  "status": "empty",
+  "response_status": "incomplete",
+  "usage": {
+    "input_tokens": 2777,
+    "output_tokens": 16384,
+    "total_tokens": 19161,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

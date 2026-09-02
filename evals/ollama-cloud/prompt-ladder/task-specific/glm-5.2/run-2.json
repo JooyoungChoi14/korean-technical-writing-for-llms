@@ -1,0 +1,23 @@
+{
+  "model": "glm-5.2",
+  "variant": "task-specific",
+  "run": 2,
+  "started_at": "2026-09-02T06:54:35.4144950+00:00",
+  "completed_at": "2026-09-02T06:55:52.1872155+00:00",
+  "elapsed_seconds": 76.773,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2738,
+    "output_tokens": 1676,
+    "total_tokens": 4414,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

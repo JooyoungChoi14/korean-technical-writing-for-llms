@@ -1,0 +1,23 @@
+{
+  "model": "deepseek-v4-flash:0731",
+  "variant": "counterexample",
+  "run": 2,
+  "started_at": "2026-09-02T06:34:37.6966041+00:00",
+  "completed_at": "2026-09-02T06:34:54.5535392+00:00",
+  "elapsed_seconds": 16.857,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2431,
+    "output_tokens": 2962,
+    "total_tokens": 5393,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

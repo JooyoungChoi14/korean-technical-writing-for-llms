@@ -1,0 +1,23 @@
+{
+  "model": "glm-5.3-flash",
+  "variant": "baseline",
+  "run": 3,
+  "started_at": "2026-09-02T06:01:13.7519250+00:00",
+  "completed_at": "2026-09-02T06:04:30.9346118+00:00",
+  "elapsed_seconds": 197.183,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2531,
+    "output_tokens": 8341,
+    "total_tokens": 10872,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

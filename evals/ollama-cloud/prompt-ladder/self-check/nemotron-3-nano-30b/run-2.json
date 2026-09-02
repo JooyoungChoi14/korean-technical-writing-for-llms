@@ -1,0 +1,23 @@
+{
+  "model": "nemotron-3-nano:30b",
+  "variant": "self-check",
+  "run": 2,
+  "started_at": "2026-09-02T06:29:49.0986697+00:00",
+  "completed_at": "2026-09-02T06:30:15.3901663+00:00",
+  "elapsed_seconds": 26.291,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2139,
+    "output_tokens": 1308,
+    "total_tokens": 3447,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

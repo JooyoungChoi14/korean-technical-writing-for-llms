@@ -1,0 +1,23 @@
+{
+  "model": "minimax-m3",
+  "variant": "self-check",
+  "run": 2,
+  "started_at": "2026-09-02T06:28:13.5016963+00:00",
+  "completed_at": "2026-09-02T06:30:35.0062527+00:00",
+  "elapsed_seconds": 141.505,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2217,
+    "output_tokens": 5901,
+    "total_tokens": 8118,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

@@ -1,0 +1,23 @@
+{
+  "model": "glm-5.3",
+  "variant": "baseline",
+  "run": 3,
+  "started_at": "2026-09-02T06:00:40.6955915+00:00",
+  "completed_at": "2026-09-02T06:03:13.7134810+00:00",
+  "elapsed_seconds": 153.018,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2531,
+    "output_tokens": 14488,
+    "total_tokens": 17019,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

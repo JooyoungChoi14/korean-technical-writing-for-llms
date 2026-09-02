@@ -1,0 +1,23 @@
+{
+  "model": "nemotron-3-super",
+  "variant": "self-check",
+  "run": 2,
+  "started_at": "2026-09-02T06:30:11.0622121+00:00",
+  "completed_at": "2026-09-02T06:31:32.2604549+00:00",
+  "elapsed_seconds": 81.198,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2139,
+    "output_tokens": 1481,
+    "total_tokens": 3620,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

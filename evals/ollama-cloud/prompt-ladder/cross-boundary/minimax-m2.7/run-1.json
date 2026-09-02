@@ -1,0 +1,23 @@
+{
+  "model": "minimax-m2.7",
+  "variant": "cross-boundary",
+  "run": 1,
+  "started_at": "2026-09-02T07:28:47.3839416+00:00",
+  "completed_at": "2026-09-02T07:30:26.5210791+00:00",
+  "elapsed_seconds": 99.137,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2140,
+    "output_tokens": 514,
+    "total_tokens": 2654,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

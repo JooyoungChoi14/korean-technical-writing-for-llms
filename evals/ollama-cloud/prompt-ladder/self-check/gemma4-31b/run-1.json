@@ -1,0 +1,23 @@
+{
+  "model": "gemma4:31b",
+  "variant": "self-check",
+  "run": 1,
+  "started_at": "2026-09-02T06:20:32.5954721+00:00",
+  "completed_at": "2026-09-02T06:20:48.7575298+00:00",
+  "elapsed_seconds": 16.162,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2196,
+    "output_tokens": 411,
+    "total_tokens": 2607,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

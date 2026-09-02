@@ -1,0 +1,23 @@
+{
+  "model": "glm-5.3-flash",
+  "variant": "self-check",
+  "run": 1,
+  "started_at": "2026-09-02T06:21:49.3469724+00:00",
+  "completed_at": "2026-09-02T06:25:19.2314160+00:00",
+  "elapsed_seconds": 209.884,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2654,
+    "output_tokens": 14195,
+    "total_tokens": 16849,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

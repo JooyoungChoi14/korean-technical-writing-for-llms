@@ -1,0 +1,23 @@
+{
+  "model": "gpt-oss:20b",
+  "variant": "task-specific",
+  "run": 3,
+  "started_at": "2026-09-02T06:57:34.3532815+00:00",
+  "completed_at": "2026-09-02T06:58:55.0177235+00:00",
+  "elapsed_seconds": 80.664,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2332,
+    "output_tokens": 964,
+    "total_tokens": 3296,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

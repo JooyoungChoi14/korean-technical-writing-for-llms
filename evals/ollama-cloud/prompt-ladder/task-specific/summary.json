@@ -1,0 +1,1313 @@
+[
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:53:54.6726086+09:00",
+    "completed_at": "2026-09-02T15:54:19.8784215+09:00",
+    "elapsed_seconds": 25.206,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 3021,
+      "total_tokens": 5444,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:53:54.8988364+09:00",
+    "completed_at": "2026-09-02T15:54:24.0763991+09:00",
+    "elapsed_seconds": 29.178,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 3049,
+      "total_tokens": 5472,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:53:55.1941759+09:00",
+    "completed_at": "2026-09-02T15:54:18.3713414+09:00",
+    "elapsed_seconds": 23.177,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 2917,
+      "total_tokens": 5340,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:53:55.4060887+09:00",
+    "completed_at": "2026-09-02T15:54:12.6875235+09:00",
+    "elapsed_seconds": 17.281,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 3555,
+      "total_tokens": 5978,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:53:55.6510343+09:00",
+    "completed_at": "2026-09-02T15:54:34.7269802+09:00",
+    "elapsed_seconds": 39.076,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 2732,
+      "total_tokens": 5155,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-pro:0813",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:53:55.8791157+09:00",
+    "completed_at": "2026-09-02T15:54:44.8727056+09:00",
+    "elapsed_seconds": 48.994,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2423,
+      "output_tokens": 4841,
+      "total_tokens": 7264,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:54:13.3808347+09:00",
+    "completed_at": "2026-09-02T15:54:26.684022+09:00",
+    "elapsed_seconds": 13.303,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2256,
+      "output_tokens": 433,
+      "total_tokens": 2689,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:54:18.9875507+09:00",
+    "completed_at": "2026-09-02T15:54:28.5247201+09:00",
+    "elapsed_seconds": 9.537,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2256,
+      "output_tokens": 362,
+      "total_tokens": 2618,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:54:20.4815653+09:00",
+    "completed_at": "2026-09-02T15:54:30.7109212+09:00",
+    "elapsed_seconds": 10.229,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2256,
+      "output_tokens": 388,
+      "total_tokens": 2644,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:54:24.7067397+09:00",
+    "completed_at": "2026-09-02T15:55:46.5326793+09:00",
+    "elapsed_seconds": 81.826,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2731,
+      "output_tokens": 3102,
+      "total_tokens": 5833,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:54:27.3692076+09:00",
+    "completed_at": "2026-09-02T15:55:38.6385636+09:00",
+    "elapsed_seconds": 71.269,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2731,
+      "output_tokens": 3522,
+      "total_tokens": 6253,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.1",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:54:29.1896766+09:00",
+    "completed_at": "2026-09-02T15:55:33.4450149+09:00",
+    "elapsed_seconds": 64.255,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2731,
+      "output_tokens": 2680,
+      "total_tokens": 5411,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:54:31.3358924+09:00",
+    "completed_at": "2026-09-02T15:55:48.9732493+09:00",
+    "elapsed_seconds": 77.637,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 2126,
+      "total_tokens": 4864,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:54:35.414495+09:00",
+    "completed_at": "2026-09-02T15:55:52.1872155+09:00",
+    "elapsed_seconds": 76.773,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 1676,
+      "total_tokens": 4414,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:54:45.4758364+09:00",
+    "completed_at": "2026-09-02T15:56:00.5833088+09:00",
+    "elapsed_seconds": 75.107,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 1832,
+      "total_tokens": 4570,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:55:34.254178+09:00",
+    "completed_at": "2026-09-02T15:56:40.3196665+09:00",
+    "elapsed_seconds": 66.065,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 10571,
+      "total_tokens": 13309,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:55:39.2569845+09:00",
+    "completed_at": "2026-09-02T15:57:08.3054755+09:00",
+    "elapsed_seconds": 89.048,
+    "status": "empty",
+    "response_status": "incomplete",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 16384,
+      "total_tokens": 19122,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:55:47.1803786+09:00",
+    "completed_at": "2026-09-02T15:57:33.7651222+09:00",
+    "elapsed_seconds": 106.585,
+    "status": "empty",
+    "response_status": "incomplete",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 16384,
+      "total_tokens": 19122,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:55:49.6661313+09:00",
+    "completed_at": "2026-09-02T15:58:31.4640071+09:00",
+    "elapsed_seconds": 161.798,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 10246,
+      "total_tokens": 12984,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:55:52.8304379+09:00",
+    "completed_at": "2026-09-02T15:58:37.4420181+09:00",
+    "elapsed_seconds": 164.612,
+    "status": "empty",
+    "response_status": "incomplete",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 16384,
+      "total_tokens": 19122,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:56:01.2303446+09:00",
+    "completed_at": "2026-09-02T15:59:46.2955802+09:00",
+    "elapsed_seconds": 225.065,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2738,
+      "output_tokens": 12587,
+      "total_tokens": 15325,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:58:32.0741714+09:00",
+    "completed_at": "2026-09-02T15:58:52.8689809+09:00",
+    "elapsed_seconds": 20.795,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 878,
+      "total_tokens": 3210,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:58:38.1026429+09:00",
+    "completed_at": "2026-09-02T15:58:58.1752949+09:00",
+    "elapsed_seconds": 20.073,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 1050,
+      "total_tokens": 3382,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:58:45.2738269+09:00",
+    "completed_at": "2026-09-02T15:58:58.9926676+09:00",
+    "elapsed_seconds": 13.719,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 697,
+      "total_tokens": 3029,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:56:40.9614608+09:00",
+    "completed_at": "2026-09-02T15:58:44.6501179+09:00",
+    "elapsed_seconds": 123.689,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 1234,
+      "total_tokens": 3566,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:57:08.9563777+09:00",
+    "completed_at": "2026-09-02T15:58:49.054823+09:00",
+    "elapsed_seconds": 100.098,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 1410,
+      "total_tokens": 3742,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:20b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:57:34.3532815+09:00",
+    "completed_at": "2026-09-02T15:58:55.0177235+09:00",
+    "elapsed_seconds": 80.664,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2332,
+      "output_tokens": 964,
+      "total_tokens": 3296,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:58:49.6808868+09:00",
+    "completed_at": "2026-09-02T16:00:03.0406956+09:00",
+    "elapsed_seconds": 73.36,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 3648,
+      "total_tokens": 6368,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:58:53.4644944+09:00",
+    "completed_at": "2026-09-02T15:59:51.2816411+09:00",
+    "elapsed_seconds": 57.817,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 3073,
+      "total_tokens": 5793,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:58:55.6074329+09:00",
+    "completed_at": "2026-09-02T16:01:56.2601136+09:00",
+    "elapsed_seconds": 180.653,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 4248,
+      "total_tokens": 6968,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:58:58.7990952+09:00",
+    "completed_at": "2026-09-02T16:00:11.2353229+09:00",
+    "elapsed_seconds": 72.436,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 2737,
+      "total_tokens": 5457,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T15:58:59.6534883+09:00",
+    "completed_at": "2026-09-02T16:00:22.8518278+09:00",
+    "elapsed_seconds": 83.198,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 2240,
+      "total_tokens": 4960,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.7-code",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T15:59:46.9466572+09:00",
+    "completed_at": "2026-09-02T16:00:32.4758123+09:00",
+    "elapsed_seconds": 45.529,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2720,
+      "output_tokens": 2251,
+      "total_tokens": 4971,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T15:59:51.9044565+09:00",
+    "completed_at": "2026-09-02T16:01:23.7080115+09:00",
+    "elapsed_seconds": 91.804,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2861,
+      "output_tokens": 4775,
+      "total_tokens": 7636,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:00:03.6725615+09:00",
+    "completed_at": "2026-09-02T16:01:52.8632207+09:00",
+    "elapsed_seconds": 109.191,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2861,
+      "output_tokens": 6315,
+      "total_tokens": 9176,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:00:12.0937252+09:00",
+    "completed_at": "2026-09-02T16:02:16.5276536+09:00",
+    "elapsed_seconds": 124.434,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2861,
+      "output_tokens": 4335,
+      "total_tokens": 7196,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:00:23.5941102+09:00",
+    "completed_at": "2026-09-02T16:02:14.9370114+09:00",
+    "elapsed_seconds": 111.343,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2118,
+      "output_tokens": 824,
+      "total_tokens": 2942,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:00:33.106104+09:00",
+    "completed_at": "2026-09-02T16:02:09.9876109+09:00",
+    "elapsed_seconds": 96.882,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2118,
+      "output_tokens": 581,
+      "total_tokens": 2699,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "minimax-m2.7",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:01:24.3240695+09:00",
+    "completed_at": "2026-09-02T16:02:28.0991539+09:00",
+    "elapsed_seconds": 63.775,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2118,
+      "output_tokens": 777,
+      "total_tokens": 2895,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:01:53.5202126+09:00",
+    "completed_at": "2026-09-02T16:03:15.1517199+09:00",
+    "elapsed_seconds": 81.632,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2274,
+      "output_tokens": 6531,
+      "total_tokens": 8805,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:01:56.9934874+09:00",
+    "completed_at": "2026-09-02T16:03:24.8025659+09:00",
+    "elapsed_seconds": 87.809,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2274,
+      "output_tokens": 3433,
+      "total_tokens": 5707,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "minimax-m3",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:02:10.6377253+09:00",
+    "completed_at": "2026-09-02T16:03:48.6038681+09:00",
+    "elapsed_seconds": 97.966,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2274,
+      "output_tokens": 6224,
+      "total_tokens": 8498,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:02:15.5703351+09:00",
+    "completed_at": "2026-09-02T16:03:31.0227588+09:00",
+    "elapsed_seconds": 75.452,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2187,
+      "output_tokens": 339,
+      "total_tokens": 2526,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:02:17.1399495+09:00",
+    "completed_at": "2026-09-02T16:03:33.1975477+09:00",
+    "elapsed_seconds": 76.058,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2187,
+      "output_tokens": 343,
+      "total_tokens": 2530,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "mistral-large-3:675b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:02:28.6908571+09:00",
+    "completed_at": "2026-09-02T16:03:39.9743704+09:00",
+    "elapsed_seconds": 71.284,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2187,
+      "output_tokens": 359,
+      "total_tokens": 2546,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:03:15.7500323+09:00",
+    "completed_at": "2026-09-02T16:03:52.2461632+09:00",
+    "elapsed_seconds": 36.496,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 1959,
+      "total_tokens": 4157,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:03:25.4219722+09:00",
+    "completed_at": "2026-09-02T16:03:52.6561921+09:00",
+    "elapsed_seconds": 27.234,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 1199,
+      "total_tokens": 3397,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-nano:30b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:03:31.753629+09:00",
+    "completed_at": "2026-09-02T16:04:02.7039163+09:00",
+    "elapsed_seconds": 30.95,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 1470,
+      "total_tokens": 3668,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:03:33.818488+09:00",
+    "completed_at": "2026-09-02T16:05:30.6018095+09:00",
+    "elapsed_seconds": 116.783,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 1382,
+      "total_tokens": 3580,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:03:40.5591024+09:00",
+    "completed_at": "2026-09-02T16:04:09.1365923+09:00",
+    "elapsed_seconds": 28.577,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 771,
+      "total_tokens": 2969,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-super",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:03:49.2139372+09:00",
+    "completed_at": "2026-09-02T16:05:03.322158+09:00",
+    "elapsed_seconds": 74.108,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 2204,
+      "total_tokens": 4402,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:03:52.8208012+09:00",
+    "completed_at": "2026-09-02T16:05:20.7133232+09:00",
+    "elapsed_seconds": 87.893,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 676,
+      "total_tokens": 2874,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:03:53.2679328+09:00",
+    "completed_at": "2026-09-02T16:05:49.5183071+09:00",
+    "elapsed_seconds": 116.25,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 988,
+      "total_tokens": 3186,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "nemotron-3-ultra",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:04:03.4392579+09:00",
+    "completed_at": "2026-09-02T16:06:28.311903+09:00",
+    "elapsed_seconds": 144.873,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2198,
+      "output_tokens": 738,
+      "total_tokens": 2936,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "task-specific",
+    "run": 1,
+    "started_at": "2026-09-02T16:04:09.7395633+09:00",
+    "completed_at": "2026-09-02T16:06:13.0299569+09:00",
+    "elapsed_seconds": 123.29,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2149,
+      "output_tokens": 3653,
+      "total_tokens": 5802,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "task-specific",
+    "run": 2,
+    "started_at": "2026-09-02T16:05:03.8988094+09:00",
+    "completed_at": "2026-09-02T16:06:45.9128027+09:00",
+    "elapsed_seconds": 102.014,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2149,
+      "output_tokens": 4923,
+      "total_tokens": 7072,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "task-specific",
+    "run": 3,
+    "started_at": "2026-09-02T16:05:21.325598+09:00",
+    "completed_at": "2026-09-02T16:06:44.5921505+09:00",
+    "elapsed_seconds": 83.267,
+    "status": "completed",
+    "response_status": "completed",
+    "usage": {
+      "input_tokens": 2149,
+      "output_tokens": 2610,
+      "total_tokens": 4759,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  }
+]

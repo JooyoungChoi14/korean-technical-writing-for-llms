@@ -1,0 +1,23 @@
+{
+  "model": "gpt-oss:120b",
+  "variant": "cross-boundary",
+  "run": 2,
+  "started_at": "2026-09-02T07:27:08.0039541+00:00",
+  "completed_at": "2026-09-02T07:27:23.5502889+00:00",
+  "elapsed_seconds": 15.546,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2360,
+    "output_tokens": 810,
+    "total_tokens": 3170,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

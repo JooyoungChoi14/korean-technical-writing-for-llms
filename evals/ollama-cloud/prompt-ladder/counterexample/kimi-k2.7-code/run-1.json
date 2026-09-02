@@ -1,0 +1,23 @@
+{
+  "model": "kimi-k2.7-code",
+  "variant": "counterexample",
+  "run": 1,
+  "started_at": "2026-09-02T06:39:44.2270929+00:00",
+  "completed_at": "2026-09-02T06:41:28.3146975+00:00",
+  "elapsed_seconds": 104.088,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2735,
+    "output_tokens": 3323,
+    "total_tokens": 6058,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

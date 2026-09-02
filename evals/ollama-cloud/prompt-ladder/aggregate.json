@@ -1,0 +1,736 @@
+{
+  "date": "2026-09-02",
+  "design": {
+    "models": 19,
+    "runs_per_model_per_variant": 3,
+    "variants": [
+      "baseline",
+      "self-check",
+      "counterexample",
+      "cross-boundary",
+      "task-specific"
+    ],
+    "total_runs": 285,
+    "judge": "Codex gpt-5.6-sol, reasoning effort high; representative pass and fail outputs manually checked",
+    "acceptance": "../../cli-smoke/expected.json"
+  },
+  "variants": {
+    "baseline": {
+      "total": 57,
+      "completed": 55,
+      "empty": 2,
+      "passed": 7,
+      "failed": 48,
+      "median_elapsed_seconds": 71.025,
+      "input_tokens": 129300.0,
+      "output_tokens": 191081.0
+    },
+    "self-check": {
+      "total": 57,
+      "completed": 53,
+      "empty": 4,
+      "passed": 5,
+      "failed": 48,
+      "median_elapsed_seconds": 73.552,
+      "input_tokens": 135000.0,
+      "output_tokens": 215184.0
+    },
+    "counterexample": {
+      "total": 57,
+      "completed": 53,
+      "empty": 4,
+      "passed": 6,
+      "failed": 47,
+      "median_elapsed_seconds": 67.432,
+      "input_tokens": 136830.0,
+      "output_tokens": 207839.0
+    },
+    "cross-boundary": {
+      "total": 57,
+      "completed": 55,
+      "empty": 2,
+      "passed": 3,
+      "failed": 52,
+      "median_elapsed_seconds": 72.315,
+      "input_tokens": 140691.0,
+      "output_tokens": 216501.0
+    },
+    "task-specific": {
+      "total": 57,
+      "completed": 54,
+      "empty": 3,
+      "passed": 21,
+      "failed": 33,
+      "median_elapsed_seconds": 76.058,
+      "input_tokens": 139002.0,
+      "output_tokens": 200631.0
+    }
+  },
+  "models": [
+    {
+      "model": "deepseek-v4-flash-0731",
+      "variants": {
+        "baseline": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 13.506
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 9.901
+        },
+        "counterexample": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 16.857
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 12.358
+        },
+        "task-specific": {
+          "passed": 3,
+          "failed": 0,
+          "empty": 0,
+          "median_elapsed_seconds": 25.206
+        }
+      }
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 29.634
+        },
+        "self-check": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 21.835
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 37.021
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 37.389
+        },
+        "task-specific": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 39.076
+        }
+      }
+    },
+    {
+      "model": "gemma4-31b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 19.676
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 15.229
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 19.16
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 22.347
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 10.229
+        }
+      }
+    },
+    {
+      "model": "glm-5.1",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 51.658
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 48.251
+        },
+        "counterexample": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 90.186
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 63.756
+        },
+        "task-specific": {
+          "passed": 3,
+          "failed": 0,
+          "empty": 0,
+          "median_elapsed_seconds": 71.269
+        }
+      }
+    },
+    {
+      "model": "glm-5.2",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 63.1
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 57.917
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 59.796
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 73.351
+        },
+        "task-specific": {
+          "passed": 3,
+          "failed": 0,
+          "empty": 0,
+          "median_elapsed_seconds": 76.773
+        }
+      }
+    },
+    {
+      "model": "glm-5.3",
+      "variants": {
+        "baseline": {
+          "passed": 2,
+          "failed": 0,
+          "empty": 1,
+          "median_elapsed_seconds": 118.901
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 1,
+          "empty": 2,
+          "median_elapsed_seconds": 115.744
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 1,
+          "empty": 2,
+          "median_elapsed_seconds": 151.446
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 1,
+          "empty": 2,
+          "median_elapsed_seconds": 170.655
+        },
+        "task-specific": {
+          "passed": 1,
+          "failed": 0,
+          "empty": 2,
+          "median_elapsed_seconds": 89.048
+        }
+      }
+    },
+    {
+      "model": "glm-5.3-flash",
+      "variants": {
+        "baseline": {
+          "passed": 2,
+          "failed": 0,
+          "empty": 1,
+          "median_elapsed_seconds": 197.183
+        },
+        "self-check": {
+          "passed": 1,
+          "failed": 0,
+          "empty": 2,
+          "median_elapsed_seconds": 209.884
+        },
+        "counterexample": {
+          "passed": 1,
+          "failed": 0,
+          "empty": 2,
+          "median_elapsed_seconds": 175.57
+        },
+        "cross-boundary": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 233.666
+        },
+        "task-specific": {
+          "passed": 2,
+          "failed": 0,
+          "empty": 1,
+          "median_elapsed_seconds": 164.612
+        }
+      }
+    },
+    {
+      "model": "gpt-oss-120b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 26.28
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 19.717
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 23.13
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 16.705
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 20.073
+        }
+      }
+    },
+    {
+      "model": "gpt-oss-20b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 78.35
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 123.785
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 72.655
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 89.647
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 100.098
+        }
+      }
+    },
+    {
+      "model": "kimi-k2.6",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 82.516
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 62.401
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 84.463
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 74.213
+        },
+        "task-specific": {
+          "passed": 3,
+          "failed": 0,
+          "empty": 0,
+          "median_elapsed_seconds": 73.36
+        }
+      }
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 74.529
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 78.007
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 99.911
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 66.204
+        },
+        "task-specific": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 72.436
+        }
+      }
+    },
+    {
+      "model": "kimi-k3",
+      "variants": {
+        "baseline": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 111.159
+        },
+        "self-check": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 96.068
+        },
+        "counterexample": {
+          "passed": 2,
+          "failed": 1,
+          "empty": 0,
+          "median_elapsed_seconds": 97.766
+        },
+        "cross-boundary": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 151.997
+        },
+        "task-specific": {
+          "passed": 3,
+          "failed": 0,
+          "empty": 0,
+          "median_elapsed_seconds": 109.191
+        }
+      }
+    },
+    {
+      "model": "minimax-m2.7",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 95.615
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 60.891
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 88.679
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 99.137
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 96.882
+        }
+      }
+    },
+    {
+      "model": "minimax-m3",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 88.072
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 141.505
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 101.175
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 149.655
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 87.809
+        }
+      }
+    },
+    {
+      "model": "mistral-large-3-675b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 82.338
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 76.568
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 55.971
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 43.556
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 75.452
+        }
+      }
+    },
+    {
+      "model": "nemotron-3-nano-30b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 37.076
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 26.291
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 15.4
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 34.401
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 30.95
+        }
+      }
+    },
+    {
+      "model": "nemotron-3-super",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 71.014
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 59.024
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 30.127
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 47.884
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 74.108
+        }
+      }
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 69.51
+        },
+        "self-check": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 114.851
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 86.193
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 110.069
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 116.25
+        }
+      }
+    },
+    {
+      "model": "qwen3.5-397b",
+      "variants": {
+        "baseline": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 71.025
+        },
+        "self-check": {
+          "passed": 1,
+          "failed": 2,
+          "empty": 0,
+          "median_elapsed_seconds": 101.746
+        },
+        "counterexample": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 114.603
+        },
+        "cross-boundary": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 118.191
+        },
+        "task-specific": {
+          "passed": 0,
+          "failed": 3,
+          "empty": 0,
+          "median_elapsed_seconds": 102.014
+        }
+      }
+    }
+  ]
+}

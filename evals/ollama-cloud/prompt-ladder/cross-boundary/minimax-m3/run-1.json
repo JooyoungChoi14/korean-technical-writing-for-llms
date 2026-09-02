@@ -1,0 +1,23 @@
+{
+  "model": "minimax-m3",
+  "variant": "cross-boundary",
+  "run": 1,
+  "started_at": "2026-09-02T07:30:14.3360259+00:00",
+  "completed_at": "2026-09-02T07:32:47.9057749+00:00",
+  "elapsed_seconds": 153.57,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2296,
+    "output_tokens": 5136,
+    "total_tokens": 7432,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

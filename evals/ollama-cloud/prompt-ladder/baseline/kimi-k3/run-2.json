@@ -1,0 +1,23 @@
+{
+  "model": "kimi-k3",
+  "variant": "baseline",
+  "run": 2,
+  "started_at": "2026-09-02T06:05:28.6403182+00:00",
+  "completed_at": "2026-09-02T06:07:20.0526446+00:00",
+  "elapsed_seconds": 111.412,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2652,
+    "output_tokens": 6324,
+    "total_tokens": 8976,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

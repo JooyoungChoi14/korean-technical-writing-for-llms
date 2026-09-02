@@ -1,0 +1,23 @@
+{
+  "model": "mistral-large-3:675b",
+  "variant": "self-check",
+  "run": 3,
+  "started_at": "2026-09-02T06:29:00.2421897+00:00",
+  "completed_at": "2026-09-02T06:30:04.1901694+00:00",
+  "elapsed_seconds": 63.948,
+  "status": "completed",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 2128,
+    "output_tokens": 393,
+    "total_tokens": 2521,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}
