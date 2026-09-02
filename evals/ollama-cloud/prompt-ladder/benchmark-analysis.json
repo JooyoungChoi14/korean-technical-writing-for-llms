@@ -1,0 +1,111 @@
+{
+  "generated_from": {
+    "context": "benchmark-context.json",
+    "aggregate": "aggregate.json"
+  },
+  "warning": "소표본 탐색값이며 통계적 유의성, 인과성 또는 모델 순위를 뜻하지 않는다.",
+  "cohorts": [
+    {
+      "id": "zai-terminal-bench-2.1",
+      "benchmark": "Terminal Bench 2.1",
+      "source": "https://huggingface.co/zai-org/GLM-5.3",
+      "n": 4,
+      "rows": [
+        {
+          "model": "glm-5.3",
+          "score": 88.2,
+          "baseline_passed_of_3": 2,
+          "task_specific_passed_of_3": 1
+        },
+        {
+          "model": "glm-5.2",
+          "score": 81.0,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 3
+        },
+        {
+          "model": "kimi-k3",
+          "score": 88.3,
+          "baseline_passed_of_3": 2,
+          "task_specific_passed_of_3": 3
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "score": 87.9,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 2
+        }
+      ],
+      "correlations": {
+        "baseline": {
+          "pearson": 0.614,
+          "spearman": 0.894
+        },
+        "task-specific": {
+          "pearson": -0.512,
+          "spearman": -0.105
+        }
+      }
+    },
+    {
+      "id": "nvidia-terminal-bench-2.1",
+      "benchmark": "Terminal Bench 2.1",
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "n": 7,
+      "rows": [
+        {
+          "model": "nemotron-3-ultra",
+          "score": 56.4,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 0
+        },
+        {
+          "model": "minimax-m2.7",
+          "score": 55.5,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 0
+        },
+        {
+          "model": "glm-5.1",
+          "score": 59.3,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 3
+        },
+        {
+          "model": "kimi-k2.6",
+          "score": 67.2,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 3
+        },
+        {
+          "model": "qwen3.5-397b",
+          "score": 49.9,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 0
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "score": 49.2,
+          "baseline_passed_of_3": 0,
+          "task_specific_passed_of_3": 2
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "score": 54.2,
+          "baseline_passed_of_3": 1,
+          "task_specific_passed_of_3": 3
+        }
+      ],
+      "correlations": {
+        "baseline": {
+          "pearson": -0.127,
+          "spearman": -0.204
+        },
+        "task-specific": {
+          "pearson": 0.451,
+          "spearman": 0.386
+        }
+      }
+    }
+  ]
+}

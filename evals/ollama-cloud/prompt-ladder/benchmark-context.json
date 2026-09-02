@@ -1,0 +1,154 @@
+{
+  "collected_at": "2026-09-02",
+  "purpose": "공개 벤치마크와 프롬프트 사다리 결과를 함께 보되, 서로 다른 하네스와 추론 설정의 점수를 하나의 순위표로 합치지 않는다.",
+  "comparability_limits": [
+    "공개 점수는 제공자, 체크포인트, 하네스, 추론 강도, 샘플링 설정이 서로 다르다.",
+    "이번 실험은 temperature 0, 도구 없음, reasoning_effort 미지정 조건이다.",
+    "Terminal Bench와 코딩·지시 준수 벤치마크는 한국어 기술 문장의 의미 보류와 교차 규칙 탐지를 직접 측정하지 않는다.",
+    "상관계수는 동일 출처 표 안의 소집단에서만 계산하며 인과 추정이나 모델 순위에 사용하지 않는다."
+  ],
+  "cohorts": [
+    {
+      "id": "zai-terminal-bench-2.1",
+      "benchmark": "Terminal Bench 2.1",
+      "source": "https://huggingface.co/zai-org/GLM-5.3",
+      "source_owner": "Z.ai",
+      "entries": [
+        {"model": "glm-5.3", "score": 88.2},
+        {"model": "glm-5.2", "score": 81.0},
+        {"model": "kimi-k3", "score": 88.3},
+        {"model": "deepseek-v4-pro-0813", "score": 87.9}
+      ]
+    },
+    {
+      "id": "nvidia-terminal-bench-2.1",
+      "benchmark": "Terminal Bench 2.1",
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "source_owner": "NVIDIA",
+      "entries": [
+        {"model": "nemotron-3-ultra", "score": 56.4},
+        {"model": "minimax-m2.7", "score": 55.5},
+        {"model": "glm-5.1", "score": 59.3},
+        {"model": "kimi-k2.6", "score": 67.2},
+        {"model": "qwen3.5-397b", "score": 49.9},
+        {"model": "deepseek-v4-pro-0813", "score": 49.2},
+        {"model": "deepseek-v4-flash-0731", "score": 54.2}
+      ],
+      "checkpoint_note": "표의 DeepSeek V4 Pro가 0813 GA 체크포인트와 동일하다고 확인할 수 없어 버전 차이가 포함될 수 있다."
+    }
+  ],
+  "selected_evidence": [
+    {
+      "model": "gemma4-31b",
+      "total_parameters_b": 30.7,
+      "metrics": {"MMLU-Pro": 85.2, "GPQA-Diamond": 84.3, "Tau2": 76.9},
+      "source": "https://huggingface.co/google/gemma-4-31B"
+    },
+    {
+      "model": "glm-5.3-flash",
+      "total_parameters_b": 320,
+      "active_parameters_b": 18,
+      "metrics": {"Terminal-Bench-2.1": 84.3},
+      "source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "inference_note": "공식 카드에서는 벤치마크 재현에 reasoning_effort max를 사용하라고 안내한다."
+    },
+    {
+      "model": "gpt-oss-120b",
+      "total_parameters_b": 117,
+      "active_parameters_b": 5.1,
+      "source": "https://openai.com/index/introducing-gpt-oss/",
+      "training_note": "공식 설명은 학습 데이터가 대부분 영어이며 STEM, 코딩, 일반 지식에 초점을 맞췄다고 밝힌다."
+    },
+    {
+      "model": "gpt-oss-20b",
+      "total_parameters_b": 21,
+      "active_parameters_b": 3.6,
+      "source": "https://openai.com/index/introducing-gpt-oss/",
+      "training_note": "공식 설명은 학습 데이터가 대부분 영어이며 STEM, 코딩, 일반 지식에 초점을 맞췄다고 밝힌다."
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "total_parameters_b": 1000,
+      "active_parameters_b": 32,
+      "metrics": {"Kimi-Code-Bench-v2": 62.0, "MCP-Atlas": 76.0},
+      "source": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
+      "inference_note": "공식 평가는 thinking 모드, temperature 1.0, top_p 0.95를 사용했다."
+    },
+    {
+      "model": "kimi-k3",
+      "total_parameters_b": 2800,
+      "active_parameters_b": 104,
+      "metrics": {"GPQA-Diamond": 93.5, "Terminal-Bench-2.1": 88.3},
+      "source": "https://huggingface.co/moonshotai/Kimi-K3",
+      "inference_note": "공식 결과는 reasoning_effort max와 temperature 1.0을 사용했다."
+    },
+    {
+      "model": "minimax-m2.7",
+      "total_parameters_b": 229,
+      "active_parameters_b": 10,
+      "metrics": {"Terminal-Bench-2.0": 57.0, "SWE-Bench-Multilingual": 76.5},
+      "source": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+      "inference_note": "공식 카드는 temperature 1.0, top_p 0.95, top_k 40을 권장한다."
+    },
+    {
+      "model": "minimax-m3",
+      "total_parameters_b": 428,
+      "active_parameters_b": 23,
+      "metrics": {"SWE-Bench-Verified": 80.5, "SWE-Bench-Pro": 59.0},
+      "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "inference_note": "공식 카드는 temperature 1.0, top_p 0.95를 권장한다."
+    },
+    {
+      "model": "mistral-large-3-675b",
+      "total_parameters_b": 675,
+      "active_parameters_b": 41,
+      "source": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512-BF16",
+      "model_note": "공식 카드는 일반 목적 지시 모델이지만 전용 추론 모델은 아니라고 명시한다."
+    },
+    {
+      "model": "nemotron-3-nano-30b",
+      "total_parameters_b": 30,
+      "active_parameters_b": 3,
+      "metrics": {"MMLU-Pro": 78.1, "GPQA": 72.5, "IFBench": 72.2},
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8"
+    },
+    {
+      "model": "nemotron-3-super",
+      "total_parameters_b": 120,
+      "active_parameters_b": 12,
+      "metrics": {"MMLU-Pro": 83.73, "GPQA": 79.23, "LiveCodeBench-v6": 78.69},
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8"
+    },
+    {
+      "model": "nemotron-3-ultra",
+      "total_parameters_b": 550,
+      "active_parameters_b": 55,
+      "metrics": {"Terminal-Bench-2.1": 56.4, "SWE-Bench-Multilingual": 67.7},
+      "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+    },
+    {
+      "model": "qwen3.5-397b",
+      "total_parameters_b": 397,
+      "active_parameters_b": 17,
+      "metrics": {"MMLU-Pro": 87.8, "IFEval": 92.6, "IFBench": 76.5, "MultiChallenge": 67.6},
+      "source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B-FP8"
+    }
+  ],
+  "additional_sources": [
+    {
+      "models": ["deepseek-v4-flash-0731", "deepseek-v4-pro-0813"],
+      "source": "https://api-docs.deepseek.com/updates/",
+      "note": "공개 Code Agent 평가는 max effort, top_p 0.95, temperature 1.0 조건이라고 명시한다."
+    },
+    {
+      "models": ["deepseek-v4-flash-0731", "deepseek-v4-pro-0813"],
+      "source": "https://api-docs.deepseek.com/news/news260424/",
+      "note": "Flash는 284B/13B active, Pro는 1.6T/49B active로 공개됐다."
+    },
+    {
+      "models": ["glm-5.1", "glm-5.2", "glm-5.3"],
+      "source": "https://huggingface.co/zai-org/GLM-5.3",
+      "note": "GLM-5.3은 GLM-5.2와 같은 base model을 사용하고 향상은 post-training에서 왔다고 설명한다."
+    }
+  ]
+}
