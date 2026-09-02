@@ -51,7 +51,9 @@ def main() -> int:
         CLI_SMOKE / "expected.json",
         CLI_SMOKE / "run-metadata.json",
         CLI_SMOKE / "outputs" / "claude-code-sonnet.md",
+        CLI_SMOKE / "outputs" / "claude-code-opus-5.md",
         CLI_SMOKE / "outputs" / "codex-gpt-5.6-sol.md",
+        CLI_SMOKE / "outputs" / "codex-gpt-5.3-codex-spark.md",
     ]
     for path in smoke_files:
         if not path.is_file():
@@ -69,9 +71,17 @@ def main() -> int:
     try:
         smoke_metadata = json.loads((CLI_SMOKE / "run-metadata.json").read_text(encoding="utf-8"))
         smoke_runs = smoke_metadata.get("runs", [])
-        smoke_agents = {run.get("agent") for run in smoke_runs if run.get("result") == "passed"}
-        if smoke_agents != {"Claude Code", "Codex CLI"}:
-            errors.append(f"unexpected passing CLI smoke-test agents: {sorted(smoke_agents)}")
+        smoke_results = {
+            (run.get("agent"), run.get("requested_model")): run.get("result") for run in smoke_runs
+        }
+        expected_smoke_results = {
+            ("Claude Code", "sonnet"): "passed",
+            ("Claude Code", "claude-opus-5"): "passed",
+            ("Codex CLI", "gpt-5.6-sol"): "passed",
+            ("Codex CLI", "gpt-5.3-codex-spark"): "failed",
+        }
+        if smoke_results != expected_smoke_results:
+            errors.append(f"unexpected CLI smoke-test run results: {smoke_results}")
     except (OSError, json.JSONDecodeError) as exc:
         errors.append(f"invalid CLI smoke run-metadata.json: {exc}")
 

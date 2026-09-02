@@ -15,11 +15,25 @@
 
 - 날짜: 2026-09-02
 - 테스트한 저장소 커밋: `aa308e0`
-- Claude Code 2.0.73, `sonnet` (`claude-sonnet-4-5-20250929`)
-- Codex CLI 0.151.0-alpha.7.2, `gpt-5.6-sol`, reasoning effort `medium`
+- Claude Code 2.0.73
+  - `sonnet` (`claude-sonnet-4-5-20250929`)
+  - `claude-opus-5`
+- Codex CLI 0.151.0-alpha.7.2, reasoning effort `medium`
+  - `gpt-5.6-sol`
+  - `gpt-5.3-codex-spark`
 - 설치 위치: 기존 전역 스킬과 분리한 임시 Git 프로젝트
 
 계정 식별자, 인증 정보, 세션 ID와 로컬 절대 경로는 기록하지 않았습니다.
+
+### 추가 모델을 고른 이유
+
+첫 실행은 Claude Sonnet 4.5와 Codex의 고성능 `gpt-5.6-sol` 조합이어서 모델 등급이 대칭적이지 않았습니다. 추가 실행에서는 Claude의 현재 고성능 모델인 `claude-opus-5`와 빠르고 집중된 작업용 Codex-Spark 계열인 `gpt-5.3-codex-spark`를 선택했습니다.
+
+- [Anthropic의 활성 모델 목록](https://platform.claude.com/docs/en/about-claude/model-deprecations)
+- [Anthropic의 Claude Code `--model` 설명](https://code.claude.com/docs/en/cli-usage)
+- [OpenAI의 Codex-Spark 사용 사례](https://learn.chatgpt.com/use-cases/make-granular-ui-changes)
+
+로컬 Claude Code에서 `--model opus`도 진단 실행했지만 `claude-opus-4-5-20251101`로 해석됐고 3번의 충돌을 놓쳤습니다. 최신 모델 비교라는 목적과 맞지 않아 결과표에서는 제외하되, 실행 사실과 2/3 충족 결과는 [`run-metadata.json`](run-metadata.json)에 남겼습니다. 이후 전체 모델 ID `claude-opus-5`로 다시 실행했습니다.
 
 ## 설치
 
@@ -75,6 +89,21 @@ claude -p $skillSmokePrompt `
   --output-format json
 ```
 
+Opus 5 실행에서는 나머지 조건을 그대로 두고 모델만 명시적으로 바꿨습니다.
+
+```powershell
+claude -p $skillSmokePrompt `
+  --model claude-opus-5 `
+  --setting-sources project `
+  --allowedTools 'Read,Skill' `
+  --permission-mode dontAsk `
+  --no-session-persistence `
+  --no-chrome `
+  --strict-mcp-config `
+  --mcp-config '{"mcpServers":{}}' `
+  --output-format json
+```
+
 Codex CLI에서는 읽기 전용 샌드박스와 임시 세션을 사용했습니다.
 
 ```powershell
@@ -92,23 +121,39 @@ codex exec `
   $skillSmokePrompt
 ```
 
+Spark 실행에서도 모델 이외의 조건을 유지했습니다.
+
+```powershell
+codex exec `
+  --model gpt-5.3-codex-spark `
+  -c 'model_reasoning_effort="medium"' `
+  --sandbox read-only `
+  --ephemeral `
+  --ignore-rules `
+  --color never `
+  $skillSmokePrompt
+```
+
 Codex 호출 문자열은 작은따옴표로 감싸 `$`가 PowerShell 변수로 해석되지 않게 했습니다.
 
 ## 결과
 
-| 확인 항목 | Claude Code | Codex CLI |
-|---|---|---|
-| 공개 저장소에서 설치 | 통과 | 통과 |
-| 프로젝트 로컬 스킬 발견 | 통과 | 통과 |
-| `그릇`의 대상 확인 | 통과 | 통과 |
-| 명확한 문장 통과 | 통과 | 통과 |
-| 권한 규칙의 의미 충돌 확인 | 통과 | 통과 |
+| 모델 | 스킬 발견 | `그릇`의 대상 확인 | 명확한 문장 통과 | 권한 규칙의 의미 충돌 확인 | 종합 |
+|---|---|---|---|---|---|
+| Claude Sonnet 4.5 | 통과 | 통과 | 통과 | 통과 | 통과 |
+| Claude Opus 5 | 통과 | 통과 | 통과 | 통과 | 통과 |
+| gpt-5.6-sol | 통과 | 통과 | 통과 | 통과 | 통과 |
+| gpt-5.3-codex-spark | 통과 | 통과 | 통과 | 실패 | 실패 |
 
-- [Claude Code 실제 출력](outputs/claude-code-sonnet.md)
-- [Codex CLI 실제 출력](outputs/codex-gpt-5.6-sol.md)
+- [Claude Sonnet 4.5 실제 출력](outputs/claude-code-sonnet.md)
+- [Claude Opus 5 실제 출력](outputs/claude-code-opus-5.md)
+- [Codex gpt-5.6-sol 실제 출력](outputs/codex-gpt-5.6-sol.md)
+- [Codex gpt-5.3-codex-spark 실제 출력과 실패 판정](outputs/codex-gpt-5.3-codex-spark.md)
 - [구조화된 실행 메타데이터](run-metadata.json)
 
-Claude Code는 여섯 열의 감사표를 만들되 일부 열 제목을 같은 뜻의 표현으로 바꿨습니다. Codex CLI는 기본 출력 형식과 판정명을 더 가깝게 따랐습니다. 두 결과 모두 세 사례의 필수 행동을 충족했습니다.
+Sonnet 4.5, Opus 5와 gpt-5.6-sol은 세 사례의 필수 행동을 모두 충족했습니다. Opus 5는 3번을 평가 절차의 생략과 우선순위의 충돌로 나누고, `사용자 직접 허용`과 `역할 거부`가 만나는 구체적인 경우까지 제시했습니다.
+
+Spark는 3번이 모호하다는 사실은 찾았습니다. 그러나 원래의 나열 순서를 유지하면서 “거부가 허용보다 우선”이라고 다시 적어 논리적 충돌을 남겼고, 직접 허용과 역할 거부 중 무엇이 이기는지도 묻지 않았습니다. 문제 문장을 찾아냈다는 이유만으로 통과시키지 않고, [`expected.json`](expected.json)의 필수 행동을 충족하지 못한 것으로 판정했습니다.
 
 첫 Claude 진단 실행에서는 허용 도구를 `Read`로만 제한해 `Skill` 호출이 거부됐습니다. 이 실행은 성공 결과에서 제외했습니다. `Read,Skill`로 바로잡은 실행에는 권한 거부가 없었습니다. 따라서 Claude Code로 재현할 때는 `Skill` 도구를 차단하지 않아야 합니다.
 
@@ -118,7 +163,7 @@ Windows 터미널에 표시된 Codex 도구 실행 로그에서는 한국어 참
 
 - 스킬 적용 시 모든 한국어 기술 문서의 품질이 향상된다고 일반화할 수 없습니다.
 - Claude Code와 Codex의 상대적인 한국어 성능을 비교할 수 없습니다.
-- 한 번씩 실행했으므로 출력 변동성과 재현율을 추정할 수 없습니다.
+- 각 모델 구성을 한 번씩 실행했으므로 출력 변동성과 재현율을 추정할 수 없습니다.
 - 스킬 미적용 조건과 통제된 반복 비교를 하지 않았으므로 성능 향상의 크기를 계산할 수 없습니다.
 
 후속 성능 실험에서는 동일한 합성 사례를 스킬 미적용·적용 조건으로 여러 번 실행하고, 모델명을 가린 평가자가 탐지율·오탐률·의미 변경률을 비교해야 합니다.

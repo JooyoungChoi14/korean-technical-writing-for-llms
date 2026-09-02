@@ -20,9 +20,9 @@ The method separates drafting, diagnosis, limited revision, and semantic verific
 
 ## Verified CLI behavior
 
-On September 2, 2026, the skill was installed from the public GitHub repository into a clean local project and invoked from Claude Code 2.0.73 and Codex CLI 0.151.0-alpha.7.2. Both CLIs discovered the installed skill, flagged an undefined container metaphor, passed a complete expiration-check sentence, and asked for clarification when a stated authorization order could conflict with a deny-first rule.
+On September 2, 2026, the skill was installed from the public GitHub repository into a clean local project and invoked with two models in each CLI. Claude Sonnet 4.5, Claude Opus 5, and gpt-5.6-sol met all three behavioral criteria. gpt-5.3-codex-spark found general ambiguity in the authorization sentence but missed the specific logical conflict between the listed order and the deny-first claim, so that run is recorded as failed rather than rounded up to a pass.
 
-This is a compatibility and behavioral smoke test, not a repeated performance benchmark. The [commands, acceptance criteria, metadata, and captured outputs](evals/cli-smoke/README.md) are included for review.
+This is a compatibility and single-run behavioral smoke test, not a repeated performance benchmark. The [commands, per-model results, acceptance criteria, metadata, and captured outputs](evals/cli-smoke/README.md) are included for review.
 
 ## Public study scope
 

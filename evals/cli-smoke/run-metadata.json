@@ -20,6 +20,20 @@
       "setting_sources": ["project"],
       "allowed_tools": ["Read", "Skill"],
       "session_persistence": false,
+      "acceptance_passed": 3,
+      "acceptance_total": 3,
+      "result": "passed"
+    },
+    {
+      "agent": "Claude Code",
+      "cli_version": "2.0.73",
+      "requested_model": "claude-opus-5",
+      "resolved_model": "claude-opus-5",
+      "setting_sources": ["project"],
+      "allowed_tools": ["Read", "Skill"],
+      "session_persistence": false,
+      "acceptance_passed": 3,
+      "acceptance_total": 3,
       "result": "passed"
     },
     {
@@ -29,11 +43,36 @@
       "reasoning_effort": "medium",
       "sandbox": "read-only",
       "session_persistence": false,
+      "acceptance_passed": 3,
+      "acceptance_total": 3,
       "result": "passed"
+    },
+    {
+      "agent": "Codex CLI",
+      "cli_version": "0.151.0-alpha.7.2",
+      "requested_model": "gpt-5.3-codex-spark",
+      "reasoning_effort": "medium",
+      "sandbox": "read-only",
+      "session_persistence": false,
+      "acceptance_passed": 2,
+      "acceptance_total": 3,
+      "result": "failed",
+      "failure": "CLI-SMOKE-003 was marked ambiguous, but the response did not identify the conflict between direct allow and role deny and proposed a revision that retained the contradiction."
+    }
+  ],
+  "diagnostic_runs": [
+    {
+      "agent": "Claude Code",
+      "requested_model": "opus",
+      "resolved_model": "claude-opus-4-5-20251101",
+      "acceptance_passed": 2,
+      "acceptance_total": 3,
+      "result": "excluded",
+      "reason": "The local CLI alias did not resolve to the current Opus 5 model requested for the additional comparison. This run also missed CLI-SMOKE-003."
     }
   ],
   "limitations": [
-    "Each agent was run once.",
+    "Each model configuration was run once.",
     "The test verifies installation, discovery, and expected behavior; it does not estimate general model performance.",
     "The outputs were reviewed manually against expected.json.",
     "A Claude diagnostic run that denied the Skill tool was excluded from the pass result."
