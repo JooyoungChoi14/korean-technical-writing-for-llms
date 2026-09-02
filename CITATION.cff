@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "Korean Technical Writing for LLMs"
+type: software
+version: 0.1.0
+date-released: 2026-09-02
+authors:
+  - family-names: "Choi"
+    given-names: "Jooyoung"
+    alias: "최주영"
+    website: "https://github.com/JooyoungChoi14"
+repository-code: "https://github.com/JooyoungChoi14/korean-technical-writing-for-llms"
+url: "https://jooyoungchoi14.github.io/korean-technical-writing-for-llms/"
+license: MIT
+keywords:
+  - Korean technical writing
+  - large language models
+  - Agent Skills
+  - documentation quality
+  - reader-centered writing
+abstract: >-
+  An exploratory study, evaluation set, and Agent Skill for reducing the
+  reinterpretation burden imposed by awkward or over-compressed Korean
+  technical writing generated or revised by language models.

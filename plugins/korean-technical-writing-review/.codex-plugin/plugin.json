@@ -1,0 +1,29 @@
+{
+  "name": "korean-technical-writing-review",
+  "version": "0.1.0",
+  "description": "Reader-centered review and revision of Korean technical documentation",
+  "author": {
+    "name": "Jooyoung Choi",
+    "url": "https://github.com/JooyoungChoi14"
+  },
+  "homepage": "https://jooyoungchoi14.github.io/korean-technical-writing-for-llms/",
+  "repository": "https://github.com/JooyoungChoi14/korean-technical-writing-for-llms",
+  "license": "MIT",
+  "keywords": ["korean", "technical-writing", "documentation", "llm", "review"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "한국어 기술 문서 검토",
+    "shortDescription": "독자의 재해석 부담과 의미 변경을 함께 점검합니다.",
+    "longDescription": "LLM이 작성하거나 수정한 한국어 기술 문서에서 낯선 결합, 동작을 대신하는 비유, 명사 나열, 근거 없는 평가를 찾고 의미를 보존하며 제한적으로 교정합니다.",
+    "developerName": "Jooyoung Choi",
+    "category": "Productivity",
+    "capabilities": ["Review", "Write"],
+    "websiteURL": "https://jooyoungchoi14.github.io/korean-technical-writing-for-llms/",
+    "defaultPrompt": [
+      "이 한국어 기술 문서의 독해 부담을 검사해 주세요.",
+      "의미가 확실한 문제 문장만 제한적으로 고쳐 주세요.",
+      "수정 전후의 의미가 같은지 별도로 검증해 주세요."
+    ],
+    "brandColor": "#C95D3A"
+  }
+}

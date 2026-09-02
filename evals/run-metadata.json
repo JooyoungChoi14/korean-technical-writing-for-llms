@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-02",
+  "locale": "ko-KR",
+  "runs": [
+    {
+      "label": "claude-sonnet",
+      "cli": "Claude Code 2.0.73",
+      "requested_model": "sonnet",
+      "resolved_model": "claude-sonnet-4-5-20250929",
+      "tools": false,
+      "session_persistence": false,
+      "task_count": 3,
+      "status": "completed"
+    },
+    {
+      "label": "codex-gpt-5.4",
+      "cli": "Codex CLI 0.151.0-alpha.7.2",
+      "requested_model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "sandbox": "read-only",
+      "session_persistence": false,
+      "task_count": 3,
+      "status": "completed"
+    },
+    {
+      "label": "gemini-2.5-pro",
+      "cli": "Gemini CLI 0.28.0",
+      "requested_model": "gemini-2.5-pro",
+      "task_count": 0,
+      "status": "blocked",
+      "reason": "Connected account returned product-license error 403 (#3501). No reauthentication or API billing was enabled."
+    }
+  ]
+}

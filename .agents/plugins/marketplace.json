@@ -1,0 +1,20 @@
+{
+  "name": "korean-writing-tools",
+  "interface": {
+    "displayName": "Korean Writing Tools"
+  },
+  "plugins": [
+    {
+      "name": "korean-technical-writing-review",
+      "source": {
+        "source": "local",
+        "path": "./plugins/korean-technical-writing-review"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

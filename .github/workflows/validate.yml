@@ -1,0 +1,24 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate evaluation cases
+        run: python scripts/validate_evals.py
+      - name: Check public files for private identifiers
+        shell: bash
+        run: |
+          if grep -RniE 'C:\\Users\\|https://[^ ]+\.slack\.com/files/|F[0-9A-Z]{10}' \
+            README* report docs evals plugins scripts; then
+            echo "Potential private identifier found."
+            exit 1
+          fi
