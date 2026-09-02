@@ -1,0 +1,38 @@
+{
+  "model": "glm-5.3-flash",
+  "variant": "certainty",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+  "run": 2,
+  "started_at": "2026-09-02T09:48:43.5095418+00:00",
+  "completed_at": "2026-09-02T09:54:43.9676726+00:00",
+  "elapsed_seconds": 360.458,
+  "transport_status": "empty",
+  "response_status": "incomplete",
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  },
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 3104,
+    "output_tokens": 16384,
+    "total_tokens": 19488,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

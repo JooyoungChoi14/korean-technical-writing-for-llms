@@ -1,0 +1,42 @@
+{
+  "model": "qwen3.5:397b",
+  "variant": "combined",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+  "run": 2,
+  "started_at": "2026-09-02T10:14:47.7333576+00:00",
+  "completed_at": "2026-09-02T10:17:30.9517686+00:00",
+  "elapsed_seconds": 163.218,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    },
+    {
+      "type": "message",
+      "content_types": [
+        "output_text"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2614,
+    "output_tokens": 5478,
+    "total_tokens": 8092,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

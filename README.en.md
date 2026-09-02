@@ -12,6 +12,7 @@ The project asks a reader-centered question: even when a sentence is grammatical
 - A reproducible [CLI installation and behavior smoke test](evals/cli-smoke/README.md)
 - A same-prompt [Codex and Ollama Cloud smoke test across 19 public models](evals/ollama-cloud/README.md)
 - A 285-run [prompt-ladder experiment](evals/ollama-cloud/prompt-ladder/README.md) separating harness failures from prompt-sensitive content failures
+- A 168-run [skill-effect factorial experiment](evals/skill-effect-v2/README.md) separating discovery, completion, and instruction effects
 - Codex plugin and repository marketplace metadata
 
 ```bash
@@ -27,6 +28,8 @@ On September 2, 2026, the skill was installed from the public GitHub repository 
 The same Codex harness was also connected to 19 Ollama Cloud models for one exploratory run per model. Fifteen produced final answers; GLM 5.3 and GLM 5.3 Flash met all three strict criteria. Four models were not scored because of tool-schema or service-availability errors. Configuration, judgments, limitations, and the 15 raw outputs are recorded in [`evals/ollama-cloud/`](evals/ollama-cloud/README.md).
 
 A follow-up direct-API experiment removed tools and ran five prompt conditions three times on all 19 models. All 285 calls reached the API without an error, separating the initial MiniMax, Mistral, and Qwen failures from Korean content quality. Generic self-check and counterexample instructions did not beat the baseline; explicitly naming the task-specific authorization conflict increased strict passes from 7 to 21 of 57. Public reasoning, instruction-following, and agentic benchmarks were then joined within source-comparable cohorts. Their relationship with this task changed direction across cohorts and prompt conditions, so the report treats base capability as one interacting variable rather than a single cause. The [raw outputs, benchmark context, exact prompt additions, repeated judgments, and limitations](evals/ollama-cloud/prompt-ladder/README.md) are published for inspection.
+
+A second factorial experiment then separated native skill discovery from the semantic effect of the instructions. Eight models completed 120 development calls and 48 holdout calls using inline `instructions`. The combined certainty-and-conflict candidate improved holdout decision accuracy from 51.6% to 56.3%, but reduced completion and increased unsupported implementation assumptions from 33.3% to 36.7%. It therefore failed the predeclared adoption thresholds, and the production skill was left unchanged. The [tasks, candidates, 168 raw outputs, runtime failures, scoring code, and decision](evals/skill-effect-v2/README.md) are published for inspection.
 
 This is a compatibility and single-run behavioral smoke test, not a repeated performance benchmark. The [commands, per-model results, acceptance criteria, metadata, and captured outputs](evals/cli-smoke/README.md) are included for review.
 

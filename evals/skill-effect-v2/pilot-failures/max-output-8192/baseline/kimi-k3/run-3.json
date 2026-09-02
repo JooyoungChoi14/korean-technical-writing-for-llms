@@ -1,0 +1,38 @@
+{
+  "model": "kimi-k3",
+  "variant": "baseline",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+  "run": 3,
+  "started_at": "2026-09-02T09:36:16.2846706+00:00",
+  "completed_at": "2026-09-02T09:38:31.0646497+00:00",
+  "elapsed_seconds": 134.78,
+  "transport_status": "empty",
+  "response_status": "incomplete",
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  },
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 3058,
+    "output_tokens": 8192,
+    "total_tokens": 11250,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

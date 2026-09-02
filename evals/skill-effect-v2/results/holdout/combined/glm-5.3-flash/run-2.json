@@ -1,0 +1,38 @@
+{
+  "model": "glm-5.3-flash",
+  "variant": "combined",
+  "task_set": "holdout",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+  "run": 2,
+  "started_at": "2026-09-02T10:28:53.3496611+00:00",
+  "completed_at": "2026-09-02T10:33:39.0495381+00:00",
+  "elapsed_seconds": 285.7,
+  "transport_status": "empty",
+  "response_status": "incomplete",
+  "incomplete_details": {
+    "reason": "max_output_tokens"
+  },
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 3344,
+    "output_tokens": 16384,
+    "total_tokens": 19728,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

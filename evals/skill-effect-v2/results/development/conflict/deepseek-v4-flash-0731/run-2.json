@@ -1,0 +1,42 @@
+{
+  "model": "deepseek-v4-flash:0731",
+  "variant": "conflict",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+  "run": 2,
+  "started_at": "2026-09-02T10:02:52.1311598+00:00",
+  "completed_at": "2026-09-02T10:06:28.3977164+00:00",
+  "elapsed_seconds": 216.267,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    },
+    {
+      "type": "message",
+      "content_types": [
+        "output_text"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2811,
+    "output_tokens": 6512,
+    "total_tokens": 9323,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-02",
+  "question": "Does the semantic content of the skill improve decisions independently of native skill discovery?",
+  "delivery": "Ollama-compatible Responses API instructions field",
+  "native_skill_loaded": false,
+  "models": [
+    "kimi-k3",
+    "glm-5.3-flash",
+    "glm-5.2",
+    "kimi-k2.6",
+    "deepseek-v4-flash:0731",
+    "qwen3.5:397b",
+    "gemma4:31b",
+    "gpt-oss:120b"
+  ],
+  "development": {
+    "cases": 12,
+    "variants": ["none", "baseline", "certainty", "conflict", "combined"],
+    "repeats": 3,
+    "calls": 120
+  },
+  "holdout": {
+    "cases": 12,
+    "variants": ["baseline", "combined"],
+    "repeats": 3,
+    "calls": 48
+  },
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 16384,
+    "truncation": "disabled"
+  },
+  "adoption_thresholds": {
+    "holdout_screen_score_gain_percentage_points": 10,
+    "clear_sentence_false_positive_must_not_worsen": true,
+    "unsupported_assumption_rate_must_not_worsen": true,
+    "models_improved_minimum": 4,
+    "direction_stable_across_repeats": true
+  },
+  "decision": "Do not modify the production skill. The combined candidate failed the aggregate gain and unsupported-assumption thresholds."
+}

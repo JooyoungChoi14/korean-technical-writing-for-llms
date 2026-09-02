@@ -1,0 +1,42 @@
+{
+  "model": "glm-5.2",
+  "variant": "baseline",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+  "run": 3,
+  "started_at": "2026-09-02T09:42:19.5428848+00:00",
+  "completed_at": "2026-09-02T09:45:13.8098376+00:00",
+  "elapsed_seconds": 174.267,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "response_output_types": [
+    {
+      "type": "reasoning",
+      "content_types": [
+        null
+      ]
+    },
+    {
+      "type": "message",
+      "content_types": [
+        "output_text"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2931,
+    "output_tokens": 2923,
+    "total_tokens": 5854,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-3.md"
+}

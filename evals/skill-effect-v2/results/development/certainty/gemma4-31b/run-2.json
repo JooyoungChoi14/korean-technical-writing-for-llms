@@ -1,0 +1,36 @@
+{
+  "model": "gemma4:31b",
+  "variant": "certainty",
+  "task_set": "development",
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+  "run": 2,
+  "started_at": "2026-09-02T09:56:09.4515000+00:00",
+  "completed_at": "2026-09-02T09:57:29.7689619+00:00",
+  "elapsed_seconds": 80.317,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "response_output_types": [
+    {
+      "type": "message",
+      "content_types": [
+        "output_text"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 2609,
+    "output_tokens": 960,
+    "total_tokens": 3569,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-2.md"
+}

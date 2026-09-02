@@ -1,0 +1,4904 @@
+[
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:44:43.1324956+09:00",
+    "completed_at": "2026-09-02T18:47:02.5093241+09:00",
+    "elapsed_seconds": 139.377,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2624,
+      "output_tokens": 979,
+      "total_tokens": 3603,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:44:51.6894723+09:00",
+    "completed_at": "2026-09-02T18:47:06.8241841+09:00",
+    "elapsed_seconds": 135.135,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2624,
+      "output_tokens": 801,
+      "total_tokens": 3425,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:45:14.3966916+09:00",
+    "completed_at": "2026-09-02T18:47:32.1806302+09:00",
+    "elapsed_seconds": 137.784,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2624,
+      "output_tokens": 6061,
+      "total_tokens": 8685,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:47:03.1214508+09:00",
+    "completed_at": "2026-09-02T18:48:34.7761264+09:00",
+    "elapsed_seconds": 91.655,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2481,
+      "output_tokens": 987,
+      "total_tokens": 3468,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:47:07.4346069+09:00",
+    "completed_at": "2026-09-02T18:48:39.3803309+09:00",
+    "elapsed_seconds": 91.946,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2481,
+      "output_tokens": 966,
+      "total_tokens": 3447,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:47:30.9278061+09:00",
+    "completed_at": "2026-09-02T18:48:41.2196971+09:00",
+    "elapsed_seconds": 70.292,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2481,
+      "output_tokens": 961,
+      "total_tokens": 3442,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:40:33.1129543+09:00",
+    "completed_at": "2026-09-02T18:44:42.5406106+09:00",
+    "elapsed_seconds": 249.428,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 2493,
+      "total_tokens": 5424,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:40:33.2693542+09:00",
+    "completed_at": "2026-09-02T18:44:51.099116+09:00",
+    "elapsed_seconds": 257.83,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 970,
+      "total_tokens": 3901,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:42:19.5428848+09:00",
+    "completed_at": "2026-09-02T18:45:13.8098376+09:00",
+    "elapsed_seconds": 174.267,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 2923,
+      "total_tokens": 5854,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:40:32.4265919+09:00",
+    "completed_at": "2026-09-02T18:45:44.5882891+09:00",
+    "elapsed_seconds": 312.162,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 16384,
+      "total_tokens": 19315,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:40:32.7124496+09:00",
+    "completed_at": "2026-09-02T18:44:21.6939138+09:00",
+    "elapsed_seconds": 228.981,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 16384,
+      "total_tokens": 19315,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:40:32.9330331+09:00",
+    "completed_at": "2026-09-02T18:46:02.0898258+09:00",
+    "elapsed_seconds": 329.157,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2931,
+      "output_tokens": 16384,
+      "total_tokens": 19315,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:47:32.7980505+09:00",
+    "completed_at": "2026-09-02T18:48:42.8825411+09:00",
+    "elapsed_seconds": 70.084,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2507,
+      "output_tokens": 1665,
+      "total_tokens": 4172,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:47:45.3976877+09:00",
+    "completed_at": "2026-09-02T18:48:45.5850355+09:00",
+    "elapsed_seconds": 60.187,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2507,
+      "output_tokens": 1756,
+      "total_tokens": 4263,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:48:30.5341003+09:00",
+    "completed_at": "2026-09-02T18:48:48.202958+09:00",
+    "elapsed_seconds": 17.669,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2507,
+      "output_tokens": 2336,
+      "total_tokens": 4843,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:42:48.5538783+09:00",
+    "completed_at": "2026-09-02T18:46:48.1293769+09:00",
+    "elapsed_seconds": 239.575,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2917,
+      "output_tokens": 3914,
+      "total_tokens": 6831,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:42:59.4348675+09:00",
+    "completed_at": "2026-09-02T18:47:30.3026282+09:00",
+    "elapsed_seconds": 270.868,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2917,
+      "output_tokens": 3879,
+      "total_tokens": 6796,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:44:22.2535533+09:00",
+    "completed_at": "2026-09-02T18:47:44.7817082+09:00",
+    "elapsed_seconds": 202.528,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2917,
+      "output_tokens": 3594,
+      "total_tokens": 6511,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:40:31.758298+09:00",
+    "completed_at": "2026-09-02T18:42:58.8756238+09:00",
+    "elapsed_seconds": 147.117,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3058,
+      "output_tokens": 13429,
+      "total_tokens": 16487,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:40:31.9867601+09:00",
+    "completed_at": "2026-09-02T18:42:47.971299+09:00",
+    "elapsed_seconds": 135.985,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3058,
+      "output_tokens": 12379,
+      "total_tokens": 15437,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:40:32.215232+09:00",
+    "completed_at": "2026-09-02T18:42:18.920915+09:00",
+    "elapsed_seconds": 106.706,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3058,
+      "output_tokens": 9600,
+      "total_tokens": 12658,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 1,
+    "started_at": "2026-09-02T18:45:45.1678675+09:00",
+    "completed_at": "2026-09-02T18:48:36.8882881+09:00",
+    "elapsed_seconds": 171.72,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2351,
+      "output_tokens": 6353,
+      "total_tokens": 8704,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 2,
+    "started_at": "2026-09-02T18:46:02.6637094+09:00",
+    "completed_at": "2026-09-02T18:48:29.9264741+09:00",
+    "elapsed_seconds": 147.263,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2351,
+      "output_tokens": 5731,
+      "total_tokens": 8082,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "baseline",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+    "run": 3,
+    "started_at": "2026-09-02T18:46:48.7197199+09:00",
+    "completed_at": "2026-09-02T18:48:44.5325387+09:00",
+    "elapsed_seconds": 115.813,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2351,
+      "output_tokens": 5791,
+      "total_tokens": 8142,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:53:46.7823914+09:00",
+    "completed_at": "2026-09-02T18:56:01.958153+09:00",
+    "elapsed_seconds": 135.176,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2772,
+      "output_tokens": 993,
+      "total_tokens": 3765,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:54:07.4810413+09:00",
+    "completed_at": "2026-09-02T18:56:08.8867137+09:00",
+    "elapsed_seconds": 121.406,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2772,
+      "output_tokens": 2036,
+      "total_tokens": 4808,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:54:43.7081157+09:00",
+    "completed_at": "2026-09-02T18:56:16.0478423+09:00",
+    "elapsed_seconds": 92.34,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2772,
+      "output_tokens": 2060,
+      "total_tokens": 4832,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:56:02.550386+09:00",
+    "completed_at": "2026-09-02T18:57:26.5625189+09:00",
+    "elapsed_seconds": 84.012,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2609,
+      "output_tokens": 952,
+      "total_tokens": 3561,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:56:09.4515+09:00",
+    "completed_at": "2026-09-02T18:57:29.7689619+09:00",
+    "elapsed_seconds": 80.317,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2609,
+      "output_tokens": 960,
+      "total_tokens": 3569,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:56:16.617653+09:00",
+    "completed_at": "2026-09-02T18:57:33.3432425+09:00",
+    "elapsed_seconds": 76.726,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2609,
+      "output_tokens": 885,
+      "total_tokens": 3494,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:48:46.238024+09:00",
+    "completed_at": "2026-09-02T18:53:46.1864678+09:00",
+    "elapsed_seconds": 299.948,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 2990,
+      "total_tokens": 6094,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:48:48.8181435+09:00",
+    "completed_at": "2026-09-02T18:54:06.9150843+09:00",
+    "elapsed_seconds": 318.097,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 2400,
+      "total_tokens": 5504,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:50:10.569153+09:00",
+    "completed_at": "2026-09-02T18:54:51.1743003+09:00",
+    "elapsed_seconds": 280.605,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 5309,
+      "total_tokens": 8413,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:48:41.8580919+09:00",
+    "completed_at": "2026-09-02T18:53:16.7894858+09:00",
+    "elapsed_seconds": 274.931,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 16384,
+      "total_tokens": 19488,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:48:43.5095418+09:00",
+    "completed_at": "2026-09-02T18:54:43.9676726+09:00",
+    "elapsed_seconds": 360.458,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 16384,
+      "total_tokens": 19488,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:48:45.1589034+09:00",
+    "completed_at": "2026-09-02T18:54:43.1370401+09:00",
+    "elapsed_seconds": 357.978,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3104,
+      "output_tokens": 16384,
+      "total_tokens": 19488,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:56:32.5309229+09:00",
+    "completed_at": "2026-09-02T18:57:38.1525852+09:00",
+    "elapsed_seconds": 65.622,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2639,
+      "output_tokens": 1994,
+      "total_tokens": 4633,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:56:49.1496128+09:00",
+    "completed_at": "2026-09-02T18:57:43.7206157+09:00",
+    "elapsed_seconds": 54.571,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2639,
+      "output_tokens": 2146,
+      "total_tokens": 4785,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:57:13.2114943+09:00",
+    "completed_at": "2026-09-02T18:57:48.6518214+09:00",
+    "elapsed_seconds": 35.44,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2639,
+      "output_tokens": 2311,
+      "total_tokens": 4950,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:51:40.5155763+09:00",
+    "completed_at": "2026-09-02T18:56:31.9557262+09:00",
+    "elapsed_seconds": 291.44,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3087,
+      "output_tokens": 5720,
+      "total_tokens": 8807,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:51:45.9306357+09:00",
+    "completed_at": "2026-09-02T18:55:58.3849+09:00",
+    "elapsed_seconds": 252.454,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3087,
+      "output_tokens": 3540,
+      "total_tokens": 6627,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:53:17.3624985+09:00",
+    "completed_at": "2026-09-02T18:56:48.5840469+09:00",
+    "elapsed_seconds": 211.222,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3087,
+      "output_tokens": 4409,
+      "total_tokens": 7496,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:48:35.411275+09:00",
+    "completed_at": "2026-09-02T18:50:09.907065+09:00",
+    "elapsed_seconds": 94.496,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3228,
+      "output_tokens": 7860,
+      "total_tokens": 11088,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:48:37.4621182+09:00",
+    "completed_at": "2026-09-02T18:51:45.292136+09:00",
+    "elapsed_seconds": 187.83,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3228,
+      "output_tokens": 16384,
+      "total_tokens": 19612,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:48:40.03041+09:00",
+    "completed_at": "2026-09-02T18:51:39.8936513+09:00",
+    "elapsed_seconds": 179.863,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3228,
+      "output_tokens": 15975,
+      "total_tokens": 19203,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 1,
+    "started_at": "2026-09-02T18:54:44.5362848+09:00",
+    "completed_at": "2026-09-02T18:57:12.60079+09:00",
+    "elapsed_seconds": 148.065,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2468,
+      "output_tokens": 5347,
+      "total_tokens": 7815,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 2,
+    "started_at": "2026-09-02T18:54:51.7522218+09:00",
+    "completed_at": "2026-09-02T18:57:50.0253961+09:00",
+    "elapsed_seconds": 178.273,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2468,
+      "output_tokens": 7271,
+      "total_tokens": 9739,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "certainty",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "4dd3ad5bc91466b22be76415dc22cecce11610d3c4d74536307dc74d6ddfd9f9",
+    "run": 3,
+    "started_at": "2026-09-02T18:55:58.9445244+09:00",
+    "completed_at": "2026-09-02T18:58:18.292884+09:00",
+    "elapsed_seconds": 139.348,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2468,
+      "output_tokens": 6288,
+      "total_tokens": 8756,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:13:24.2286983+09:00",
+    "completed_at": "2026-09-02T19:15:27.9376673+09:00",
+    "elapsed_seconds": 123.709,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2959,
+      "output_tokens": 3984,
+      "total_tokens": 6943,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:13:29.1694129+09:00",
+    "completed_at": "2026-09-02T19:15:45.5046532+09:00",
+    "elapsed_seconds": 136.335,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2959,
+      "output_tokens": 4147,
+      "total_tokens": 7106,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:14:04.9961654+09:00",
+    "completed_at": "2026-09-02T19:17:16.4980319+09:00",
+    "elapsed_seconds": 191.502,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2959,
+      "output_tokens": 12521,
+      "total_tokens": 15480,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:15:28.5197679+09:00",
+    "completed_at": "2026-09-02T19:17:21.0693008+09:00",
+    "elapsed_seconds": 112.55,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2769,
+      "output_tokens": 895,
+      "total_tokens": 3664,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:15:46.0837003+09:00",
+    "completed_at": "2026-09-02T19:17:23.4109456+09:00",
+    "elapsed_seconds": 97.327,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2769,
+      "output_tokens": 872,
+      "total_tokens": 3641,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:16:04.4749534+09:00",
+    "completed_at": "2026-09-02T19:17:26.0235557+09:00",
+    "elapsed_seconds": 81.549,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2769,
+      "output_tokens": 899,
+      "total_tokens": 3668,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:08:14.3954471+09:00",
+    "completed_at": "2026-09-02T19:13:28.5982264+09:00",
+    "elapsed_seconds": 314.203,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 3790,
+      "total_tokens": 7136,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:08:50.5883428+09:00",
+    "completed_at": "2026-09-02T19:14:47.1644627+09:00",
+    "elapsed_seconds": 356.576,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 5145,
+      "total_tokens": 8491,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:09:54.4290992+09:00",
+    "completed_at": "2026-09-02T19:14:04.4119362+09:00",
+    "elapsed_seconds": 249.983,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 4713,
+      "total_tokens": 8059,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:08:03.3146699+09:00",
+    "completed_at": "2026-09-02T19:13:02.8628006+09:00",
+    "elapsed_seconds": 299.548,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 16384,
+      "total_tokens": 19730,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:08:09.1464967+09:00",
+    "completed_at": "2026-09-02T19:13:23.6569532+09:00",
+    "elapsed_seconds": 314.51,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 16384,
+      "total_tokens": 19730,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:08:09.5585262+09:00",
+    "completed_at": "2026-09-02T19:14:07.4127432+09:00",
+    "elapsed_seconds": 357.854,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3346,
+      "output_tokens": 16384,
+      "total_tokens": 19730,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:16:36.1214379+09:00",
+    "completed_at": "2026-09-02T19:17:32.3574353+09:00",
+    "elapsed_seconds": 56.236,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2812,
+      "output_tokens": 2174,
+      "total_tokens": 4986,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:17:17.1304541+09:00",
+    "completed_at": "2026-09-02T19:17:36.9248312+09:00",
+    "elapsed_seconds": 19.794,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2812,
+      "output_tokens": 1901,
+      "total_tokens": 4713,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:17:18.941162+09:00",
+    "completed_at": "2026-09-02T19:17:37.9980285+09:00",
+    "elapsed_seconds": 19.057,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2812,
+      "output_tokens": 1739,
+      "total_tokens": 4551,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:10:21.9039325+09:00",
+    "completed_at": "2026-09-02T19:15:08.2806881+09:00",
+    "elapsed_seconds": 286.377,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3322,
+      "output_tokens": 2996,
+      "total_tokens": 6318,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:10:48.1842836+09:00",
+    "completed_at": "2026-09-02T19:16:03.9117827+09:00",
+    "elapsed_seconds": 315.727,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3322,
+      "output_tokens": 4973,
+      "total_tokens": 8295,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:13:03.4281528+09:00",
+    "completed_at": "2026-09-02T19:16:35.5483561+09:00",
+    "elapsed_seconds": 212.12,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3322,
+      "output_tokens": 3577,
+      "total_tokens": 6899,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:07:47.3653067+09:00",
+    "completed_at": "2026-09-02T19:10:21.3233295+09:00",
+    "elapsed_seconds": 153.958,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3463,
+      "output_tokens": 13087,
+      "total_tokens": 16550,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:07:52.3556285+09:00",
+    "completed_at": "2026-09-02T19:09:53.8612971+09:00",
+    "elapsed_seconds": 121.506,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3463,
+      "output_tokens": 9928,
+      "total_tokens": 13391,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:07:58.3153499+09:00",
+    "completed_at": "2026-09-02T19:10:47.6177047+09:00",
+    "elapsed_seconds": 169.302,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3463,
+      "output_tokens": 11799,
+      "total_tokens": 15262,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 1,
+    "started_at": "2026-09-02T19:14:07.987808+09:00",
+    "completed_at": "2026-09-02T19:17:18.3452913+09:00",
+    "elapsed_seconds": 190.357,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2614,
+      "output_tokens": 6626,
+      "total_tokens": 9240,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 2,
+    "started_at": "2026-09-02T19:14:47.7333576+09:00",
+    "completed_at": "2026-09-02T19:17:30.9517686+09:00",
+    "elapsed_seconds": 163.218,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2614,
+      "output_tokens": 5478,
+      "total_tokens": 8092,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "combined",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "fa5d6cb28dedf756d6902a4775f91cd1f0c1e4021f5108e9e9edfc5fd03d1e06",
+    "run": 3,
+    "started_at": "2026-09-02T19:15:08.8503886+09:00",
+    "completed_at": "2026-09-02T19:18:15.2086301+09:00",
+    "elapsed_seconds": 186.358,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2614,
+      "output_tokens": 5633,
+      "total_tokens": 8247,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T19:02:36.4613727+09:00",
+    "completed_at": "2026-09-02T19:05:30.7263965+09:00",
+    "elapsed_seconds": 174.265,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2811,
+      "output_tokens": 818,
+      "total_tokens": 3629,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T19:02:52.1311598+09:00",
+    "completed_at": "2026-09-02T19:06:28.3977164+09:00",
+    "elapsed_seconds": 216.267,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2811,
+      "output_tokens": 6512,
+      "total_tokens": 9323,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T19:03:03.143114+09:00",
+    "completed_at": "2026-09-02T19:06:46.902867+09:00",
+    "elapsed_seconds": 223.76,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2811,
+      "output_tokens": 3788,
+      "total_tokens": 6599,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T19:05:31.3026098+09:00",
+    "completed_at": "2026-09-02T19:07:46.7687319+09:00",
+    "elapsed_seconds": 135.466,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2641,
+      "output_tokens": 959,
+      "total_tokens": 3600,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T19:06:24.5301943+09:00",
+    "completed_at": "2026-09-02T19:07:51.7078459+09:00",
+    "elapsed_seconds": 87.178,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2641,
+      "output_tokens": 955,
+      "total_tokens": 3596,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T19:06:28.970061+09:00",
+    "completed_at": "2026-09-02T19:07:57.7550326+09:00",
+    "elapsed_seconds": 88.785,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2641,
+      "output_tokens": 988,
+      "total_tokens": 3629,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T18:57:50.6346776+09:00",
+    "completed_at": "2026-09-02T19:02:51.5562456+09:00",
+    "elapsed_seconds": 300.922,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 2906,
+      "total_tokens": 6079,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T18:58:18.8481681+09:00",
+    "completed_at": "2026-09-02T19:03:02.5738285+09:00",
+    "elapsed_seconds": 283.726,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 2602,
+      "total_tokens": 5775,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T18:59:21.2220484+09:00",
+    "completed_at": "2026-09-02T19:03:14.0767543+09:00",
+    "elapsed_seconds": 232.855,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 2567,
+      "total_tokens": 5740,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T18:57:38.7149102+09:00",
+    "completed_at": "2026-09-02T19:02:35.8459949+09:00",
+    "elapsed_seconds": 297.131,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 16384,
+      "total_tokens": 19557,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T18:57:44.2819415+09:00",
+    "completed_at": "2026-09-02T19:02:31.3568004+09:00",
+    "elapsed_seconds": 287.075,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 16384,
+      "total_tokens": 19557,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T18:57:49.2178689+09:00",
+    "completed_at": "2026-09-02T19:03:21.4057324+09:00",
+    "elapsed_seconds": 332.188,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3173,
+      "output_tokens": 16384,
+      "total_tokens": 19557,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T19:06:47.4805496+09:00",
+    "completed_at": "2026-09-02T19:08:02.7379805+09:00",
+    "elapsed_seconds": 75.257,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2680,
+      "output_tokens": 1843,
+      "total_tokens": 4523,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T19:07:25.0721966+09:00",
+    "completed_at": "2026-09-02T19:08:08.565391+09:00",
+    "elapsed_seconds": 43.493,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2680,
+      "output_tokens": 1916,
+      "total_tokens": 4596,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T19:07:40.2317973+09:00",
+    "completed_at": "2026-09-02T19:08:13.840234+09:00",
+    "elapsed_seconds": 33.608,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2680,
+      "output_tokens": 2275,
+      "total_tokens": 4955,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T18:59:23.7987683+09:00",
+    "completed_at": "2026-09-02T19:05:19.4480198+09:00",
+    "elapsed_seconds": 355.649,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3152,
+      "output_tokens": 3436,
+      "total_tokens": 6588,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T19:00:24.4473507+09:00",
+    "completed_at": "2026-09-02T19:07:39.6621106+09:00",
+    "elapsed_seconds": 435.215,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3152,
+      "output_tokens": 7996,
+      "total_tokens": 11148,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T19:02:31.9352798+09:00",
+    "completed_at": "2026-09-02T19:06:23.9492687+09:00",
+    "elapsed_seconds": 232.014,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3152,
+      "output_tokens": 4835,
+      "total_tokens": 7987,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T18:57:27.1520031+09:00",
+    "completed_at": "2026-09-02T19:00:23.8574409+09:00",
+    "elapsed_seconds": 176.705,
+    "transport_status": "completed",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3293,
+      "output_tokens": 16384,
+      "total_tokens": 19677,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T18:57:30.3280489+09:00",
+    "completed_at": "2026-09-02T18:59:20.6632607+09:00",
+    "elapsed_seconds": 110.335,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3293,
+      "output_tokens": 8530,
+      "total_tokens": 11823,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T18:57:33.8998705+09:00",
+    "completed_at": "2026-09-02T18:59:23.216955+09:00",
+    "elapsed_seconds": 109.317,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 3293,
+      "output_tokens": 5937,
+      "total_tokens": 9230,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 1,
+    "started_at": "2026-09-02T19:03:14.6650594+09:00",
+    "completed_at": "2026-09-02T19:07:24.502417+09:00",
+    "elapsed_seconds": 249.837,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 5713,
+      "total_tokens": 8210,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 2,
+    "started_at": "2026-09-02T19:03:21.9893078+09:00",
+    "completed_at": "2026-09-02T19:08:08.9817923+09:00",
+    "elapsed_seconds": 286.992,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 7719,
+      "total_tokens": 10216,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "conflict",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "ae6a073355140a343902c9b19eeb9e40f6a20d93216e30359b90e2072ba0088b",
+    "run": 3,
+    "started_at": "2026-09-02T19:05:20.0199501+09:00",
+    "completed_at": "2026-09-02T19:08:50.0098513+09:00",
+    "elapsed_seconds": 209.99,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 8102,
+      "total_tokens": 10599,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:30:59.4845419+09:00",
+    "completed_at": "2026-09-02T18:34:45.9358159+09:00",
+    "elapsed_seconds": 226.451,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 531,
+      "output_tokens": 4020,
+      "total_tokens": 4551,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:31:23.8523764+09:00",
+    "completed_at": "2026-09-02T18:35:10.6519246+09:00",
+    "elapsed_seconds": 226.8,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 531,
+      "output_tokens": 3827,
+      "total_tokens": 4358,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "deepseek-v4-flash:0731",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:31:33.0337547+09:00",
+    "completed_at": "2026-09-02T18:34:59.9662135+09:00",
+    "elapsed_seconds": 206.932,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 531,
+      "output_tokens": 1980,
+      "total_tokens": 2511,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:34:45.5566768+09:00",
+    "completed_at": "2026-09-02T18:36:07.302782+09:00",
+    "elapsed_seconds": 81.746,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 524,
+      "output_tokens": 933,
+      "total_tokens": 1457,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:34:46.5239573+09:00",
+    "completed_at": "2026-09-02T18:36:11.7969539+09:00",
+    "elapsed_seconds": 85.273,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 524,
+      "output_tokens": 936,
+      "total_tokens": 1460,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gemma4:31b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:35:00.544922+09:00",
+    "completed_at": "2026-09-02T18:36:15.6337331+09:00",
+    "elapsed_seconds": 75.089,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 524,
+      "output_tokens": 940,
+      "total_tokens": 1464,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:28:36.5007685+09:00",
+    "completed_at": "2026-09-02T18:31:33.3716175+09:00",
+    "elapsed_seconds": 176.871,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 3572,
+      "total_tokens": 4170,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:28:36.6852158+09:00",
+    "completed_at": "2026-09-02T18:31:23.2361333+09:00",
+    "elapsed_seconds": 166.551,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 2379,
+      "total_tokens": 2977,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.2",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:29:22.5462715+09:00",
+    "completed_at": "2026-09-02T18:31:52.7271488+09:00",
+    "elapsed_seconds": 150.181,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 2407,
+      "total_tokens": 3005,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:28:35.8204037+09:00",
+    "completed_at": "2026-09-02T18:30:50.7234771+09:00",
+    "elapsed_seconds": 134.903,
+    "transport_status": "empty",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 8192,
+      "total_tokens": 8790,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:28:36.0558904+09:00",
+    "completed_at": "2026-09-02T18:30:58.9189059+09:00",
+    "elapsed_seconds": 142.863,
+    "transport_status": "completed",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 8192,
+      "total_tokens": 8790,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:28:36.2835053+09:00",
+    "completed_at": "2026-09-02T18:31:32.4468577+09:00",
+    "elapsed_seconds": 176.163,
+    "transport_status": "completed",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 598,
+      "output_tokens": 8192,
+      "total_tokens": 8790,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:35:11.2396879+09:00",
+    "completed_at": "2026-09-02T18:36:18.656919+09:00",
+    "elapsed_seconds": 67.417,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 543,
+      "output_tokens": 1534,
+      "total_tokens": 2077,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:35:59.4542045+09:00",
+    "completed_at": "2026-09-02T18:36:22.4271223+09:00",
+    "elapsed_seconds": 22.973,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 543,
+      "output_tokens": 1806,
+      "total_tokens": 2349,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "gpt-oss:120b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:36:04.1565168+09:00",
+    "completed_at": "2026-09-02T18:36:28.1979226+09:00",
+    "elapsed_seconds": 24.041,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 543,
+      "output_tokens": 2217,
+      "total_tokens": 2760,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:29:34.5366245+09:00",
+    "completed_at": "2026-09-02T18:34:23.1743718+09:00",
+    "elapsed_seconds": 288.638,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 602,
+      "output_tokens": 4958,
+      "total_tokens": 5560,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:30:13.1521931+09:00",
+    "completed_at": "2026-09-02T18:34:44.9701185+09:00",
+    "elapsed_seconds": 271.818,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 602,
+      "output_tokens": 4712,
+      "total_tokens": 5314,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k2.6",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:30:51.3005657+09:00",
+    "completed_at": "2026-09-02T18:36:25.7248514+09:00",
+    "elapsed_seconds": 334.424,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 602,
+      "output_tokens": 5539,
+      "total_tokens": 6141,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:28:35.1407691+09:00",
+    "completed_at": "2026-09-02T18:29:21.9365885+09:00",
+    "elapsed_seconds": 46.796,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 743,
+      "output_tokens": 3767,
+      "total_tokens": 4510,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:28:35.3443309+09:00",
+    "completed_at": "2026-09-02T18:29:33.950218+09:00",
+    "elapsed_seconds": 58.606,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 743,
+      "output_tokens": 4884,
+      "total_tokens": 5627,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "kimi-k3",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:28:35.5702816+09:00",
+    "completed_at": "2026-09-02T18:30:12.5236224+09:00",
+    "elapsed_seconds": 96.953,
+    "transport_status": "completed",
+    "response_status": "incomplete",
+    "incomplete_details": {
+      "reason": "max_output_tokens"
+    },
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 743,
+      "output_tokens": 8192,
+      "total_tokens": 8935,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 1,
+    "started_at": "2026-09-02T18:31:33.9771931+09:00",
+    "completed_at": "2026-09-02T18:35:58.8899779+09:00",
+    "elapsed_seconds": 264.913,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 472,
+      "output_tokens": 5942,
+      "total_tokens": 6414,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-1.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 2,
+    "started_at": "2026-09-02T18:31:53.3055799+09:00",
+    "completed_at": "2026-09-02T18:36:03.5980864+09:00",
+    "elapsed_seconds": 250.293,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 472,
+      "output_tokens": 5142,
+      "total_tokens": 5614,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-2.md"
+  },
+  {
+    "model": "qwen3.5:397b",
+    "variant": "none",
+    "task_set": "development",
+    "delivery": "inline_instructions",
+    "native_skill_loaded": false,
+    "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+    "run": 3,
+    "started_at": "2026-09-02T18:34:23.7367316+09:00",
+    "completed_at": "2026-09-02T18:36:54.0110994+09:00",
+    "elapsed_seconds": 150.274,
+    "transport_status": "completed",
+    "response_status": "completed",
+    "incomplete_details": null,
+    "response_output_types": [
+      {
+        "type": "reasoning",
+        "content_types": [
+          null
+        ]
+      },
+      {
+        "type": "message",
+        "content_types": [
+          "output_text"
+        ]
+      }
+    ],
+    "usage": {
+      "input_tokens": 472,
+      "output_tokens": 5606,
+      "total_tokens": 6078,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "error": null,
+    "output": "run-3.md"
+  }
+]
