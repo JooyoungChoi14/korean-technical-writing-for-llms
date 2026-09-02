@@ -1,0 +1,160 @@
+{
+  "records": [
+    {
+      "model": "kimi-k3",
+      "variant": "baseline",
+      "context_condition": "sufficient",
+      "run": 1,
+      "transport_status": "completed",
+      "elapsed_seconds": 34.467,
+      "json_valid": true,
+      "case_count_valid": true,
+      "cases": [
+        {
+          "id": "PERM-S",
+          "scenario": "permissions",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": false,
+          "question_ok": true,
+          "revision_ok": false,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 4,
+          "possible": 6
+        },
+        {
+          "id": "INV-S",
+          "scenario": "inventory",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": false,
+          "question_ok": true,
+          "revision_ok": true,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 5,
+          "possible": 6
+        },
+        {
+          "id": "STAT-S",
+          "scenario": "statistics_ui",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": false,
+          "question_ok": true,
+          "revision_ok": false,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 4,
+          "possible": 6
+        }
+      ],
+      "error": null
+    },
+    {
+      "model": "kimi-k3",
+      "variant": "none",
+      "context_condition": "sufficient",
+      "run": 1,
+      "transport_status": "completed",
+      "elapsed_seconds": 38.965,
+      "json_valid": true,
+      "case_count_valid": true,
+      "cases": [
+        {
+          "id": "PERM-S",
+          "scenario": "permissions",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": true,
+          "question_ok": true,
+          "revision_ok": false,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 5,
+          "possible": 6
+        },
+        {
+          "id": "INV-S",
+          "scenario": "inventory",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": true,
+          "question_ok": true,
+          "revision_ok": true,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 6,
+          "possible": 6
+        },
+        {
+          "id": "STAT-S",
+          "scenario": "statistics_ui",
+          "condition": "sufficient",
+          "decision_ok": true,
+          "evidence_exact": true,
+          "evidence_anchor": true,
+          "question_ok": true,
+          "revision_ok": false,
+          "assumption_safe": true,
+          "forbidden_found": [],
+          "earned": 5,
+          "possible": 6
+        }
+      ],
+      "error": null
+    }
+  ],
+  "summary": [
+    {
+      "variant": "baseline",
+      "context_condition": "sufficient",
+      "runs": 1,
+      "completed": 1,
+      "json_valid": 1,
+      "earned": 13,
+      "possible": 18,
+      "decision_ok": 3,
+      "cases": 3,
+      "grounded": 0,
+      "safe": 3,
+      "question_ok": 3,
+      "revision_ok": 1,
+      "completion_rate": 1.0,
+      "score": 0.7222,
+      "decision_accuracy": 1.0,
+      "grounding_rate": 0.0,
+      "assumption_safe_rate": 1.0,
+      "question_accuracy": 1.0,
+      "revision_accuracy": 0.3333
+    },
+    {
+      "variant": "none",
+      "context_condition": "sufficient",
+      "runs": 1,
+      "completed": 1,
+      "json_valid": 1,
+      "earned": 16,
+      "possible": 18,
+      "decision_ok": 3,
+      "cases": 3,
+      "grounded": 3,
+      "safe": 3,
+      "question_ok": 3,
+      "revision_ok": 1,
+      "completion_rate": 1.0,
+      "score": 0.8889,
+      "decision_accuracy": 1.0,
+      "grounding_rate": 1.0,
+      "assumption_safe_rate": 1.0,
+      "question_accuracy": 1.0,
+      "revision_accuracy": 0.3333
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "model": "qwen3.5:397b",
+  "variant": "baseline",
+  "context_condition": "underspecified",
+  "run": 1,
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+  "started_at": "2026-09-02T11:50:35.8060687+00:00",
+  "completed_at": "2026-09-02T11:52:13.4013586+00:00",
+  "elapsed_seconds": 97.595,
+  "transport_status": "failed",
+  "response_status": null,
+  "incomplete_details": null,
+  "usage": null,
+  "error": "Response status code does not indicate success: 429 (Too Many Requests).",
+  "output": null
+}

@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.3-codex-spark",
+  "key": "codex-gpt-5.3-codex-spark",
+  "variant": "none",
+  "context_condition": "conflicting",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:15:00.2077590+00:00",
+  "completed_at": "2026-09-02T12:15:06.5038598+00:00",
+  "elapsed_seconds": 6.296,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

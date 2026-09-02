@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.6-sol",
+  "key": "codex-gpt-5.6-sol",
+  "variant": "baseline",
+  "context_condition": "sufficient",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T12:04:39.9608629+00:00",
+  "completed_at": "2026-09-02T12:04:40.1530575+00:00",
+  "elapsed_seconds": 0.192,
+  "transport_status": "failed",
+  "error": "WARNING: proceeding, even though we could not create PATH aliases: Could not find home directory\r\nError finding codex home: Could not find home directory\r\n",
+  "output": "run-1.md"
+}

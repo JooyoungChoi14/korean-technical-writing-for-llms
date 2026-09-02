@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "sonnet",
+  "key": "claude-sonnet",
+  "variant": "none",
+  "context_condition": "irrelevant",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:13:41.5289036+00:00",
+  "completed_at": "2026-09-02T12:13:59.8085494+00:00",
+  "elapsed_seconds": 18.28,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

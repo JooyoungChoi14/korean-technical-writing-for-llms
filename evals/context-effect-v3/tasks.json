@@ -1,0 +1,149 @@
+{
+  "experiment": "context-effect-v3",
+  "cases": [
+    {
+      "id": "PERM-U",
+      "scenario": "permissions",
+      "context_condition": "underspecified",
+      "target": "권한을 담아낼 그릇이 필요합니다.",
+      "context": "이 문서는 교내 연구지원시스템의 권한 개편안을 설명한다. 현재 시스템은 사용자, 부서, 연구과제와 메뉴를 각각 관리하며, 한 사용자가 여러 부서와 과제에 동시에 참여할 수 있다. 권한은 조회, 신청, 승인, 정산, 감사 메뉴에 따라 달라지고 같은 사람도 과제 책임자일 때와 검토자일 때 수행할 수 있는 작업이 다르다. 개편 후에는 메뉴를 열 때마다 여러 테이블을 직접 조회하지 않고 미리 계산한 결과를 사용하려 한다. 계산 결과는 사용자 직접 설정, 소속 부서, 과제 역할, 임시 위임과 적용 기간을 반영해야 한다. 만료된 위임은 다음 로그인부터 제외하고, 감사 로그에는 최종 결과와 근거가 된 규칙을 남긴다. 배치 작업은 매일 새벽에 만료 여부를 다시 계산하며 관리자가 긴급 변경한 경우에는 즉시 반영한다. 저장 위치와 자료 구조, 이름, 생성 주체는 아직 결정하지 않았다. 설계 회의 기록에는 다음 요구만 남아 있다.\n\n권한을 담아낼 그릇이 필요합니다.\n\n후속 절에서는 계산 주기와 감사 로그 형식을 다룬다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["저장", "구조"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["저장 위치와 자료 구조, 이름, 생성 주체는 아직 결정하지 않았다"],
+      "forbidden_assumptions": ["AccessProfile", "PermissionSet", "JSON 컬럼", "Redis"]
+    },
+    {
+      "id": "PERM-S",
+      "scenario": "permissions",
+      "context_condition": "sufficient",
+      "target": "권한을 담아낼 그릇이 필요합니다.",
+      "context": "이 문서는 교내 연구지원시스템의 권한 개편안을 설명한다. 사용자 한 명이 여러 부서와 연구과제에 참여하므로 메뉴를 열 때마다 직접 권한, 부서 권한, 과제 역할과 임시 위임을 합산하는 방식은 응답 시간을 불안정하게 만든다. 개편안에서는 계산된 권한 결과를 `EffectivePermissionSet` 객체 하나로 표현한다. 이 객체는 `user_id`, 허용된 `action_codes`, 적용을 시작하고 끝내는 시각, 계산에 사용한 `rule_ids`를 가진다. 로그인과 권한 변경 이벤트를 처리하는 `PermissionResolver`가 객체를 생성하며, 세션 저장소에는 객체의 식별자만 보관한다. 메뉴 API는 이 객체를 읽어 작업 허용 여부를 판정하고 감사 로그에는 `rule_ids`를 기록한다. 객체가 없거나 만료됐으면 Resolver가 다시 계산한다. 설계 문서의 요약에는 아직 이전 회의에서 사용한 비유가 남아 있다.\n\n권한을 담아낼 그릇이 필요합니다.\n\n여기서 이 문장은 앞에서 정의한 객체를 생성해야 한다는 뜻이다.",
+      "expected_decision": "구체화 필요",
+      "required_question_terms": [],
+      "required_revision_terms": ["EffectivePermissionSet", "PermissionResolver", "생성"],
+      "required_evidence_terms": ["계산된 권한 결과를 `EffectivePermissionSet` 객체 하나로 표현한다"],
+      "forbidden_assumptions": ["Redis", "JSON 컬럼", "PermissionBundle"]
+    },
+    {
+      "id": "PERM-I",
+      "scenario": "permissions",
+      "context_condition": "irrelevant",
+      "target": "권한을 담아낼 그릇이 필요합니다.",
+      "context": "이 문서는 교내 연구지원시스템의 다음 분기 배포 절차를 설명한다. 프런트엔드는 정적 자산을 먼저 배포하고 API 서버는 두 개 가용 영역에 순차적으로 반영한다. 배포 중에는 기존 세션을 유지하며 데이터베이스 스키마 변경은 하위 호환되는 열 추가만 허용한다. 관측 지표는 오류율, 95백분위 응답 시간, 로그인 성공률이고 오류율이 2%를 넘으면 이전 버전으로 되돌린다. 점검 담당자는 학사팀과 연구지원팀에서 한 명씩 지정한다. 작업 시작 전 변경 티켓과 백업 완료 여부를 확인하고, 종료 후에는 대표 사용자 계정으로 신청·승인·정산 화면을 순서대로 확인한다. 이 절에는 권한 계산의 자료 구조나 저장 방식, 생성 주체가 정의되어 있지 않다. 다만 이전 설계 회의에서 옮겨 온 다음 문장이 배포 체크리스트 아래에 남아 있다.\n\n권한을 담아낼 그릇이 필요합니다.\n\n배포 절차의 나머지 항목은 장애 연락망과 복구 시간 목표를 설명한다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["권한", "대상"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["권한 계산의 자료 구조나 저장 방식, 생성 주체가 정의되어 있지 않다"],
+      "forbidden_assumptions": ["AccessProfile", "PermissionSet", "배포 서버", "세션 저장소"]
+    },
+    {
+      "id": "PERM-C",
+      "scenario": "permissions",
+      "context_condition": "conflicting",
+      "target": "권한을 담아낼 그릇이 필요합니다.",
+      "context": "이 문서는 교내 연구지원시스템의 권한 개편안을 설명한다. 2장에서는 계산된 권한 결과를 `PermissionBundle`이라고 부르며 사용자별 JSON 문서로 저장한다고 정의한다. Bundle에는 허용 메뉴, 거부 메뉴, 적용 기간과 계산 근거가 포함되고 로그인 서비스가 이를 생성한다. 그러나 4장의 데이터 모델에서는 같은 비유를 `RoleSnapshot` 테이블로 정의한다. 이 테이블은 사용자별이 아니라 역할별 행을 가지며 야간 배치가 생성하고 사용자 직접 설정은 포함하지 않는다고 적혀 있다. 두 절 모두 현재안으로 표시되어 있고 변경 이력에는 어느 정의가 폐기됐는지 남아 있지 않다. 메뉴 API 설명은 단지 계산된 결과를 읽는다고만 되어 있어 어느 정의를 사용하는지 확인할 수 없다. 요약 절에는 다음 문장이 있다.\n\n권한을 담아낼 그릇이 필요합니다.\n\n`그릇`이라는 표현이 `PermissionBundle`과 `RoleSnapshot` 중 어느 쪽을 가리키는지에 따라 생성 주체, 저장 단위와 포함되는 규칙이 모두 달라진다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["PermissionBundle", "RoleSnapshot"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["두 절 모두 현재안으로 표시되어 있고 변경 이력에는 어느 정의가 폐기됐는지 남아 있지 않다"],
+      "forbidden_assumptions": ["PermissionBundle을 사용", "RoleSnapshot을 사용"]
+    },
+    {
+      "id": "INV-U",
+      "scenario": "inventory",
+      "context_condition": "underspecified",
+      "target": "재고 부족을 흡수할 쿠션이 필요합니다.",
+      "context": "이 문서는 의료소모품 공급 계획의 개편 방향을 설명한다. 병원별 주문은 평일 오전과 오후 두 차례 집계되지만 응급실 품목은 수시로 출고된다. 공급사는 품목에 따라 국내 창고, 해외 제조사, 지역 대리점으로 나뉘고 조달 기간은 하루에서 여섯 주까지 차이가 난다. 최근에는 수요 급증, 공급사 납기 지연과 검수 불합격이 동시에 발생해 일부 병원에 배정량을 줄인 사례가 있었다. 새 계획은 부족 상황에서도 필수 품목의 진료가 중단되지 않게 해야 하며, 비용과 폐기 위험도 함께 제한해야 한다. 대응 수단으로 추가 재고, 대체 품목, 복수 공급사, 긴급 운송과 병원 간 전환이 논의됐지만 어느 수단을 어느 품목에 적용할지는 결정되지 않았다. 회의 결론에는 다음 문장만 남아 있다.\n\n재고 부족을 흡수할 쿠션이 필요합니다.\n\n다음 회의에서 품목 등급과 대응 수단을 확정할 예정이다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["재고 부족", "수단"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["어느 수단을 어느 품목에 적용할지는 결정되지 않았다"],
+      "forbidden_assumptions": ["안전 재고", "자동 발주", "대체 공급사로 전환"]
+    },
+    {
+      "id": "INV-S",
+      "scenario": "inventory",
+      "context_condition": "sufficient",
+      "target": "재고 부족을 흡수할 쿠션이 필요합니다.",
+      "context": "이 문서는 의료소모품 공급 계획의 개편안을 설명한다. A등급 품목은 대체가 불가능하고 공급 중단 시 진료에 직접 영향을 준다. 최근 12개월의 일별 사용량과 공급사 납기 편차를 분석한 결과, A등급 품목은 평균 사용량 14일분을 추가로 보유하면 관측된 납기 지연의 95%를 감당할 수 있었다. 이에 따라 각 병원은 A등급 품목별 `safety_stock_days`를 14로 설정하고, 가용 재고가 이 값 아래로 내려가면 중앙 구매팀에 보충 요청을 보낸다. 이 추가 수량을 문서에서는 안전 재고라고 정의한다. B등급은 대체 품목 전환으로 대응하므로 같은 규칙을 적용하지 않는다. 폐기율을 통제하기 위해 안전 재고 수량은 분기마다 최근 사용량으로 다시 계산한다. 요약 절에는 이전 회의의 비유가 남아 있다.\n\n재고 부족을 흡수할 쿠션이 필요합니다.\n\n이 문장은 A등급 품목에 14일분의 안전 재고를 설정한다는 결정을 가리킨다.",
+      "expected_decision": "구체화 필요",
+      "required_question_terms": [],
+      "required_revision_terms": ["A등급", "14일분", "안전 재고"],
+      "required_evidence_terms": ["A등급 품목별 `safety_stock_days`를 14로 설정"],
+      "forbidden_assumptions": ["자동 발주", "복수 공급사", "21일분"]
+    },
+    {
+      "id": "INV-I",
+      "scenario": "inventory",
+      "context_condition": "irrelevant",
+      "target": "재고 부족을 흡수할 쿠션이 필요합니다.",
+      "context": "이 문서는 의료소모품 창고의 모바일 검수 화면을 설명한다. 작업자는 입고 상자의 바코드를 읽고 발주 번호, 품목 코드, 제조번호와 유효기간을 확인한다. 카메라 인식에 실패하면 품목 코드를 직접 입력할 수 있고, 동일 제조번호가 이미 등록됐으면 중복 경고를 표시한다. 검수 완료 버튼은 필수 항목이 모두 입력된 경우에만 활성화된다. 네트워크가 끊기면 최대 50건을 단말기에 임시 저장하고 연결이 복구되면 입력 순서대로 전송한다. 서버는 성공한 건의 입고 식별자를 반환하며 실패한 건은 사유와 함께 작업 목록에 남긴다. 이 절은 입력 화면과 동기화 동작만 다루며 부족 상황의 대응 정책이나 보유 수량은 정의하지 않는다. 화면 설명 끝에 다음 문장이 섞여 있다.\n\n재고 부족을 흡수할 쿠션이 필요합니다.\n\n후속 절은 바코드 라벨의 인쇄 규격을 설명한다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["쿠션", "대응"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["부족 상황의 대응 정책이나 보유 수량은 정의하지 않는다"],
+      "forbidden_assumptions": ["안전 재고", "50건", "단말기 임시 저장"]
+    },
+    {
+      "id": "INV-C",
+      "scenario": "inventory",
+      "context_condition": "conflicting",
+      "target": "재고 부족을 흡수할 쿠션이 필요합니다.",
+      "context": "이 문서는 의료소모품 공급 계획의 현재안을 설명한다. 수요 계획 절에서는 `쿠션`을 A등급 품목의 14일분 안전 재고라고 정의하며 병원 창고가 이를 보유한다고 적는다. 수량은 최근 12개월 사용량으로 분기마다 갱신한다. 반면 조달 운영 절에서는 재고를 늘리면 폐기 비용이 커지므로 추가 재고를 두지 않는다고 명시한다. 그 절에서 `쿠션`은 두 번째 공급사와의 긴급 구매 계약을 뜻하며, 부족이 예상될 때 중앙 구매팀이 계약을 발동한다고 정의한다. 두 절은 모두 승인 완료 상태이고 적용 대상도 A등급 품목으로 같다. 문서의 의사결정 기록에는 어느 정책이 최종안인지 표시되지 않았다. 요약에는 다음 문장이 있다.\n\n재고 부족을 흡수할 쿠션이 필요합니다.\n\n안전 재고와 긴급 구매 계약은 비용, 담당자와 작동 시점이 다르므로 하나를 임의로 선택해 고칠 수 없다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["안전 재고", "긴급 구매 계약"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["어느 정책이 최종안인지 표시되지 않았다"],
+      "forbidden_assumptions": ["안전 재고를 적용", "긴급 구매 계약을 적용"]
+    },
+    {
+      "id": "STAT-U",
+      "scenario": "statistics_ui",
+      "context_condition": "underspecified",
+      "target": "통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.",
+      "context": "이 문서는 지역정책 실험 결과를 조회하는 관리자 화면의 개편 방향을 설명한다. 화면은 지역, 정책 시행 기간, 참여 집단과 비교 집단을 선택해 평균 효과와 신뢰구간을 보여준다. 통계 계산은 야간 배치에서 수행되며 결과에는 표본 수, 결측치 비율, 추정값, 표준오차와 모형 버전이 포함된다. 사용자는 표와 추세 그래프를 전환하고 CSV 파일로 내보낼 수 있어야 한다. 새 계산이 끝나기 전에는 이전 결과를 표시하되 기준 시각을 함께 보여준다. 표본 수가 공개 기준보다 적은 셀은 값 대신 비공개 사유를 표시한다. 프런트엔드에서 결과를 가져오는 구체적인 API, 상태 관리 방식과 사용자 동작은 아직 합의되지 않았다. 화면 개편안에는 다음 요구가 있다.\n\n통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.\n\n후속 회의에서 호출 방식과 갱신 동작을 결정한다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["통계 값", "호출"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["구체적인 API, 상태 관리 방식과 사용자 동작은 아직 합의되지 않았다"],
+      "forbidden_assumptions": ["usePolicyStats", "조회 버튼", "GraphQL", "REST API"]
+    },
+    {
+      "id": "STAT-S",
+      "scenario": "statistics_ui",
+      "context_condition": "sufficient",
+      "target": "통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.",
+      "context": "이 문서는 지역정책 실험 결과를 조회하는 관리자 화면의 상세 설계를 설명한다. 통계 서비스는 `GET /policy-effects`에서 지역 코드와 기준일을 받아 추정값, 신뢰구간, 표본 수와 모형 버전을 반환한다. 프런트엔드는 이 API 호출과 로딩·오류·마지막 갱신 시각을 관리하는 React 훅 `usePolicyEffects`를 사용한다. 화면이 처음 열리거나 지역과 기준일이 바뀌면 훅의 `reload` 함수가 호출된다. 응답이 성공하면 표와 그래프가 같은 결과 객체를 읽고, 실패하면 기존 값을 유지한 채 오류 배너를 표시한다. CSV 내보내기도 훅이 보관한 결과를 사용한다. 상세 설계는 이미 승인됐지만 요약 절에는 이전 회의에서 사용한 비유가 남아 있다.\n\n통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.\n\n여기서 손잡이는 앞에서 정의한 `usePolicyEffects` 훅과 `reload` 함수를 뜻한다.",
+      "expected_decision": "구체화 필요",
+      "required_question_terms": [],
+      "required_revision_terms": ["usePolicyEffects", "reload", "호출"],
+      "required_evidence_terms": ["React 훅 `usePolicyEffects`를 사용한다"],
+      "forbidden_assumptions": ["GraphQL", "조회 버튼", "useRegionalMetrics"]
+    },
+    {
+      "id": "STAT-I",
+      "scenario": "statistics_ui",
+      "context_condition": "irrelevant",
+      "target": "통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.",
+      "context": "이 문서는 지역정책 실험 결과 화면의 접근성 기준을 설명한다. 표와 그래프의 모든 색상은 명도 대비 4.5대 1 이상을 만족해야 하며 색상만으로 증가와 감소를 구분하지 않는다. 키보드 사용자는 필터, 표, 그래프 설명과 내보내기 버튼을 논리적인 순서로 이동할 수 있어야 한다. 그래프에는 같은 데이터를 요약한 텍스트 설명을 제공하고 표 머리글은 열과 행의 범위를 명시한다. 오류 배너는 화면 읽기 프로그램에 즉시 전달하되 반복 갱신으로 같은 메시지를 계속 읽지 않게 한다. 날짜는 로케일 형식으로 표시하지만 원본 시각대도 보조 설명에 남긴다. 이 절은 표시와 조작의 접근성만 다루며 통계 값을 가져오는 API나 상태 관리 수단은 정의하지 않는다. 끝부분에 다음 구현 메모가 남아 있다.\n\n통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.\n\n다음 절은 모바일 화면의 표 가로 스크롤을 다룬다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["손잡이", "수단"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["통계 값을 가져오는 API나 상태 관리 수단은 정의하지 않는다"],
+      "forbidden_assumptions": ["조회 버튼", "React 훅", "REST API", "키보드 버튼"]
+    },
+    {
+      "id": "STAT-C",
+      "scenario": "statistics_ui",
+      "context_condition": "conflicting",
+      "target": "통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.",
+      "context": "이 문서는 지역정책 실험 결과 화면의 현재 설계를 설명한다. API 절에서는 화면이 `GET /policy-effects`를 직접 호출하고 React 훅 `usePolicyEffects`가 응답과 갱신을 관리한다고 정의한다. 필터가 바뀌면 훅의 `reload`를 호출한다. 그러나 상태 관리 절에서는 브라우저의 직접 호출을 금지하고 서버 렌더링 단계에서 `PolicyEffectLoader`가 통계를 주입한다고 적는다. 이 절에는 클라이언트 훅을 만들지 않으며 필터 변경 시 전체 페이지를 다시 요청한다고 명시돼 있다. 두 절 모두 승인 상태이고 같은 관리자 화면을 대상으로 한다. 변경 이력에는 어느 설계가 폐기됐는지 기록되지 않았다. 요약에는 다음 문장이 남아 있다.\n\n통계 값을 화면으로 끌어올릴 손잡이를 추가합니다.\n\n이 표현을 `usePolicyEffects`로 바꿀지 `PolicyEffectLoader`로 바꿀지에 따라 실행 위치와 갱신 방식이 달라진다.",
+      "expected_decision": "의미 확인 필요",
+      "required_question_terms": ["usePolicyEffects", "PolicyEffectLoader"],
+      "required_revision_terms": [],
+      "required_evidence_terms": ["어느 설계가 폐기됐는지 기록되지 않았다"],
+      "forbidden_assumptions": ["usePolicyEffects를 사용", "PolicyEffectLoader를 사용"]
+    }
+  ]
+}

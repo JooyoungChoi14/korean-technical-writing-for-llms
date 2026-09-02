@@ -1,0 +1,18 @@
+{
+  "model": "gemma4:31b",
+  "variant": "baseline",
+  "context_condition": "irrelevant",
+  "run": 1,
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+  "started_at": "2026-09-02T11:52:27.6294562+00:00",
+  "completed_at": "2026-09-02T11:52:28.1485567+00:00",
+  "elapsed_seconds": 0.519,
+  "transport_status": "failed",
+  "response_status": null,
+  "incomplete_details": null,
+  "usage": null,
+  "error": "Response status code does not indicate success: 429 (Too Many Requests).",
+  "output": null
+}

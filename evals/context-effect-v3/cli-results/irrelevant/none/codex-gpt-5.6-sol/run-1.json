@@ -1,0 +1,15 @@
+{
+  "agent": "codex",
+  "model": "gpt-5.6-sol",
+  "key": "codex-gpt-5.6-sol",
+  "variant": "none",
+  "context_condition": "irrelevant",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:13:56.3101470+00:00",
+  "completed_at": "2026-09-02T12:14:08.9739248+00:00",
+  "elapsed_seconds": 12.664,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

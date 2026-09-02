@@ -1,0 +1,18 @@
+{
+  "model": "gpt-oss:120b",
+  "variant": "none",
+  "context_condition": "irrelevant",
+  "run": 1,
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+  "started_at": "2026-09-02T11:52:24.8249780+00:00",
+  "completed_at": "2026-09-02T11:52:26.3922868+00:00",
+  "elapsed_seconds": 1.567,
+  "transport_status": "failed",
+  "response_status": null,
+  "incomplete_details": null,
+  "usage": null,
+  "error": "Response status code does not indicate success: 429 (Too Many Requests).",
+  "output": null
+}

@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "claude-opus-5",
+  "key": "claude-opus-5",
+  "variant": "baseline",
+  "context_condition": "sufficient",
+  "delivery": "system_or_developer_instructions",
+  "run": 1,
+  "started_at": "2026-09-02T12:08:48.2159635+00:00",
+  "completed_at": "2026-09-02T12:09:20.2642179+00:00",
+  "elapsed_seconds": 32.048,
+  "transport_status": "completed",
+  "error": null,
+  "output": "run-1.md"
+}

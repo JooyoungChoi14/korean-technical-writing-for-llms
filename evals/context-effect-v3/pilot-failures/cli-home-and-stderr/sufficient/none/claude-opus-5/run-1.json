@@ -1,0 +1,15 @@
+{
+  "agent": "claude",
+  "model": "claude-opus-5",
+  "key": "claude-opus-5",
+  "variant": "none",
+  "context_condition": "sufficient",
+  "delivery": "none",
+  "run": 1,
+  "started_at": "2026-09-02T12:04:34.4628887+00:00",
+  "completed_at": "2026-09-02T12:04:39.3682572+00:00",
+  "elapsed_seconds": 4.905,
+  "transport_status": "failed",
+  "error": "Conversion from JSON failed with error: Additional text encountered after finished reading JSON content: |. Path '', line 1, position 3.",
+  "output": "run-1.md"
+}

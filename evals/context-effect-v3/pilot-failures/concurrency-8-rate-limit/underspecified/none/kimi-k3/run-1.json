@@ -1,0 +1,28 @@
+{
+  "model": "kimi-k3",
+  "variant": "none",
+  "context_condition": "underspecified",
+  "run": 1,
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "edda021a1042ba641d06e0a172a33f3c6880368057ac5c7e9afb343374f04594",
+  "started_at": "2026-09-02T11:48:39.8496233+00:00",
+  "completed_at": "2026-09-02T11:50:35.2374285+00:00",
+  "elapsed_seconds": 115.388,
+  "transport_status": "completed",
+  "response_status": "completed",
+  "incomplete_details": null,
+  "usage": {
+    "input_tokens": 1557,
+    "output_tokens": 8913,
+    "total_tokens": 10470,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "error": null,
+  "output": "run-1.md"
+}

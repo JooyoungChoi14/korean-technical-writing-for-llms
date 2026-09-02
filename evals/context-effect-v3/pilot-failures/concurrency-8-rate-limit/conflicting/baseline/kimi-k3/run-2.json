@@ -1,0 +1,18 @@
+{
+  "model": "kimi-k3",
+  "variant": "baseline",
+  "context_condition": "conflicting",
+  "run": 2,
+  "delivery": "inline_instructions",
+  "native_skill_loaded": false,
+  "instruction_sha256": "46a73b77176fc23f840b72ff08f0b1397b99722b52c8791bb19378a6098d2abe",
+  "started_at": "2026-09-02T11:52:31.8429559+00:00",
+  "completed_at": "2026-09-02T11:52:32.3853070+00:00",
+  "elapsed_seconds": 0.542,
+  "transport_status": "failed",
+  "response_status": null,
+  "incomplete_details": null,
+  "usage": null,
+  "error": "Response status code does not indicate success: 429 (Too Many Requests).",
+  "output": null
+}
