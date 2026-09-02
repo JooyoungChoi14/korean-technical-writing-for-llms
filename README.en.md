@@ -9,6 +9,7 @@ The project asks a reader-centered question: even when a sentence is grammatical
 - A Korean [experiment report](report/experiment.ko.md) and [web edition](docs/index.html)
 - The installable [`korean-technical-writing-review`](plugins/korean-technical-writing-review/skills/korean-technical-writing-review/SKILL.md) Agent Skill
 - A public-safe evaluation set of 20 synthetic cases
+- A reproducible [CLI installation and behavior smoke test](evals/cli-smoke/README.md)
 - Codex plugin and repository marketplace metadata
 
 ```bash
@@ -16,6 +17,12 @@ npx skills add JooyoungChoi14/korean-technical-writing-for-llms --skill korean-t
 ```
 
 The method separates drafting, diagnosis, limited revision, and semantic verification. It is model-neutral and does not attempt to identify which model authored a document.
+
+## Verified CLI behavior
+
+On September 2, 2026, the skill was installed from the public GitHub repository into a clean local project and invoked from Claude Code 2.0.73 and Codex CLI 0.151.0-alpha.7.2. Both CLIs discovered the installed skill, flagged an undefined container metaphor, passed a complete expiration-check sentence, and asked for clarification when a stated authorization order could conflict with a deny-first rule.
+
+This is a compatibility and behavioral smoke test, not a repeated performance benchmark. The [commands, acceptance criteria, metadata, and captured outputs](evals/cli-smoke/README.md) are included for review.
 
 ## Public study scope
 

@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-02",
+  "source": "https://github.com/JooyoungChoi14/korean-technical-writing-for-llms",
+  "source_commit": "aa308e0",
+  "installation": {
+    "scope": "temporary project",
+    "command": "npx -y skills add JooyoungChoi14/korean-technical-writing-for-llms --agent claude-code --agent codex --skill korean-technical-writing-review --yes",
+    "canonical_path": ".agents/skills/korean-technical-writing-review",
+    "claude_path": ".claude/skills/korean-technical-writing-review",
+    "claude_link_type": "junction",
+    "installed_file_count": 5,
+    "normalized_content_match": true
+  },
+  "runs": [
+    {
+      "agent": "Claude Code",
+      "cli_version": "2.0.73",
+      "requested_model": "sonnet",
+      "resolved_model": "claude-sonnet-4-5-20250929",
+      "setting_sources": ["project"],
+      "allowed_tools": ["Read", "Skill"],
+      "session_persistence": false,
+      "result": "passed"
+    },
+    {
+      "agent": "Codex CLI",
+      "cli_version": "0.151.0-alpha.7.2",
+      "requested_model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "sandbox": "read-only",
+      "session_persistence": false,
+      "result": "passed"
+    }
+  ],
+  "limitations": [
+    "Each agent was run once.",
+    "The test verifies installation, discovery, and expected behavior; it does not estimate general model performance.",
+    "The outputs were reviewed manually against expected.json.",
+    "A Claude diagnostic run that denied the Skill tool was excluded from the pass result."
+  ]
+}

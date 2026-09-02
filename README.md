@@ -10,6 +10,7 @@ LLM이 만든 한국어 기술 문서를 **문법 오류가 아니라 독자가 
 - [브라우저에서 바로 읽는 실험 문서](docs/index.html)
 - Claude Code와 Codex 등에서 사용할 수 있는 [`korean-technical-writing-review`](plugins/korean-technical-writing-review/skills/korean-technical-writing-review/SKILL.md) 스킬
 - 공개 가능한 합성 사례 20개와 기대 판정으로 구성한 [평가 세트](evals/README.md)
+- 공개 저장소 설치부터 실제 판정까지 확인한 [CLI 스모크 테스트](evals/cli-smoke/README.md)
 - Codex용 플러그인 및 저장소 마켓플레이스 메타데이터
 
 ## 가장 짧은 사용법
@@ -27,6 +28,20 @@ $korean-technical-writing-review 이 설계 문서를 검사하고, 의미를 �
 ```
 
 Codex 저장소 플러그인으로 사용할 때는 `.agents/plugins/marketplace.json`과 `plugins/`를 함께 사용합니다.
+
+## 실제 CLI에서 확인한 동작
+
+2026년 9월 2일 공개 GitHub 저장소에서 프로젝트 로컬 스킬로 새로 설치한 뒤, Claude Code와 Codex CLI에서 같은 세 문장을 검사했습니다.
+
+| 확인 항목 | Claude Code 2.0.73 | Codex CLI 0.151.0-alpha.7.2 |
+|---|---|---|
+| 설치된 스킬 발견 | 통과 | 통과 |
+| 기대한 판정 행동 재현 | 통과 | 통과 |
+| 대상이 불분명한 `그릇` 비유 지적 | 통과 | 통과 |
+| 명확한 만료 검사 문장 통과 | 통과 | 통과 |
+| 권한 순서와 `거부 우선`의 충돌 가능성 확인 | 통과 | 통과 |
+
+이 결과는 설치 호환성과 의도한 행동의 재현을 확인한 **스모크 테스트**입니다. 여러 모델과 반복 실행을 비교한 성능 벤치마크는 아닙니다. 설치 명령, 실행 조건, 기대 판정과 실제 출력은 [`evals/cli-smoke/`](evals/cli-smoke/README.md)에 공개했습니다.
 
 ## 핵심 제안
 
