@@ -11,6 +11,7 @@ LLM이 만든 한국어 기술 문서를 **문법 오류가 아니라 독자가 
 - Claude Code와 Codex 등에서 사용할 수 있는 [`korean-technical-writing-review`](plugins/korean-technical-writing-review/skills/korean-technical-writing-review/SKILL.md) 스킬
 - 공개 가능한 합성 사례 20개와 기대 판정으로 구성한 [평가 세트](evals/README.md)
 - 공개 저장소 설치부터 실제 판정까지 확인한 [CLI 스모크 테스트](evals/cli-smoke/README.md)
+- Codex에서 Ollama Cloud 공개 모델 19개를 같은 조건으로 비교한 [모델별 스모크 테스트](evals/ollama-cloud/README.md)
 - Codex용 플러그인 및 저장소 마켓플레이스 메타데이터
 
 ## 가장 짧은 사용법
@@ -41,6 +42,8 @@ Codex 저장소 플러그인으로 사용할 때는 `.agents/plugins/marketplace
 | Codex CLI · gpt-5.3-codex-spark | 통과 | 통과 | 통과 | 실패 | 실패 |
 
 Spark는 3번을 모호하다고 표시했지만 나열 순서와 `거부 우선`의 논리적 충돌을 해소하지 않은 수정안을 제시했습니다. 이 결과는 설치 호환성과 모델별 핵심 행동을 한 번씩 확인한 **스모크 테스트**입니다. 반복 실행을 비교한 성능 벤치마크는 아닙니다. 설치 명령, 실행 조건, 기대 판정과 실제 출력은 [`evals/cli-smoke/`](evals/cli-smoke/README.md)에 공개했습니다.
+
+같은 날 Codex를 Ollama Cloud에 연결해 공개 모델 19개도 모델당 한 번씩 시험했습니다. 15개가 최종 응답을 만들었고, 엄격한 세 조건을 모두 만족한 것은 GLM 5.3과 GLM 5.3 Flash였습니다. 네 모델은 도구 스키마 또는 서비스 오류로 미채점 처리했습니다. 이는 모델 우열을 일반화하는 벤치마크가 아니라 현재 하네스의 설치·동작 회귀 시험입니다. 설정 예시, 전체 결과와 원출력은 [`evals/ollama-cloud/`](evals/ollama-cloud/README.md)에 있습니다.
 
 ## 핵심 제안
 

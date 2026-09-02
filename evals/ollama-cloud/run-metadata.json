@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-02",
+  "source_commit": "aa308e0",
+  "agent": "Codex CLI",
+  "cli_version": "0.151.0-alpha.7.2",
+  "provider": "Ollama Cloud OpenAI-compatible API",
+  "base_url": "https://ollama.com/v1",
+  "wire_api": "responses",
+  "reasoning_effort": "medium (Codex fallback metadata)",
+  "sandbox": "read-only",
+  "session_persistence": false,
+  "prompt": "../cli-smoke/prompt.ko.txt",
+  "expected": "../cli-smoke/expected.json",
+  "runs": [
+    {"model":"deepseek-v4-flash:0731","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-deepseek-v4-flash-0731.txt"},
+    {"model":"deepseek-v4-pro:0813","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-deepseek-v4-pro-0813.txt"},
+    {"model":"gemma4:31b","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-gemma4-31b.txt"},
+    {"model":"glm-5.1","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-glm-5.1.txt"},
+    {"model":"glm-5.2","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-glm-5.2.txt"},
+    {"model":"glm-5.3","execution":"completed","acceptance_passed":3,"acceptance_total":3,"result":"passed","output":"outputs/ollama-glm-5.3.txt"},
+    {"model":"glm-5.3-flash","execution":"completed","acceptance_passed":3,"acceptance_total":3,"result":"passed","output":"outputs/ollama-glm-5.3-flash.txt"},
+    {"model":"gpt-oss:20b","execution":"completed","acceptance_passed":0,"acceptance_total":3,"result":"failed","output":"outputs/ollama-gpt-oss-20b.txt"},
+    {"model":"gpt-oss:120b","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-gpt-oss-120b.txt"},
+    {"model":"kimi-k2.6","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-kimi-k2.6.txt"},
+    {"model":"kimi-k2.7-code","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-kimi-k2.7-code.txt"},
+    {"model":"kimi-k3","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-kimi-k3.txt"},
+    {"model":"minimax-m2.7","execution":"failed","acceptance_passed":null,"acceptance_total":3,"result":"not_scored","failure":"The provider rejected the Codex tool schema: invalid tool type namespace."},
+    {"model":"minimax-m3","execution":"failed","acceptance_passed":null,"acceptance_total":3,"result":"not_scored","failure":"The provider rejected the Codex tool schema: invalid tool type namespace."},
+    {"model":"mistral-large-3:675b","execution":"failed","acceptance_passed":null,"acceptance_total":3,"result":"not_scored","failure":"Ollama Cloud returned a high-demand error on the initial run and one retry."},
+    {"model":"nemotron-3-nano:30b","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-nemotron-3-nano-30b.txt"},
+    {"model":"nemotron-3-super","execution":"completed","acceptance_passed":1,"acceptance_total":3,"result":"failed","output":"outputs/ollama-nemotron-3-super.txt"},
+    {"model":"nemotron-3-ultra","execution":"completed","acceptance_passed":2,"acceptance_total":3,"result":"failed","output":"outputs/ollama-nemotron-3-ultra.txt"},
+    {"model":"qwen3.5:397b","execution":"failed","acceptance_passed":null,"acceptance_total":3,"result":"not_scored","failure":"The provider rejected one Codex tool definition because its function name was missing."}
+  ],
+  "limitations": [
+    "Each model was run once, except Mistral which received one retry after a service error.",
+    "The test is a strict installation and behavior smoke test, not a general model benchmark.",
+    "Completed outputs were scored manually against ../cli-smoke/expected.json.",
+    "Execution failures were not converted into behavioral failures.",
+    "Codex used fallback model metadata because the provider model-list schema did not match the schema expected by this Codex build."
+  ]
+}
