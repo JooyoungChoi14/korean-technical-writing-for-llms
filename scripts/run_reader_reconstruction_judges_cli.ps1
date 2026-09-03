@@ -2,6 +2,7 @@ param(
     [ValidateSet('claude-fable-5','codex-gpt-5.6-sol')]
     [string[]]$Judges=@('claude-fable-5','codex-gpt-5.6-sol'),
     [Parameter(Mandatory=$true)][string]$OutputRoot,
+    [string]$BatchRoot='',
     [ValidateRange(1,60)][int]$ChunkSize=20,
     [ValidateRange(1,3)][int]$Concurrency=2,
     [switch]$SkipFinished
@@ -9,7 +10,8 @@ param(
 $ErrorActionPreference='Stop'
 $repoRoot=Split-Path -Parent $PSScriptRoot
 $experimentRoot=Join-Path $repoRoot 'evals\reader-reconstruction-v6'
-$batchRoot=Join-Path $experimentRoot 'batches'
+if([string]::IsNullOrWhiteSpace($BatchRoot)){$BatchRoot=Join-Path $experimentRoot 'batches'}elseif(-not [IO.Path]::IsPathRooted($BatchRoot)){$BatchRoot=Join-Path $repoRoot $BatchRoot}
+$BatchRoot=[IO.Path]::GetFullPath($BatchRoot)
 $schemaPath=Join-Path $experimentRoot 'judge-output-schema.json'
 $mcpConfigPath=Join-Path $experimentRoot 'empty-mcp.json'
 $schemaText=Get-Content $schemaPath -Raw -Encoding UTF8
@@ -29,7 +31,7 @@ actor_and_action_explicit는 revision만 읽고 누가 또는 무엇이 어떤 �
 '@
 $jobs=[Collections.Generic.List[object]]::new()
 foreach($profile in $profiles){
-    $judgeDir=Join-Path $batchRoot $profile.judge
+    $judgeDir=Join-Path $BatchRoot $profile.judge
     foreach($batch in Get-ChildItem $judgeDir -Filter 'batch-*.json'|Sort-Object Name){
       $batchPayload=Get-Content $batch.FullName -Raw -Encoding UTF8|ConvertFrom-Json
       for($startIndex=0;$startIndex -lt $batchPayload.items.Count;$startIndex+=$ChunkSize){

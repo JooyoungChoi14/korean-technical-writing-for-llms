@@ -1,13 +1,15 @@
 param(
     [string]$Model='kimi-k3',
     [Parameter(Mandatory=$true)][string]$OutputRoot,
+    [string]$BatchRoot='',
     [ValidateRange(1,60)][int]$ChunkSize=10,
     [string[]]$BatchNames=@(),
     [ValidateRange(0,5)][int]$RetryCount=2,
     [switch]$SkipFinished
 )
 $ErrorActionPreference='Stop'
-$repoRoot=Split-Path -Parent $PSScriptRoot;$experimentRoot=Join-Path $repoRoot 'evals\reader-reconstruction-v6';$batchRoot=Join-Path $experimentRoot 'batches\ollama-kimi-k3'
+$repoRoot=Split-Path -Parent $PSScriptRoot;$experimentRoot=Join-Path $repoRoot 'evals\reader-reconstruction-v6'
+if([string]::IsNullOrWhiteSpace($BatchRoot)){$batchRoot=Join-Path $experimentRoot 'batches\ollama-kimi-k3'}elseif([IO.Path]::IsPathRooted($BatchRoot)){$batchRoot=[IO.Path]::GetFullPath($BatchRoot)}else{$batchRoot=[IO.Path]::GetFullPath((Join-Path $repoRoot $BatchRoot))}
 $schemaText=Get-Content (Join-Path $experimentRoot 'judge-output-schema.json') -Raw -Encoding UTF8
 $secretPath=Join-Path $env:USERPROFILE '.codex\secrets\ollama-cloud-api-key.txt';$token=$env:OLLAMA_API_KEY
 if([string]::IsNullOrWhiteSpace($token) -and (Test-Path -LiteralPath $secretPath)){$token=(Get-Content $secretPath -Raw -Encoding UTF8).Trim()}
