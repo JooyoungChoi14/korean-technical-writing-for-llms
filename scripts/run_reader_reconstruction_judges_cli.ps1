@@ -2,6 +2,7 @@ param(
     [ValidateSet('claude-fable-5','codex-gpt-5.6-sol')]
     [string[]]$Judges=@('claude-fable-5','codex-gpt-5.6-sol'),
     [Parameter(Mandatory=$true)][string]$OutputRoot,
+    [ValidateRange(1,60)][int]$ChunkSize=20,
     [ValidateRange(1,3)][int]$Concurrency=2,
     [switch]$SkipFinished
 )
@@ -30,15 +31,19 @@ $jobs=[Collections.Generic.List[object]]::new()
 foreach($profile in $profiles){
     $judgeDir=Join-Path $batchRoot $profile.judge
     foreach($batch in Get-ChildItem $judgeDir -Filter 'batch-*.json'|Sort-Object Name){
+      $batchPayload=Get-Content $batch.FullName -Raw -Encoding UTF8|ConvertFrom-Json
+      for($startIndex=0;$startIndex -lt $batchPayload.items.Count;$startIndex+=$ChunkSize){
+        [int]$part=1+[Math]::Floor($startIndex/$ChunkSize);$partItems=@($batchPayload.items|Select-Object -Skip $startIndex -First $ChunkSize)
         while(($jobs|Where-Object State -eq Running).Count -ge $Concurrency){$done=Wait-Job $jobs -Any -Timeout 5;if($done){Receive-Job $done|Out-Host}}
         $dir=Join-Path $OutputRoot $profile.judge;New-Item -ItemType Directory -Path $dir -Force|Out-Null
-        $base=[IO.Path]::GetFileNameWithoutExtension($batch.Name)
+        $base="$([IO.Path]::GetFileNameWithoutExtension($batch.Name))-part-$($part.ToString('D2'))"
         $out=Join-Path $dir "$base.output.json";$meta=Join-Path $dir "$base.meta.json"
         if($SkipFinished -and (Test-Path -LiteralPath $meta)){if((Get-Content $meta -Raw -Encoding UTF8|ConvertFrom-Json).transport_status -eq 'completed'){continue}}
-        $batchText=Get-Content $batch.FullName -Raw -Encoding UTF8
+        $batchText=[ordered]@{judge=$batchPayload.judge;items=$partItems}|ConvertTo-Json -Depth 12
+        $batchCount=$partItems.Count
         $prompt="$instruction`n반드시 아래 JSON Schema와 일치하는 JSON 객체 하나만 출력하세요. 설명이나 코드 펜스를 추가하지 마세요.`n`n[JSON Schema]`n$schemaText`n`n[판정 대상]`n$batchText"
-        $jobs.Add((Start-Job -ArgumentList $profile.agent,$profile.model,$profile.judge,$batch.FullName,$prompt,$schemaPath,$mcpConfigPath,$out,$meta -ScriptBlock{
-            param($agent,$model,$judge,$batchFile,$prompt,$schemaPath,$mcpConfigPath,$out,$meta)
+        $jobs.Add((Start-Job -ArgumentList $profile.agent,$profile.model,$profile.judge,$batch.FullName,$batchCount,$prompt,$schemaPath,$mcpConfigPath,$out,$meta -ScriptBlock{
+            param($agent,$model,$judge,$batchFile,$batchCount,$prompt,$schemaPath,$mcpConfigPath,$out,$meta)
             $OutputEncoding=[Text.UTF8Encoding]::new($false);[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)
             $start=[DateTimeOffset]::UtcNow;$stderrPath=[IO.Path]::ChangeExtension($meta,'.stderr.txt');$rawDebugPath=$null
             $record=[ordered]@{judge=$judge;agent=$agent;model=$model;batch_file=$batchFile;started_at=$start.ToString('o');completed_at=$null;elapsed_seconds=$null;transport_status='failed';error=$null;output=[IO.Path]::GetFileName($out)}
@@ -54,10 +59,12 @@ foreach($profile in $profiles){
                 }
                 $parsed=Get-Content $out -Raw -Encoding UTF8|ConvertFrom-Json
                 if($null -eq $parsed.judgments){throw 'judgments 배열이 없습니다.'}
+                if(@($parsed.judgments).Count -ne $batchCount){throw "judgments 수가 입력 항목 수와 다릅니다: $(@($parsed.judgments).Count)/$batchCount"}
                 $record.transport_status='completed'
             }catch{$record.error=$_.Exception.Message}
             finally{$end=[DateTimeOffset]::UtcNow;$record.completed_at=$end.ToString('o');$record.elapsed_seconds=[Math]::Round(($end-$start).TotalSeconds,3);$record|ConvertTo-Json -Depth 10|Set-Content $meta -Encoding UTF8;if($record.transport_status -eq 'completed' -and (Test-Path -LiteralPath $stderrPath)){Remove-Item -LiteralPath $stderrPath -Force};if($record.transport_status -eq 'completed' -and $rawDebugPath -and (Test-Path -LiteralPath $rawDebugPath)){Remove-Item -LiteralPath $rawDebugPath -Force};[pscustomobject]@{judge=$judge;batch=[IO.Path]::GetFileName($batchFile);status=$record.transport_status;seconds=$record.elapsed_seconds}}
         }))
+      }
     }
 }
 while(($jobs|Where-Object State -eq Running).Count){$done=Wait-Job $jobs -Any -Timeout 5;if($done){Receive-Job $done|Out-Host}}
