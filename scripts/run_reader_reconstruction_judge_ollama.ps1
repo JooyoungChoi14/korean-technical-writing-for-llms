@@ -1,7 +1,8 @@
 param(
     [string]$Model='kimi-k3',
     [Parameter(Mandatory=$true)][string]$OutputRoot,
-    [ValidateRange(1,60)][int]$ChunkSize=20,
+    [ValidateRange(1,60)][int]$ChunkSize=10,
+    [string[]]$BatchNames=@(),
     [ValidateRange(0,5)][int]$RetryCount=2,
     [switch]$SkipFinished
 )
@@ -14,12 +15,14 @@ if([string]::IsNullOrWhiteSpace($token)){throw 'Ollama Cloud API 키를 찾지 �
 if(-not [IO.Path]::IsPathRooted($OutputRoot)){$OutputRoot=Join-Path $repoRoot $OutputRoot};$OutputRoot=[IO.Path]::GetFullPath($OutputRoot)
 $dir=Join-Path $OutputRoot 'ollama-kimi-k3';New-Item -ItemType Directory -Path $dir -Force|Out-Null
 $instructions='문장 선호도가 아니라 명시적 의미 포함 여부만 판정하는 평가자입니다. revision 문장 자체가 proposition을 직접 진술하거나 모호하지 않게 바꾸어 말했을 때만 true로 판정하세요. 명제 목록을 단서로 빠진 내용을 추론하거나 보충하지 마세요. actor_and_action_explicit는 문장만으로 주체와 핵심 동작을 둘 다 알 수 있을 때만 true입니다. JSON 객체 외에는 출력하지 마세요.'
-foreach($batch in Get-ChildItem $batchRoot -Filter 'batch-*.json'|Sort-Object Name){
+$batchFiles=Get-ChildItem $batchRoot -Filter 'batch-*.json'|Sort-Object Name
+if($BatchNames.Count -gt 0){$batchFiles=$batchFiles|Where-Object{$BatchNames -contains $_.Name}}
+foreach($batch in $batchFiles){
   $batchPayload=Get-Content $batch.FullName -Raw -Encoding UTF8|ConvertFrom-Json
   for($startIndex=0;$startIndex -lt $batchPayload.items.Count;$startIndex+=$ChunkSize){
-    $part=1+[Math]::Floor($startIndex/$ChunkSize);$partItems=@($batchPayload.items|Select-Object -Skip $startIndex -First $ChunkSize)
+    [int]$part=1+[Math]::Floor($startIndex/$ChunkSize);$partItems=@($batchPayload.items|Select-Object -Skip $startIndex -First $ChunkSize)
     $chunkPayload=[ordered]@{judge=$batchPayload.judge;items=$partItems}|ConvertTo-Json -Depth 12
-    $base="$([IO.Path]::GetFileNameWithoutExtension($batch.Name))-part-$('{0:D2}' -f $part)";$out=Join-Path $dir "$base.output.json";$meta=Join-Path $dir "$base.meta.json"
+    $base="$([IO.Path]::GetFileNameWithoutExtension($batch.Name))-part-$($part.ToString('D2'))";$out=Join-Path $dir "$base.output.json";$meta=Join-Path $dir "$base.meta.json"
     if($SkipFinished -and (Test-Path -LiteralPath $meta)){if((Get-Content $meta -Raw -Encoding UTF8|ConvertFrom-Json).transport_status -eq 'completed'){continue}}
     $prompt="입력의 모든 item_id와 proposition id를 빠짐없이 한 번씩 반환하세요. 반드시 아래 JSON Schema와 일치하는 JSON 객체 하나만 출력하세요.`n`n[JSON Schema]`n$schemaText`n`n[판정 대상]`n$chunkPayload"
     $start=[DateTimeOffset]::UtcNow;$record=[ordered]@{judge='ollama-kimi-k3';agent='ollama-cloud';model=$Model;batch_file=$batch.FullName;part=$part;item_count=$partItems.Count;started_at=$start.ToString('o');completed_at=$null;elapsed_seconds=$null;transport_status='failed';response_status=$null;usage=$null;error=$null;output=[IO.Path]::GetFileName($out)}
