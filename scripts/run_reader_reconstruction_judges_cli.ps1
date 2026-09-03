@@ -10,6 +10,7 @@ $repoRoot=Split-Path -Parent $PSScriptRoot
 $experimentRoot=Join-Path $repoRoot 'evals\reader-reconstruction-v6'
 $batchRoot=Join-Path $experimentRoot 'batches'
 $schemaPath=Join-Path $experimentRoot 'judge-output-schema.json'
+$mcpConfigPath=Join-Path $experimentRoot 'empty-mcp.json'
 $schemaText=Get-Content $schemaPath -Raw -Encoding UTF8
 if(-not [IO.Path]::IsPathRooted($OutputRoot)){$OutputRoot=Join-Path $repoRoot $OutputRoot}
 $OutputRoot=[IO.Path]::GetFullPath($OutputRoot)
@@ -36,14 +37,14 @@ foreach($profile in $profiles){
         if($SkipFinished -and (Test-Path -LiteralPath $meta)){if((Get-Content $meta -Raw -Encoding UTF8|ConvertFrom-Json).transport_status -eq 'completed'){continue}}
         $batchText=Get-Content $batch.FullName -Raw -Encoding UTF8
         $prompt="$instruction`n반드시 아래 JSON Schema와 일치하는 JSON 객체 하나만 출력하세요. 설명이나 코드 펜스를 추가하지 마세요.`n`n[JSON Schema]`n$schemaText`n`n[판정 대상]`n$batchText"
-        $jobs.Add((Start-Job -ArgumentList $profile.agent,$profile.model,$profile.judge,$batch.FullName,$prompt,$schemaPath,$out,$meta -ScriptBlock{
-            param($agent,$model,$judge,$batchFile,$prompt,$schemaPath,$out,$meta)
+        $jobs.Add((Start-Job -ArgumentList $profile.agent,$profile.model,$profile.judge,$batch.FullName,$prompt,$schemaPath,$mcpConfigPath,$out,$meta -ScriptBlock{
+            param($agent,$model,$judge,$batchFile,$prompt,$schemaPath,$mcpConfigPath,$out,$meta)
             $OutputEncoding=[Text.UTF8Encoding]::new($false);[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)
             $start=[DateTimeOffset]::UtcNow;$stderrPath=[IO.Path]::ChangeExtension($meta,'.stderr.txt');$rawDebugPath=$null
             $record=[ordered]@{judge=$judge;agent=$agent;model=$model;batch_file=$batchFile;started_at=$start.ToString('o');completed_at=$null;elapsed_seconds=$null;transport_status='failed';error=$null;output=[IO.Path]::GetFileName($out)}
             try{
                 if($agent -eq 'claude'){
-                    $args=@('-p','--model',$model,'--tools','','--permission-mode','dontAsk','--no-session-persistence','--no-chrome','--strict-mcp-config','--mcp-config','{"mcpServers":{}}','--output-format','text')
+                    $args=@('-p','--model',$model,'--tools','','--permission-mode','dontAsk','--no-session-persistence','--no-chrome','--strict-mcp-config','--mcp-config',$mcpConfigPath,'--output-format','text')
                     $raw=($prompt|& claude @args 2> $stderrPath|Out-String);$rawDebugPath=[IO.Path]::ChangeExtension($out,'.raw.txt');Set-Content $rawDebugPath $raw -Encoding UTF8
                     if($LASTEXITCODE -ne 0){throw ((Get-Content $stderrPath -Raw -ErrorAction SilentlyContinue)+$raw)}
                     $value=$raw.Trim();if($value.StartsWith('```json')){$value=$value.Substring(7)}elseif($value.StartsWith('```')){$value=$value.Substring(3)};if($value.EndsWith('```')){$value=$value.Substring(0,$value.Length-3)};Set-Content $out $value.Trim() -Encoding UTF8
