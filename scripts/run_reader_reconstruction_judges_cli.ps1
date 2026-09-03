@@ -43,13 +43,13 @@ foreach($profile in $profiles){
             $record=[ordered]@{judge=$judge;agent=$agent;model=$model;batch_file=$batchFile;started_at=$start.ToString('o');completed_at=$null;elapsed_seconds=$null;transport_status='failed';error=$null;output=[IO.Path]::GetFileName($out)}
             try{
                 if($agent -eq 'claude'){
-                    $args=@('-p',$prompt,'--model',$model,'--tools','','--permission-mode','dontAsk','--no-session-persistence','--no-chrome','--strict-mcp-config','--mcp-config','{"mcpServers":{}}','--output-format','text')
-                    $raw=(& claude @args 2> $stderrPath|Out-String);$rawDebugPath=[IO.Path]::ChangeExtension($out,'.raw.txt');Set-Content $rawDebugPath $raw -Encoding UTF8
+                    $args=@('-p','--model',$model,'--tools','','--permission-mode','dontAsk','--no-session-persistence','--no-chrome','--strict-mcp-config','--mcp-config','{"mcpServers":{}}','--output-format','text')
+                    $raw=($prompt|& claude @args 2> $stderrPath|Out-String);$rawDebugPath=[IO.Path]::ChangeExtension($out,'.raw.txt');Set-Content $rawDebugPath $raw -Encoding UTF8
                     if($LASTEXITCODE -ne 0){throw ((Get-Content $stderrPath -Raw -ErrorAction SilentlyContinue)+$raw)}
                     $value=$raw.Trim();if($value.StartsWith('```json')){$value=$value.Substring(7)}elseif($value.StartsWith('```')){$value=$value.Substring(3)};if($value.EndsWith('```')){$value=$value.Substring(0,$value.Length-3)};Set-Content $out $value.Trim() -Encoding UTF8
                 }else{
-                    $args=@('exec','--model',$model,'--sandbox','read-only','--ephemeral','--ignore-rules','--color','never','--skip-git-repo-check','--output-schema',$schemaPath,$prompt)
-                    $raw=(& codex @args 2> $stderrPath|Out-String);if($LASTEXITCODE -ne 0){throw ((Get-Content $stderrPath -Raw -ErrorAction SilentlyContinue)+$raw)};Set-Content $out $raw.Trim() -Encoding UTF8
+                    $args=@('exec','--model',$model,'--sandbox','read-only','--ephemeral','--ignore-rules','--color','never','--skip-git-repo-check','--output-schema',$schemaPath,'-')
+                    $raw=($prompt|& codex @args 2> $stderrPath|Out-String);if($LASTEXITCODE -ne 0){throw ((Get-Content $stderrPath -Raw -ErrorAction SilentlyContinue)+$raw)};Set-Content $out $raw.Trim() -Encoding UTF8
                 }
                 $parsed=Get-Content $out -Raw -Encoding UTF8|ConvertFrom-Json
                 if($null -eq $parsed.judgments){throw 'judgments 배열이 없습니다.'}
