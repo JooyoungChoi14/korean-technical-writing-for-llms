@@ -1,0 +1,1415 @@
+{
+  "judge": "claude-fable-5",
+  "items": [
+    {
+      "item_id": "Rbe919a54b16d",
+      "revision": "주문 서비스는 재고 예약에 실패한 주문의 `inventory_retry_requested` 이벤트를 Kafka의 `inventory-retry` 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "주문 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "inventory_retry_requested 이벤트를 처리한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 inventory-retry 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R9b0e929723ca",
+      "revision": "모든 행의 검증을 선행하고, 유효한 경우에만 유효한 행을 한 번의 트랜잭션으로 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "sequence",
+          "text": "업로드 서비스가 저장하기 전에 모든 행을 검사한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "한 행이라도 유효하지 않으면 아무 행도 저장하지 않는다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "모든 행이 유효할 때만 하나의 트랜잭션으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R06245df13ddc",
+      "revision": "각 기관의 권한 설정과 공통 역할 설정에서 허용 메뉴를 합쳐 사용자별 유효 메뉴 권한을 만든다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rcda415d2e516",
+      "revision": "권한 서비스는 사용자가 속한 기관의 권한 설정과 공통 역할 설정을 읽어 두 설정에 포함된 허용 메뉴를 합친다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rff21baa78a75",
+      "revision": "모든 권한을 하나의 세션 값에 합치면 구현이 단순해진다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R99aa569232a5",
+      "revision": "마감된 원장의 분개는 소급하여 수정하지 않고, 정정이 필요하면 현재 회계 기간에 반대 분개와 올바른 분개를 새로 기록한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R681c57a6362b",
+      "revision": "재처리 대상 주문을 `inventory-retry` 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "주문 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "inventory_retry_requested 이벤트를 처리한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 inventory-retry 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R1c18fcaee058",
+      "revision": "정산 대사 배치(`SettlementReconciliationJob`)는 금액이나 지급 상태가 다른 내역을 예외 목록에 추가해 담당자가 확인하게 하고, 원장을 자동으로 수정하거나 차이를 자동 승인하지 않는다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "SettlementReconciliationJob 정산 배치가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "PG사 지급 명세와 내부 정산 원장을 주문 번호별로 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "차이를 발견하면 예외 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R13b3c82125d8",
+      "revision": "권한 서비스가 사용자가 속한 기관의 권한 설정과 공통 역할 설정을 읽어 두 설정에 포함된 허용 메뉴를 합친다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R10ab301a3e5a",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 뒤 로그아웃할 때까지 사용자가 이전 조직의 행을 볼 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rde020ec28467",
+      "revision": "approval matrix의 effective rule을 구체화한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R839ff1ae1d14",
+      "revision": "운영 서버는 기동 시 자주 조회되는 상품을 로컬 캐시에 미리 적재한다. 추가 메모리 200MB보다 배포 직후 p95 지연 감소가 더 중요하기 때문이다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "action",
+          "text": "검색 서버가 기동할 때 상품 5만 건을 로컬 캐시에 사전 적재한다."
+        },
+        {
+          "id": "P2",
+          "role": "cost",
+          "text": "사전 적재는 서버당 메모리를 200MB 더 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "benefit",
+          "text": "배포 직후 검색 응답 p95를 420밀리초에서 90밀리초로 줄인다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0008a7b9b3a0",
+      "revision": "이탈 예측 모델은 고객별 이탈 확률을 계산하고, 분석 서비스는 확률이 0.7 이상인 고객을 상담 검토 목록에 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "이탈 예측 모델이 고객별 이탈 확률을 계산한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "분석 서비스는 이탈 확률이 0.7 이상인지 확인한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "0.7 이상인 고객을 상담 검토 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R07a8e9179135",
+      "revision": "이 분기는 응답하지 않거나 값이 없는 문항을 평균 계산에서 제외한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R4d2c22300a64",
+      "revision": "소급 수정은 마감 당시 잔액 추적을 불가능하게 한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R2cf6ec02647d",
+      "revision": "기동할 때 Redis에서 조회 빈도가 높은 상품 5만 건을 로컬 캐시에 미리 적재하면 서버당 메모리를 200MB 더 사용하지만, 배포 직후 10분간 검색 응답 p95가 420밀리초에서 90밀리초로 줄어 운영 서버에서 사전 적재를 사용하기로 했다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "action",
+          "text": "검색 서버가 기동할 때 상품 5만 건을 로컬 캐시에 사전 적재한다."
+        },
+        {
+          "id": "P2",
+          "role": "cost",
+          "text": "사전 적재는 서버당 메모리를 200MB 더 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "benefit",
+          "text": "배포 직후 검색 응답 p95를 420밀리초에서 90밀리초로 줄인다."
+        }
+      ]
+    },
+    {
+      "item_id": "R587ce11d8620",
+      "revision": "승인 규칙 집합을 계산해 사용자별 최종 승인 한도를 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rb7859a988d1a",
+      "revision": "권한 서비스는 역할 변경 정보를 담은 `access_role_changed` 이벤트를 Kafka의 `access-audit` 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "권한 변경을 access_role_changed 이벤트로 만든다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 access-audit 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rf5b05d751ae0",
+      "revision": "사용자가 속한 기관의 권한 설정과 공통 역할 설정에 포함된 허용 메뉴를 합친다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0f72378db870",
+      "revision": "역할 변경 내역을 `access-audit` 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "권한 변경을 access_role_changed 이벤트로 만든다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 access-audit 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R461e907ecc7f",
+      "revision": "메뉴 조회 권한과 행 조회 권한을 하나의 세션 값으로 통합하면 구현은 단순해지지만, 조직 이동 후 로그아웃할 때까지 이전 조직의 행이 노출될 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "Ra92cfb70599b",
+      "revision": "기존 API는 유지하고, 신규 필드는 선택적으로 적용한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R51cc1cc7f602",
+      "revision": "권한 서비스는 직급 기본 규칙, 부서별 규칙, 사용자별 임시 예외를 순차 적용해 덮어쓴 결과인 `effective rule`(최종 승인 한도)을 미리 계산해 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R889b35e647f0",
+      "revision": "approval matrix를 바탕으로 최종 승인 한도를 미리 계산해 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Re6ddc17cc0ff",
+      "revision": "모든 행의 검증을 먼저 수행하고, 유효할 때만 데이터를 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "sequence",
+          "text": "업로드 서비스가 저장하기 전에 모든 행을 검사한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "한 행이라도 유효하지 않으면 아무 행도 저장하지 않는다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "모든 행이 유효할 때만 하나의 트랜잭션으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rf4f78934bc2f",
+      "revision": "",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R57a7f3dd9eeb",
+      "revision": "권한 서비스는 직급 기본 규칙, 부서별 추가 규칙, 사용자별 임시 예외를 차례로 적용해 최종 승인 한도를 계산하고 사용자별로 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R43302f1b320e",
+      "revision": "권한 서비스는 approval matrix의 세 규칙을 미리 계산해 사용자별 effective rule을 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R4665ff71c658",
+      "revision": "이 분기는 응답하지 않은 문항과 값이 없는 문항을 평균 계산에서 제외한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R1260a1455188",
+      "revision": "권한을 통합하면 구현은 단순해지지만 보안 문제가 발생한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0795df3648c2",
+      "revision": "마감 후에는 원장을 소급 수정하지 않고, 반대 분개와 정정 분개를 새로 기록한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R402009ad40fe",
+      "revision": "`approval matrix`의 규칙을 적용해 계산한 `effective rule`(최종 승인 한도)을 미리 materialize하지 않고 저장해 사용자별 승인 요청마다 사용한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R5c3bee95dd6a",
+      "revision": "주문 서비스가 재고 예약에 실패한 주문을 `inventory_retry_requested` 이벤트로 만들어 Kafka의 `inventory-retry` 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "주문 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "inventory_retry_requested 이벤트를 처리한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 inventory-retry 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R67adc1bca783",
+      "revision": "정산 대사 배치(`SettlementReconciliationJob`)는 금액이나 지급 상태가 다른 주문을 예외 목록에 추가해 담당자가 확인할 수 있게 한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "SettlementReconciliationJob 정산 배치가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "PG사 지급 명세와 내부 정산 원장을 주문 번호별로 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "차이를 발견하면 예외 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R19521b13e87f",
+      "revision": "‘응답하지 않음’ 및 설문 중 이탈 항목을 제외하는 분기는 통계 왜곡을 방지한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R6efa6940f353",
+      "revision": "각 기관(tenant)의 권한 설정 스냅샷을 병합한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0c11660e3c45",
+      "revision": "예측 모델이 고객별 이탈 확률을 계산하고, 확률이 0.7 이상인 고객만 상담 검토 목록에 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "이탈 예측 모델이 고객별 이탈 확률을 계산한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "분석 서비스는 이탈 확률이 0.7 이상인지 확인한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "0.7 이상인 고객을 상담 검토 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R4cab937c9132",
+      "revision": "기존 엔드포인트와 기존 두 필드는 유지하면서 선택 필드 `preferredName`을 응답에 추가하고, 신버전 앱만 값이 있을 때 별칭을 표시한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rde8972cfa8ff",
+      "revision": "approval matrix의 effective rule을 구체화한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R131c9f8cdbe9",
+      "revision": "권한 변경 이벤트를 감사용 Kafka 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "권한 변경을 access_role_changed 이벤트로 만든다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 access-audit 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R62753bc97b99",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 뒤 로그아웃할 때까지 이전 행을 볼 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R39c9f80d6342",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 뒤 로그아웃할 때까지 이전 행을 볼 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R9d822a7207e6",
+      "revision": "마감된 원장의 분개를 직접 수정하면 마감 당시 잔액과 정정 내역을 추적할 수 없다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R120b0b883f4f",
+      "revision": "이탈 예측 모델은 고객별 이탈 확률을 0~1로 산출하고, 0.7 이상인 고객만 상담 검토 목록에 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "이탈 예측 모델이 고객별 이탈 확률을 계산한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "분석 서비스는 이탈 확률이 0.7 이상인지 확인한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "0.7 이상인 고객을 상담 검토 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0cbdb43f3348",
+      "revision": "모든 행을 먼저 검증하고, 모두 유효한 경우에만 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "sequence",
+          "text": "업로드 서비스가 저장하기 전에 모든 행을 검사한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "한 행이라도 유효하지 않으면 아무 행도 저장하지 않는다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "모든 행이 유효할 때만 하나의 트랜잭션으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R9cc1a4826883",
+      "revision": "",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "action",
+          "text": "검색 서버가 기동할 때 상품 5만 건을 로컬 캐시에 사전 적재한다."
+        },
+        {
+          "id": "P2",
+          "role": "cost",
+          "text": "사전 적재는 서버당 메모리를 200MB 더 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "benefit",
+          "text": "배포 직후 검색 응답 p95를 420밀리초에서 90밀리초로 줄인다."
+        }
+      ]
+    },
+    {
+      "item_id": "R8fdb8cab6402",
+      "revision": "기존 엔드포인트와 두 필드는 유지하면서 선택 필드 `preferredName`을 추가한다. 구버전 앱은 이 필드를 무시하고, 신버전 앱은 값이 있을 때만 별칭을 표시한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R29c63e1bb58b",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 조직 이동 후 로그아웃할 때까지 이전 조직의 행을 볼 수 있어 두 권한을 분리한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R31b1bfd9c878",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 뒤 로그아웃할 때까지 이전 조직의 행을 볼 수 있으므로 두 권한을 분리한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rc7b2e5cbfd7a",
+      "revision": "모든 행을 먼저 검증하고(학번 형식, 필수 열, 중복), 검증에 실패한 행이 있으면 저장하지 않는다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "sequence",
+          "text": "업로드 서비스가 저장하기 전에 모든 행을 검사한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "한 행이라도 유효하지 않으면 아무 행도 저장하지 않는다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "모든 행이 유효할 때만 하나의 트랜잭션으로 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R32f0def185d7",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 후 이전 행이 계속 보일 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rd0a5a00addf8",
+      "revision": "서버는 기존 엔드포인트와 필드를 유지하면서 `preferredName` 필드를 선택적으로 추가하고, 신버전 앱만 값이 있을 때 별칭을 표시한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R907a048da064",
+      "revision": "메뉴 권한과 행 조회 권한을 하나의 세션 값으로 합치면 구현은 단순해지지만, 조직 이동 후 로그아웃 전까지 이전 조직의 행을 조회할 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "menu",
+          "text": "메뉴 권한은 로그인할 때 계산해 세션에 저장한다."
+        },
+        {
+          "id": "P2",
+          "role": "row",
+          "text": "행 조회 권한은 요청마다 현재 조직 범위와 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "decision",
+          "text": "두 권한을 하나의 값으로 합치지 않고 분리한다."
+        },
+        {
+          "id": "P4",
+          "role": "reason",
+          "text": "분리하면 조직 이동 뒤 이전 조직의 행을 계속 보는 문제를 피할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R29398ba1d3fd",
+      "revision": "이탈 예측 모델이 계산한 확률이 0.7 이상인 고객만 상담 검토 목록에 추가하고, 0.7 미만은 제외한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "이탈 예측 모델이 고객별 이탈 확률을 계산한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "분석 서비스는 이탈 확률이 0.7 이상인지 확인한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "0.7 이상인 고객을 상담 검토 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R0dbbd9a0c0f5",
+      "revision": "기존 `/v1/profile` 응답 구조는 유지하고, 새 필드 `preferredName`만 선택적으로 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R1659e13fa369",
+      "revision": "실패한 주문에 대한 재처리 이벤트를 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "주문 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "inventory_retry_requested 이벤트를 처리한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 inventory-retry 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R629ea5f362cc",
+      "revision": "이 분기는 `응답하지 않음`을 선택했거나 값이 없는 문항을 합계와 분모에서 제외한 뒤 평균을 계산하게 한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rc93e99d1b90b",
+      "revision": "권한 서비스는 역할 추가/제거 시 `access_role_changed` 이벤트를 생성해 Kafka의 `access-audit` 토픽으로 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "권한 변경을 access_role_changed 이벤트로 만든다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 access-audit 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R7707a0e6c4fa",
+      "revision": "권한 서비스는 approval matrix에서 계산된 effective rule을 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rc413b229c124",
+      "revision": "마감된 분개는 소급 수정·삭제하지 않으며, 환불 누락 발견 시 반대 분개와 정정 환불 분개를 현재 회계 기간에 새로 기록한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    }
+  ]
+}

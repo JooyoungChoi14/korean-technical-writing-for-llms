@@ -1,0 +1,277 @@
+{
+  "judge": "ollama-kimi-k3",
+  "items": [
+    {
+      "item_id": "R5d135caee4a0",
+      "revision": "월 마감 후에는 기존 분개를 직접 수정/삭제하지 않고, 환불 누락은 반대 분개와 정정 환불 분개를 현재 회계 기간에 추가로 기록해 추적한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "constraint",
+          "text": "마감된 기존 분개는 수정하거나 삭제하지 않는다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "반대 분개와 올바른 환불 분개를 현재 회계 기간에 새로 기록한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "마감 당시 잔액과 이후 정정 내역을 모두 추적할 수 있다."
+        }
+      ]
+    },
+    {
+      "item_id": "R50f5501204ca",
+      "revision": "이 분기는 값이 없는 문항을 제외해 평균이 왜곡되지 않게 한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rb0de63ebd4c1",
+      "revision": "정산 대사 작업(`SettlementReconciliationJob`)은 PG사의 지급 명세와 내부 정산 원장의 차이를 예외 목록에 추가해 담당자가 확인할 수 있게 한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "SettlementReconciliationJob 정산 배치가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "action",
+          "text": "PG사 지급 명세와 내부 정산 원장을 주문 번호별로 비교한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "차이를 발견하면 예외 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R80a63c748a93",
+      "revision": "배포 직후 지연을 줄이려면 캐시를 서버 기동 시 미리 적재한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "action",
+          "text": "검색 서버가 기동할 때 상품 5만 건을 로컬 캐시에 사전 적재한다."
+        },
+        {
+          "id": "P2",
+          "role": "cost",
+          "text": "사전 적재는 서버당 메모리를 200MB 더 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "benefit",
+          "text": "배포 직후 검색 응답 p95를 420밀리초에서 90밀리초로 줄인다."
+        }
+      ]
+    },
+    {
+      "item_id": "Ra6d0d0a09d88",
+      "revision": "이 분기는 `응답하지 않음` 문항과 값이 없는 문항을 분모와 합계에서 제외해, 두 경우가 0점으로 포함되어 평균이 낮아지는 것을 막는다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "condition",
+          "text": "응답하지 않음과 값이 없는 문항을 제외한다."
+        },
+        {
+          "id": "P2",
+          "role": "scope",
+          "text": "제외 대상은 합계와 분모 양쪽에서 뺀다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "남은 응답으로 평균을 계산한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Re8b2d86d82ab",
+      "revision": "사전 적재를 켜두면 배포 직후 검색 응답 지연을 줄일 수 있다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "action",
+          "text": "검색 서버가 기동할 때 상품 5만 건을 로컬 캐시에 사전 적재한다."
+        },
+        {
+          "id": "P2",
+          "role": "cost",
+          "text": "사전 적재는 서버당 메모리를 200MB 더 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "benefit",
+          "text": "배포 직후 검색 응답 p95를 420밀리초에서 90밀리초로 줄인다."
+        }
+      ]
+    },
+    {
+      "item_id": "R7bcb034c84d9",
+      "revision": "예측 모델이 고객별 이탈 확률을 계산하고, 0.7 이상인 고객을 상담 검토 목록에 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "이탈 예측 모델이 고객별 이탈 확률을 계산한다."
+        },
+        {
+          "id": "P2",
+          "role": "condition",
+          "text": "분석 서비스는 이탈 확률이 0.7 이상인지 확인한다."
+        },
+        {
+          "id": "P3",
+          "role": "result",
+          "text": "0.7 이상인 고객을 상담 검토 목록에 추가한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rbf9d0af2186e",
+      "revision": "기존 엔드포인트와 필드를 유지하고, 신버전 앱에서만 사용하는 `preferredName` 필드를 추가한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "preserve",
+          "text": "서버가 기존 /v1/profile 엔드포인트와 이름·소속 필드를 유지한다."
+        },
+        {
+          "id": "P2",
+          "role": "change",
+          "text": "서버가 선택 필드 preferredName을 응답에 추가한다."
+        },
+        {
+          "id": "P3",
+          "role": "compatibility",
+          "text": "구버전 앱은 preferredName을 무시한다."
+        },
+        {
+          "id": "P4",
+          "role": "condition",
+          "text": "신버전 앱은 preferredName 값이 있을 때만 별칭을 표시한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R6241224dff40",
+      "revision": "권한 변경 이벤트를 감사용 Kafka 토픽에 발행한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "object",
+          "text": "권한 변경을 access_role_changed 이벤트로 만든다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "이벤트를 Kafka의 access-audit 토픽에 발행한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R56ce8bfaac8f",
+      "revision": "approval matrix의 세 규칙을 미리 계산해 사용자별 effective rule을 저장하거나, 승인 한도를 미리 계산해 데이터베이스에 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "Rc2ca6c9e0462",
+      "revision": "권한 서비스는 직급 기본 규칙 → 부서별 추가 규칙 → 사용자 임시 예외 규칙 순으로 덮어써서 최종 승인 한도(`effective rule`)를 계산해 저장한다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "input",
+          "text": "직급, 부서, 사용자별 규칙을 사용한다."
+        },
+        {
+          "id": "P2",
+          "role": "sequence",
+          "text": "직급, 부서, 사용자별 규칙을 정해진 우선순위로 적용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "사용자별 최종 승인 한도를 미리 계산한다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "계산한 최종 승인 한도를 저장한다."
+        }
+      ]
+    },
+    {
+      "item_id": "R3c3dfceb74c6",
+      "revision": "세 기관의 권한 설정과 공통 역할 설정에서 허용 메뉴를 읽어 합친다.",
+      "propositions": [
+        {
+          "id": "P1",
+          "role": "actor",
+          "text": "권한 서비스가 처리한다."
+        },
+        {
+          "id": "P2",
+          "role": "input",
+          "text": "사용자가 속한 기관의 권한 설정과 공통 역할 설정을 사용한다."
+        },
+        {
+          "id": "P3",
+          "role": "action",
+          "text": "두 설정의 허용 메뉴를 합친다."
+        },
+        {
+          "id": "P4",
+          "role": "result",
+          "text": "합친 결과를 사용자별 유효 메뉴 권한으로 저장한다."
+        }
+      ]
+    }
+  ]
+}
