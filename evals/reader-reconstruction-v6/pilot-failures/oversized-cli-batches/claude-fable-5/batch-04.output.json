@@ -1,0 +1,566 @@
+﻿{
+  "judgments": [
+    {
+      "item_id": "Re8b2d86d82ab",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R24658a98db4f",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R9ad2832010db",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rce41ef7d6014",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Ra0bb899f8076",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rbb2c3407e978",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R135dd0af0d95",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rca14946ff91d",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R5b085ec901db",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rd534a26c8503",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R2adbd6f231b2",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R3b479cfc07c4",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rd26342c151cb",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rca6267c8bcc9",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R50a1516d9527",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R5540df3d1b42",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rf99af69663f3",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rd1b99daa73a8",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R589fe3c72ca4",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R0483e3e933b8",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R3e65158ea6b4",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R0e80f2e8cc3b",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Ref5c565beb92",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R73663e402c6c",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R98e9fb8a21f7",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R8ec98652e49e",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R84e00edc5d08",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R4c6bcbd59eb2",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R5ed300e9bfbf",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R61047f6abc27",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rcd3c09c5b0da",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R696183e2603c",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rbd1b843e8528",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rc41372c72085",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rbd360290c731",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R5f418d5b0ac2",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R7d2c842798bc",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rd0cb192821ab",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R6a58cbb747ee",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R3357b2733656",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rb965b39c0295",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R63bbdb51839f",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rb8d8ff6c63ec",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R4e1f234cbce8",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R8766ec057d11",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true},
+        {"id": "P4", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rdbf9d3427f87",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R05e73886fe56",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R736644f09b75",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rd09d1f9421eb",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R22da24746514",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R7205340a5050",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R2667cc54539c",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R652ecddc6853",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Recdd17d9f600",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "Rf7d95e4c6303",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R9d5def3d9a0f",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R0bf8aafc8529",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": true}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "R1ff76d3e9b46",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    },
+    {
+      "item_id": "R0d5281e736c2",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": true},
+        {"id": "P2", "explicitly_entailed": true},
+        {"id": "P3", "explicitly_entailed": true},
+        {"id": "P4", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": true
+    },
+    {
+      "item_id": "Rbf9def6e110c",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    }
+  ]
+}

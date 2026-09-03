@@ -1,0 +1,13 @@
+﻿{
+  "judgments": [
+    {
+      "item_id": "R3a7eaee6abb3",
+      "propositions": [
+        {"id": "P1", "explicitly_entailed": false},
+        {"id": "P2", "explicitly_entailed": false},
+        {"id": "P3", "explicitly_entailed": false}
+      ],
+      "actor_and_action_explicit": false
+    }
+  ]
+}

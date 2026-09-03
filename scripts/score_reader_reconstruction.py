@@ -20,11 +20,15 @@ def parse_output(raw: str) -> dict:
 
 
 def summarize(rows: list[dict]) -> dict:
+    planned_total = len(rows)
+    rows = [row for row in rows if row["judge_count"] == 2]
     proposition_total = sum(row["proposition_total"] for row in rows)
     item_total = len(rows)
     return {
+        "planned_items": planned_total,
         "items": item_total,
-        "items_with_two_judges": sum(row["judge_count"] == 2 for row in rows),
+        "coverage": round(item_total / planned_total, 4) if planned_total else 0,
+        "items_with_two_judges": item_total,
         "propositions": proposition_total,
         "strict_propositions": sum(row["strict_propositions"] for row in rows),
         "liberal_propositions": sum(row["liberal_propositions"] for row in rows),
@@ -112,7 +116,21 @@ def main() -> int:
     summary = [{"variant": key, **summarize(value), "control_precision": control_precision[key]} for key, value in sorted(grouped.items())]
     per_model = [{"model": key[0], "variant": key[1], **summarize(value)} for key, value in sorted(model_grouped.items())]
     per_case = [{"case_id": key[0], "variant": key[1], **summarize(value)} for key, value in sorted(case_grouped.items())]
-    by_variant = {row["variant"]: row for row in summary}
+    pair_groups = defaultdict(list)
+    for row in rows:
+        pair_groups[(row["source_agent"], row["source_model"], row["source_run"], row["case_id"])].append(row)
+    paired_rows = [
+        row
+        for values in pair_groups.values()
+        if {value["source_variant"] for value in values if value["judge_count"] == 2} == {"baseline", "candidate"}
+        for row in values
+        if row["judge_count"] == 2
+    ]
+    paired_grouped = defaultdict(list)
+    for row in paired_rows:
+        paired_grouped[row["source_variant"]].append(row)
+    paired_summary = [{"variant": key, **summarize(value)} for key, value in sorted(paired_grouped.items())]
+    by_variant = {row["variant"]: row for row in paired_summary}
     baseline = by_variant["baseline"]
     candidate = by_variant["candidate"]
     agreement_ok = min(baseline["judge_agreement"], candidate["judge_agreement"]) >= 0.80
@@ -122,7 +140,7 @@ def main() -> int:
         "complete_reconstruction_gain_at_least_3pp": candidate["complete_reconstruction_rate"] - baseline["complete_reconstruction_rate"] >= 0.03,
     }
     signal = "aligned" if all(checks.values()) else ("unstable" if not agreement_ok else "no_signal")
-    result = {"meta_signal": signal, "checks": checks, "transport": transport, "summary": summary, "per_model": per_model, "per_case": per_case, "records": rows}
+    result = {"meta_signal": signal, "checks": checks, "transport": transport, "summary": summary, "paired_summary": paired_summary, "per_model": per_model, "per_case": per_case, "records": rows}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Scored {len(rows)} source revisions: {signal}")

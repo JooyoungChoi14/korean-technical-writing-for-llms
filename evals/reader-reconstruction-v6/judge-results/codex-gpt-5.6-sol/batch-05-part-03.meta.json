@@ -1,0 +1,12 @@
+﻿{
+    "judge":  "codex-gpt-5.6-sol",
+    "agent":  "codex",
+    "model":  "gpt-5.6-sol",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\batches\\codex-gpt-5.6-sol\\batch-05.json",
+    "started_at":  "2026-09-03T01:31:51.4283210+00:00",
+    "completed_at":  "2026-09-03T01:32:41.3010933+00:00",
+    "elapsed_seconds":  49.873,
+    "transport_status":  "completed",
+    "error":  null,
+    "output":  "batch-05-part-03.output.json"
+}

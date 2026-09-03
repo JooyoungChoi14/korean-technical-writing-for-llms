@@ -63,7 +63,7 @@ def main() -> int:
                 for item in missing[start:start + args.batch_size]
             ],
         }
-        path = judge_dir / f"recovery-{start // args.batch_size + 1:03d}.json"
+        path = judge_dir / f"batch-recovery-{start // args.batch_size + 1:03d}.json"
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{args.judge}: expected={len(expected)} valid={len(valid)} missing={len(missing)} batches={(len(missing) + args.batch_size - 1) // args.batch_size}")
     return 0

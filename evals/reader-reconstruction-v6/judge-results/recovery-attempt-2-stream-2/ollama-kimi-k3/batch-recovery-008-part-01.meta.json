@@ -1,0 +1,16 @@
+﻿{
+    "judge":  "ollama-kimi-k3",
+    "agent":  "ollama-cloud",
+    "model":  "kimi-k3",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\recovery-attempt-2\\ollama-kimi-k3\\batch-recovery-008.json",
+    "part":  1,
+    "item_count":  5,
+    "started_at":  "2026-09-03T01:49:19.7045268+00:00",
+    "completed_at":  "2026-09-03T01:50:06.1589559+00:00",
+    "elapsed_seconds":  46.454,
+    "transport_status":  "failed",
+    "response_status":  null,
+    "usage":  null,
+    "error":  "The remote server returned an error: (429) Too Many Requests.",
+    "output":  "batch-recovery-008-part-01.output.json"
+}

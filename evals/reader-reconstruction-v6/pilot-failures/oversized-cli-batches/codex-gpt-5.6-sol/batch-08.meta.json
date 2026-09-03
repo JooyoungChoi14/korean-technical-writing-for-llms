@@ -1,0 +1,12 @@
+﻿{
+    "judge":  "codex-gpt-5.6-sol",
+    "agent":  "codex",
+    "model":  "gpt-5.6-sol",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\batches\\codex-gpt-5.6-sol\\batch-08.json",
+    "started_at":  "2026-09-03T01:01:58.3289129+00:00",
+    "completed_at":  "2026-09-03T01:01:58.4209120+00:00",
+    "elapsed_seconds":  0.092,
+    "transport_status":  "failed",
+    "error":  "\u0027codex.exe\u0027 프로그램을 실행하지 못했습니다. 파일 이름이나 확장명이 너무 깁니다위치 줄:14 문자:27\r\n+                     $raw=(\u0026 codex @args 2\u003e $stderrPath|Out-String);if ...\r\n+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~.",
+    "output":  "batch-08.output.json"
+}

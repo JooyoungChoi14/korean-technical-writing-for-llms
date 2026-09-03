@@ -1,0 +1,26 @@
+﻿{
+  "judgments": [
+    {
+      "item_id": "R6c90d2293627",
+      "propositions": [
+        {
+          "id": "P1",
+          "explicitly_entailed": false
+        },
+        {
+          "id": "P2",
+          "explicitly_entailed": false
+        },
+        {
+          "id": "P3",
+          "explicitly_entailed": true
+        },
+        {
+          "id": "P4",
+          "explicitly_entailed": true
+        }
+      ],
+      "actor_and_action_explicit": false
+    }
+  ]
+}

@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 .idea/
 evals/runs/
+evals/reader-reconstruction-v6/recovery-attempt-*/

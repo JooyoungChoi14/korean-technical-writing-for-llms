@@ -1,0 +1,26 @@
+﻿{
+    "judge":  "ollama-kimi-k3",
+    "agent":  "ollama-cloud",
+    "model":  "kimi-k3",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\batches\\ollama-kimi-k3\\batch-04.json",
+    "part":  1,
+    "item_count":  10,
+    "started_at":  "2026-09-03T01:36:09.2480721+00:00",
+    "completed_at":  "2026-09-03T01:39:53.4245988+00:00",
+    "elapsed_seconds":  224.177,
+    "transport_status":  "failed",
+    "response_status":  "incomplete",
+    "usage":  {
+                  "input_tokens":  3325,
+                  "output_tokens":  20000,
+                  "total_tokens":  23325,
+                  "input_tokens_details":  {
+                                               "cached_tokens":  0
+                                           },
+                  "output_tokens_details":  {
+                                                "reasoning_tokens":  0
+                                            }
+              },
+    "error":  "judgments 諛곗뿴???놁뒿?덈떎.",
+    "output":  "batch-04-part-01.output.json"
+}

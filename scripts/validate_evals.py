@@ -9,6 +9,7 @@ CASES = ROOT / "evals" / "cases.jsonl"
 CLI_SMOKE = ROOT / "evals" / "cli-smoke"
 NATURALNESS_V4 = ROOT / "evals" / "naturalness-effect-v4"
 NATURALNESS_V5 = ROOT / "evals" / "naturalness-tuning-v5"
+RECONSTRUCTION_V6 = ROOT / "evals" / "reader-reconstruction-v6"
 REQUIRED = {"id", "source", "category", "text", "expected", "inference", "rewrite", "preserve"}
 VERDICTS = {"통과", "구체화 필요", "의미 확인 필요"}
 
@@ -205,13 +206,48 @@ def main() -> int:
     except (OSError, json.JSONDecodeError) as exc:
         errors.append(f"invalid naturalness v5 adoption decision: {exc}")
 
+    reconstruction_files = [
+        RECONSTRUCTION_V6 / "README.md",
+        RECONSTRUCTION_V6 / "protocol.md",
+        RECONSTRUCTION_V6 / "minimum-propositions.json",
+        RECONSTRUCTION_V6 / "judge-output-schema.json",
+        RECONSTRUCTION_V6 / "batches" / "manifest.json",
+        RECONSTRUCTION_V6 / "scores.json",
+    ]
+    for path in reconstruction_files:
+        if not path.is_file():
+            errors.append(f"missing reader reconstruction v6 file: {path.relative_to(ROOT)}")
+
+    try:
+        manifest = json.loads((RECONSTRUCTION_V6 / "batches" / "manifest.json").read_text(encoding="utf-8"))
+        items = manifest.get("items", [])
+        item_ids = [item.get("item_id") for item in items]
+        if len(items) != 720 or len(set(item_ids)) != 720:
+            errors.append("reader reconstruction v6 must contain 720 unique blind items")
+        if len(manifest.get("batches", [])) != 26:
+            errors.append("reader reconstruction v6 must contain 26 preregistered judge batches")
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid reader reconstruction v6 manifest: {exc}")
+
+    try:
+        reconstruction = json.loads((RECONSTRUCTION_V6 / "scores.json").read_text(encoding="utf-8"))
+        if reconstruction.get("meta_signal") != "no_signal":
+            errors.append("reader reconstruction v6 meta signal must be no_signal")
+        paired = reconstruction.get("paired_summary", [])
+        if len(paired) != 2 or {row.get("items") for row in paired} != {164}:
+            errors.append("reader reconstruction v6 must contain 164 complete pairs per variant")
+        if len(reconstruction.get("records", [])) != 720:
+            errors.append("reader reconstruction v6 scores must contain 720 source records")
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid reader reconstruction v6 scores: {exc}")
+
     if errors:
         print("Evaluation set validation failed:")
         for error in errors:
             print(f"- {error}")
         return 1
 
-    print(f"Validated {count} baseline cases and naturalness v4/v5 artifacts.")
+    print(f"Validated {count} baseline cases and naturalness v4/v5 plus reconstruction v6 artifacts.")
     return 0
 
 

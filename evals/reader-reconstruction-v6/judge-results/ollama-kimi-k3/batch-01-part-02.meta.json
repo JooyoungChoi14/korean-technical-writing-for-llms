@@ -1,0 +1,16 @@
+﻿{
+    "judge":  "ollama-kimi-k3",
+    "agent":  "ollama-cloud",
+    "model":  "kimi-k3",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\batches\\ollama-kimi-k3\\batch-01.json",
+    "part":  2,
+    "item_count":  10,
+    "started_at":  "2026-09-03T01:21:37.8751613+00:00",
+    "completed_at":  "2026-09-03T01:25:25.8027545+00:00",
+    "elapsed_seconds":  227.928,
+    "transport_status":  "failed",
+    "response_status":  null,
+    "usage":  null,
+    "error":  "Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.",
+    "output":  "batch-01-part-02.output.json"
+}

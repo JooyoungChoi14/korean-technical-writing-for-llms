@@ -1,0 +1,12 @@
+﻿{
+    "judge":  "claude-fable-5",
+    "agent":  "claude",
+    "model":  "sonnet",
+    "batch_file":  "C:\\Users\\AntLabs\\Downloads\\jooyoung-personal\\korean-technical-writing-for-llms\\evals\\reader-reconstruction-v6\\recovery-attempt-3\\claude-fable-5\\batch-recovery-121.json",
+    "started_at":  "2026-09-03T01:55:33.1952492+00:00",
+    "completed_at":  "2026-09-03T01:55:41.1982215+00:00",
+    "elapsed_seconds":  8.003,
+    "transport_status":  "completed",
+    "error":  null,
+    "output":  "batch-recovery-121-part-01.output.json"
+}

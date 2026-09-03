@@ -1,6 +1,7 @@
 param(
     [ValidateSet('claude-fable-5','codex-gpt-5.6-sol')]
     [string[]]$Judges=@('claude-fable-5','codex-gpt-5.6-sol'),
+    [string]$ClaudeModel='claude-fable-5',
     [Parameter(Mandatory=$true)][string]$OutputRoot,
     [string]$BatchRoot='',
     [ValidateRange(1,60)][int]$ChunkSize=20,
@@ -19,7 +20,7 @@ if(-not [IO.Path]::IsPathRooted($OutputRoot)){$OutputRoot=Join-Path $repoRoot $O
 $OutputRoot=[IO.Path]::GetFullPath($OutputRoot)
 New-Item -ItemType Directory -Path $OutputRoot -Force|Out-Null
 $profiles=@(
-    [pscustomobject]@{agent='claude';model='claude-fable-5';judge='claude-fable-5'},
+    [pscustomobject]@{agent='claude';model=$ClaudeModel;judge='claude-fable-5'},
     [pscustomobject]@{agent='codex';model='gpt-5.6-sol';judge='codex-gpt-5.6-sol'}
 )|Where-Object{$Judges -contains $_.judge}
 $instruction=@'
