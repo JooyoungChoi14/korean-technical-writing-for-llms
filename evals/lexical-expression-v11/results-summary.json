@@ -1,0 +1,261 @@
+{
+  "status": "execution_complete",
+  "attempts": 238,
+  "max_planned_calls": 240,
+  "json_returned": 233,
+  "paired_revisions": 56,
+  "routes": [
+    {
+      "model": "claude-sonnet-4-5-20250929",
+      "provider": "claude",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "glm-5.3",
+      "provider": "ollama",
+      "attempts": 24,
+      "json_returned": 21,
+      "diagnoses": 12,
+      "revisions": 9,
+      "errors": {
+        "TimeoutError": 1,
+        "JSONDecodeError": 2
+      },
+      "paired_revisions": 3
+    },
+    {
+      "model": "deepseek-v4-pro:0813",
+      "provider": "ollama",
+      "attempts": 22,
+      "json_returned": 20,
+      "diagnoses": 10,
+      "revisions": 10,
+      "errors": {
+        "generation_incomplete": 2
+      },
+      "paired_revisions": 5
+    },
+    {
+      "model": "kimi-k3",
+      "provider": "ollama",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "qwen3.5:397b",
+      "provider": "ollama",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "glm-5.2",
+      "provider": "ollama",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "glm-5.3-flash",
+      "provider": "ollama",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "gpt-5.5",
+      "provider": "codex",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "provider": "codex",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "provider": "codex",
+      "attempts": 24,
+      "json_returned": 24,
+      "diagnoses": 12,
+      "revisions": 12,
+      "errors": {},
+      "paired_revisions": 6
+    }
+  ],
+  "provisional_expression_counts": {
+    "candidate": {
+      "tie": 17,
+      "N_better": 2,
+      "NS_better": 19
+    },
+    "control": {
+      "tie": 18
+    }
+  },
+  "location_counts": {
+    "exact": 293,
+    "whitespace_equivalent": 10
+  },
+  "human_reviewers": 0,
+  "independent_evaluator": false,
+  "limitations": [
+    "Purposefully selected four candidates and two controls; not representative.",
+    "One repetition; route and temporal variation remain.",
+    "Diagnostic scaffolding shared across N/NS; results apply to this workflow.",
+    "Expression assessment separate from fidelity; not a general success rate.",
+    "The same four candidate items repeat across models; pairs are not independent items.",
+    "NS appends skill text; automatic skill discovery or loading was not tested.",
+    "Some candidate vocabulary and an exact exclusion control appear in the skill examples.",
+    "Claude CLI reported auxiliary model usage; Codex resolved model not independently verified."
+  ],
+  "provisional_fidelity_counts": {
+    "N": {
+      "preserved": 31,
+      "uncertain": 7
+    },
+    "NS": {
+      "preserved": 26,
+      "risk": 1,
+      "uncertain": 11
+    }
+  },
+  "control_fidelity_counts": {
+    "N": {
+      "preserved": 18
+    },
+    "NS": {
+      "preserved": 17,
+      "risk": 1
+    }
+  },
+  "preferred_expression_with_fidelity_preserved": {
+    "N": 2,
+    "NS": 12
+  },
+  "diagnostic_decisions": {
+    "candidate": {
+      "N": {
+        "issue": 34,
+        "none": 2,
+        "uncertain": 3
+      },
+      "NS": {
+        "issue": 36,
+        "none": 1,
+        "uncertain": 2
+      }
+    },
+    "control": {
+      "N": {
+        "none": 12,
+        "issue": 7,
+        "uncertain": 1
+      },
+      "NS": {
+        "none": 17,
+        "issue": 3
+      }
+    }
+  },
+  "candidate_counts_by_model": {
+    "claude-sonnet-4-5-20250929": {
+      "tie": 1,
+      "N_better": 1,
+      "NS_better": 2
+    },
+    "glm-5.3": {
+      "tie": 1,
+      "NS_better": 2
+    },
+    "deepseek-v4-pro:0813": {
+      "tie": 2,
+      "NS_better": 1
+    },
+    "kimi-k3": {
+      "NS_better": 3,
+      "tie": 1
+    },
+    "qwen3.5:397b": {
+      "tie": 3,
+      "NS_better": 1
+    },
+    "glm-5.2": {
+      "NS_better": 4
+    },
+    "glm-5.3-flash": {
+      "NS_better": 3,
+      "tie": 1
+    },
+    "gpt-5.5": {
+      "NS_better": 1,
+      "N_better": 1,
+      "tie": 2
+    },
+    "gpt-5.6-sol": {
+      "tie": 3,
+      "NS_better": 1
+    },
+    "gpt-5.6-terra": {
+      "tie": 3,
+      "NS_better": 1
+    }
+  },
+  "execution_audit": {
+    "frozen_inputs_and_runners_unchanged": true,
+    "timing": {
+      "claude": {
+        "completed": 24,
+        "minimum_observed_gap_seconds": 9.997,
+        "gaps_below_9_9_seconds": 0
+      },
+      "ollama": {
+        "completed": 142,
+        "minimum_observed_gap_seconds": 10.002,
+        "gaps_below_9_9_seconds": 0
+      },
+      "codex": {
+        "completed": 72,
+        "minimum_observed_gap_seconds": 9.996,
+        "gaps_below_9_9_seconds": 0
+      }
+    },
+    "timing_precision_note": "Filesystem timestamps; 0.1s tolerance for timestamp precision.",
+    "ollama_requests_without_client_output_limit": 142,
+    "errors": {
+      "generation_incomplete": 2,
+      "TimeoutError": 1,
+      "JSONDecodeError": 2
+    },
+    "http_429": 0,
+    "validation_errors": {}
+  }
+}
