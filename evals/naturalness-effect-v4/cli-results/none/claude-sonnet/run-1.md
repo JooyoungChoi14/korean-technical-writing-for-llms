@@ -1,9 +1,9 @@
-Claude configuration file at C:\Users\AntLabs\.claude.json is corrupted: JSON Parse error: Unexpected EOF
+Claude configuration file at C:\Users\<USER>\.claude.json is corrupted: JSON Parse error: Unexpected EOF
 
-Claude configuration file at C:\Users\AntLabs\.claude.json is corrupted
-The corrupted file has been backed up to: C:\Users\AntLabs\.claude.json.corrupted.1788383785192
-A backup file exists at: C:\Users\AntLabs\.claude.json.backup
-You can manually restore it by running: cp "C:\Users\AntLabs\.claude.json.backup" "C:\Users\AntLabs\.claude.json"
+Claude configuration file at C:\Users\<USER>\.claude.json is corrupted
+The corrupted file has been backed up to: C:\Users\<USER>\.claude.json.corrupted.1788383785192
+A backup file exists at: C:\Users\<USER>\.claude.json.backup
+You can manually restore it by running: cp "C:\Users\<USER>\.claude.json.backup" "C:\Users\<USER>\.claude.json"
 
 ```json
 {
